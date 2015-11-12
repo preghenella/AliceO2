@@ -1,9 +1,9 @@
 var NAVTREE =
 [
   [ "AliceO2", "index.html", [
-    [ "#### Prototype Devices for the transport between FLPs and EPNs", "d9/d91/md__Users_turany_development_AliceO2_devices_flp2epn-distributed_README.html", null ],
-    [ "Hough Transform", "d6/d77/md__Users_turany_development_AliceO2_devices_hough_README.html", null ],
-    [ "Generating Doxygen documentation", "d5/d24/md__Users_turany_development_AliceO2_doxygen_README.html", null ],
+    [ "#### Prototype Devices for the transport between FLPs and EPNs", "d9/d4a/md_devices_flp2epn-distributed_README.html", null ],
+    [ "Hough Transform", "d7/db9/md_devices_hough_README.html", null ],
+    [ "AliceO2", "d0/d30/md_README.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -13,8 +13,8 @@ var NAVTREE =
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
+    [ "Classes", null, [
+      [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
@@ -44,18 +44,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d1c/Condition_8cxx_source.html",
-"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#abed9b1294a10beda959b06a0bcad1360",
-"d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#adbffa839bb4b3614bd7253b9604dcae7",
-"d5/d8c/group__alihlt__component__datatypes.html#ga550963b55b36d578a1347307809b32f7",
-"d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a490782ea1809ea807b5919c46405272d",
-"d6/d34/AliHLTDataTypes_8h.html#a4e433520da7eee380dee1808432d52db",
-"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a658a575e0b1cc92f16d63ee1267f81bd",
-"d8/d9a/FileStorage_8cxx.html#a1cbad8eb935f4f01a5d87fd8f2936162",
-"d9/d51/classAliceO2_1_1ITS_1_1Detector.html#ad177e19f163ac9602eaee99067cc246f",
-"db/da0/classAliceO2_1_1ITS_1_1MisalignmentParameter.html#a5bad908c3af9e526985b56f3d9fa1cf6",
-"dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a704932d687e4015e66d26becd466eefe",
-"df/dcd/structAliHLTComponentDataType.html#a6637f97e8fbbed826d1d38e5ed9536fc"
+"d2/d4d/classAliceO2_1_1Passive_1_1Pipe.html#a7509374cdefcca660c2213399ab328e2",
+"d3/dc5/aliceHLTEventSampler_8cxx.html",
+"d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a4bf3326d081c1f9e0b51d75673c22258",
+"d5/d8c/group__alihlt__component__datatypes.html#ga6cc681656b181ecaf4977ae732bb8e84",
+"d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#aa4a3d7425eeaa79d7510e1ad5aa89957",
+"d6/d34/AliHLTDataTypes_8h.html#ab663967d1e121f421bf5b2068f17b037",
+"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#ad1554f4b3f7542d341f1a35de85038dc",
+"d8/dc7/classAliceO2_1_1ITS_1_1Chip.html#a3930fe945e6c30534eebb09964c224b3",
+"da/d18/classAliceO2_1_1Base_1_1TrackReference.html",
+"db/dea/classAliceO2_1_1CDB_1_1Manager.html#a415491771419a5dbf1406582ea10fe56",
+"dd/dd1/tpc_2ContainerFactory_8cxx.html#ad9080d12bfe9d2534ec2490a8a01bd7c",
+"functions_func_o.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
