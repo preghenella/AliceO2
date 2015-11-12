@@ -12,5 +12,7 @@ var classAliceO2_1_1CDB_1_1IdRunRange =
     [ "isValid", "d6/d60/classAliceO2_1_1CDB_1_1IdRunRange.html#a99dc550817853fd0a5c2022185cfe324", null ],
     [ "setFirstRun", "d6/d60/classAliceO2_1_1CDB_1_1IdRunRange.html#a067289d35aabdff615e484edd51a0090", null ],
     [ "setIdRunRange", "d6/d60/classAliceO2_1_1CDB_1_1IdRunRange.html#a8c07cdd4d7418c094d3cec718f82dee0", null ],
-    [ "setLastRun", "d6/d60/classAliceO2_1_1CDB_1_1IdRunRange.html#aebab7139c0bb2496c38b51a9d5a5fe69", null ]
+    [ "setLastRun", "d6/d60/classAliceO2_1_1CDB_1_1IdRunRange.html#aebab7139c0bb2496c38b51a9d5a5fe69", null ],
+    [ "mFirstRun", "d6/d60/classAliceO2_1_1CDB_1_1IdRunRange.html#af9dea4634af88217b719963449ca80c1", null ],
+    [ "mLastRun", "d6/d60/classAliceO2_1_1CDB_1_1IdRunRange.html#a03f03a5eee23a8e8b59677bd71ab6108", null ]
 ];

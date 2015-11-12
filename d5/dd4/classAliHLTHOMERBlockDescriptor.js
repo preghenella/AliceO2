@@ -1,6 +1,7 @@
 var classAliHLTHOMERBlockDescriptor =
 [
     [ "AliHLTHOMERBlockDescriptor", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#a282397146f15acd97cd1f55dc944f4c2", null ],
+    [ "AliHLTHOMERBlockDescriptor", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#a17673d506b7eac848101428808e9f31a", null ],
     [ "GetBlockOffset", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#a53a0df467cc4dfd640b74f586f077d7f", null ],
     [ "GetBlockSize", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#aeb67e22c0efdc93080b273239d14bffc", null ],
     [ "GetByteOrder", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#af97edd2797366eef72eaf1557057fd1a", null ],
@@ -8,6 +9,7 @@ var classAliHLTHOMERBlockDescriptor =
     [ "GetHeaderLength", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#a8b165787a28e738d0b60879ed0fe12ea", null ],
     [ "GetStatusFlags", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#a3215409cec8aba1feac94f7be1eb8b1d", null ],
     [ "Initialize", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#a15e9fc593af8c50264be9c6ae726614b", null ],
+    [ "operator=", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#a9fde2e3e191e628c394ab0f19645d484", null ],
     [ "SetAlignment", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#ab467b190f225d38a248b5279eeb5c51b", null ],
     [ "SetBirth_s", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#a5f0097503584c6a607471ce93ef57f98", null ],
     [ "SetBirth_us", "d5/dd4/classAliHLTHOMERBlockDescriptor.html#ac145a95aa628f2f31702a07155b84fb2", null ],

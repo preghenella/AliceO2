@@ -9,13 +9,22 @@ var classALICE_1_1HLT_1_1EventSampler =
     [ "Last", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ad45061a2eb8cb8505add52e52921bfc7a20eb4f6b5cfbcbf8da471e0b4c10ad70", null ],
     [ "EventSampler", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a0efd2cc2f984b07497b7e4e5f27bad39", null ],
     [ "~EventSampler", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a7e344cc3af635ba17db574c314cea802", null ],
+    [ "EventSampler", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a0e8f831707899906f31d3c03ec0d17bc", null ],
     [ "GetProperty", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#acd3361d0a27655278c32962af9b8a71d", null ],
     [ "GetProperty", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a8f9666b7a04d8ca28794ba1ec09a4591", null ],
     [ "Init", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#afcf6c1b2f8079754e0f309d9aaed6adf", null ],
+    [ "operator=", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a5efc7ac9efb29b4ee72a0cd0acd23cc6", null ],
     [ "Pause", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#aecd36579ae17098d93b5ed5357bb3e70", null ],
     [ "Run", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a2f659152b2da6cc612d34a9dcdce87bc", null ],
     [ "samplerLoop", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a59b013a0fffad12b838531ab547dde26", null ],
     [ "SetProperty", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ae0fe23fba9c757154c3adac30b2d688f", null ],
     [ "SetProperty", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ab595a5dc1a7ea830ab6a76c7aa7650f3", null ],
-    [ "Shutdown", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#aa82906f785e452a0d7e5fa526462da69", null ]
+    [ "Shutdown", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#aa82906f785e452a0d7e5fa526462da69", null ],
+    [ "mEventPeriod", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ad4f1163e7109da9fcb9afd3150680f70", null ],
+    [ "mInitialDelay", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a2040a4c1f8f2826ab6e747520bcf7be9", null ],
+    [ "mNEvents", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a57e3f2bbfa377a2ecf092cc57c87d034", null ],
+    [ "mOutputFile", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ae80210c58eff19f78396e5d1cf1bdcff", null ],
+    [ "mPollingTimeout", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ae8a575338f04b988ad33e892e0100110", null ],
+    [ "mSkipProcessing", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a6d348990188cabb7c3395eeb296dc6c5", null ],
+    [ "mVerbosity", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a703db3d9facf0bdf6d1dde5541159744", null ]
 ];

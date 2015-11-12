@@ -16,6 +16,8 @@ var classPythia8Generator =
     [ "fHNL", "de/d55/classPythia8Generator.html#a8d6179e5c7e5ddb9e0561ce33e6423b2", null ],
     [ "fId", "de/d55/classPythia8Generator.html#a382c56ee9468aba19b598295298ddf6d", null ],
     [ "fMom", "de/d55/classPythia8Generator.html#aecd1eb517519f22228741b6ed62d1a43", null ],
+    [ "fPythia", "de/d55/classPythia8Generator.html#aaebab44d440936b2aed64f18f6f9937a", null ],
+    [ "fRandomEngine", "de/d55/classPythia8Generator.html#a2237687770d2cbe829383783015609a2", null ],
     [ "fUseRandom1", "de/d55/classPythia8Generator.html#aa30d2c72d3db89285c0adf3a7f8a042f", null ],
     [ "fUseRandom3", "de/d55/classPythia8Generator.html#af6c553dba17223a063a3fa9a700d9869", null ]
 ];

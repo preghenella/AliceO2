@@ -18,5 +18,9 @@ var classAliceO2_1_1CDB_1_1XmlHandler =
     [ "OnStartElement", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#ad1a43f492ba2500737609486a326a39c", null ],
     [ "OnWarning", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#a183c3a6dc3100ef581441d9d0ce591df", null ],
     [ "operator=", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#ae3364553ebccb57ce5e0ee2c592ac143", null ],
-    [ "setRun", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#a14315359fa5e96411e319be7fba65479", null ]
+    [ "setRun", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#a14315359fa5e96411e319be7fba65479", null ],
+    [ "mEndIdRunRange", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#adec41f11656038ea528c36a81e826692", null ],
+    [ "mOCDBFolder", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#a63710a6e6f0239c72ddaf38cc41b1cdc", null ],
+    [ "mRun", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#af47ba03a8b6dd389c3c9ec6854b3f21d", null ],
+    [ "mStartIdRunRange", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#a27e18416570aaca477048f39b593e067", null ]
 ];

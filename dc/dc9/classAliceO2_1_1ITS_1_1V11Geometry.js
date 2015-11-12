@@ -3,6 +3,8 @@ var classAliceO2_1_1ITS_1_1V11Geometry =
     [ "V11Geometry", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a57ed23cb8c232aa01bfbe8b77cacd46c", null ],
     [ "V11Geometry", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a2d95f3016eea443343fa22a390762080", null ],
     [ "~V11Geometry", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a8ad84443ccfcf8179c5ed15f1a068559", null ],
+    [ "angleForRoundedCorners0", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a718c629b6264a8067d2d46ebc652807f", null ],
+    [ "angleForRoundedCorners1", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a97eff563589e62dedee7c625768bfb15", null ],
     [ "angleOfIntersectionWithLine", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#aa716012a65fed68a30d5b0c775ac2310", null ],
     [ "anglesForRoundedCorners", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a09211c13165c3a969a04a4efbe45adce", null ],
     [ "cosD", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#ac5c61cf6ec520b08fb79eaa07ab97320", null ],
@@ -38,5 +40,6 @@ var classAliceO2_1_1ITS_1_1V11Geometry =
     [ "zFrom2Points", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#aae2350030adadc2adf6fc6b281eb84f3", null ],
     [ "zFromRMaxpCone", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#ab5efa23776b8a7395159688b5136ab3d", null ],
     [ "zFromRMaxpCone", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a247846319aade6dc8fe0d503e7cd5e88", null ],
-    [ "zFromRMinpCone", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a486029744d2e38a245415387167949bf", null ]
+    [ "zFromRMinpCone", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a486029744d2e38a245415387167949bf", null ],
+    [ "mDebug", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#ac66c45479f128caabe080bd017ddbe2d", null ]
 ];

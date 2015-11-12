@@ -34,5 +34,10 @@ var classAliceO2_1_1CDB_1_1ConditionId =
     [ "setPath", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a3bbccfff1586a4e8122899237608b09b", null ],
     [ "setSubVersion", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#afe3cb505ebe781d10d622d96dceacf83", null ],
     [ "setVersion", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#af79e9a5f30c310c39f01cb6b756b1593", null ],
-    [ "ToString", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a6eb668a6482da196ea8170cc79696424", null ]
+    [ "ToString", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a6eb668a6482da196ea8170cc79696424", null ],
+    [ "mIdRunRange", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#aa0e94bc8c4be29b5f9c1f1d96195a70e", null ],
+    [ "mLastStorage", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a8316e7040219b7be0a31c8b2759526e5", null ],
+    [ "mPath", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a05580deea3d7cfa1fc2b02840fa2486a", null ],
+    [ "mSubVersion", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#ad760d589bb389d0783dc6284fe7f6fa5", null ],
+    [ "mVersion", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a1b5f3f160c04d82c551aeacaed9a9b7a", null ]
 ];

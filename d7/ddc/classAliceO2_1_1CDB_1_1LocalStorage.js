@@ -1,14 +1,26 @@
 var classAliceO2_1_1CDB_1_1LocalStorage =
 [
+    [ "LocalStorage", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a551cd370ae1017523ce84617c91d3e17", null ],
+    [ "LocalStorage", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a92243b0a3137adc03b9cfe34f29cfc7f", null ],
+    [ "~LocalStorage", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#abeb2886cf09e3ff9b6d20bc5387fc089", null ],
+    [ "filenameToId", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#ade35308f175873b5c03acd38687703d2", null ],
     [ "getAllEntries", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a7b4d634fb6dbf13b7d7e3783946311dd", null ],
     [ "getCondition", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a2e9757bb94885377ff846ef14371cd56", null ],
     [ "getConditionId", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a37bc6d3594936106ef8722ac7dbc2c45", null ],
+    [ "getEntriesForLevel0", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a6d1f28d7f7e0097447777acfc3bccc23", null ],
+    [ "getEntriesForLevel1", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a7e104052f884089caa6c239e56ec83e4", null ],
+    [ "getId", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a02419732362c921c73b814ab278c40da", null ],
     [ "getIdListFromFile", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a07d69fd801f0c1b1dfd39693c2752a1e", null ],
     [ "hasConditionType", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a1dd97848c967ae08004eb7d74ad8c103", null ],
     [ "hasSubVersion", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a748aee283b3bce8a7ef4dcdc48ca75bc", null ],
     [ "idToFilename", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#ac0cde5d4d7fe938314b68318e8affca3", null ],
     [ "isReadOnly", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a349024e0479a942f10f25f478f444604", null ],
+    [ "operator=", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a749b5474f8e0c4b1b444dd34dd0175fc", null ],
+    [ "prepareId", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#ae1ba9d9cc967fd42da7c276362403a4e", null ],
     [ "putCondition", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a5344295924ee5178c7d51e38bf689e34", null ],
+    [ "queryValidCVMFSFiles", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a39fed2d4b6f30071cee963e74509a232", null ],
+    [ "queryValidFiles", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#aa34ae5c5c7609b7980dcd3104fe3640f", null ],
     [ "setRetry", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a0eccd07fc2f571efd897a416ab7fdeb7", null ],
-    [ "LocalStorageFactory", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#ab9325962769a8ee3f12d5f472526768d", null ]
+    [ "LocalStorageFactory", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#ab9325962769a8ee3f12d5f472526768d", null ],
+    [ "mBaseDirectory", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#aa28bceecb57f1e601278090f5f23e425", null ]
 ];

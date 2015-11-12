@@ -19,7 +19,7 @@ var searchData=
   ['evaluateuserfunction',['evaluateUserFunction',['../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#ae1bbb0cadc3a387fb4c8861929c66cea',1,'AliceO2::MathUtils::Chebyshev3D::evaluateUserFunction(const Float_t *x, Float_t *res)'],['../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a1c666c77923e1ebcfc943901a717efb6',1,'AliceO2::MathUtils::Chebyshev3D::evaluateUserFunction()']]],
   ['eventperiod',['EventPeriod',['../d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ad45061a2eb8cb8505add52e52921bfc7a52ac09367b4b612a6da3ef5653143d79',1,'ALICE::HLT::EventSampler']]],
   ['eventrate',['EventRate',['../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fab89a032dcf3b382f1d336c3841596c46',1,'AliceO2::Devices::FLPSyncSampler::EventRate()'],['../d7/def/structDeviceOptions.html#a660f2547d13b9f23e594ead733d56cf6',1,'DeviceOptions::eventRate()']]],
-  ['eventsampler',['EventSampler',['../d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a0efd2cc2f984b07497b7e4e5f27bad39',1,'ALICE::HLT::EventSampler']]],
+  ['eventsampler',['EventSampler',['../d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a0efd2cc2f984b07497b7e4e5f27bad39',1,'ALICE::HLT::EventSampler::EventSampler(int verbosity=0)'],['../d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a0e8f831707899906f31d3c03ec0d17bc',1,'ALICE::HLT::EventSampler::EventSampler(const EventSampler &amp;)']]],
   ['eventsampler',['EventSampler',['../d2/dd9/classALICE_1_1HLT_1_1EventSampler.html',1,'ALICE::HLT']]],
   ['eventsampler_2ecxx',['EventSampler.cxx',['../d1/dda/EventSampler_8cxx.html',1,'']]],
   ['eventsampler_2eh',['EventSampler.h',['../d6/d6a/EventSampler_8h.html',1,'']]],

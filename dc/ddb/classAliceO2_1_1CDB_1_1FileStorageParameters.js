@@ -7,5 +7,7 @@ var classAliceO2_1_1CDB_1_1FileStorageParameters =
     [ "getHash", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters.html#ad018d737bfc495b5dcd7a5fc9564ec6b", null ],
     [ "getPathString", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters.html#a41389877c212d87fe52cc4c8afc4be41", null ],
     [ "isEqual", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters.html#af90decb9f02d4ba00babf63d3ff84f31", null ],
-    [ "isReadOnly", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters.html#adbcf0d888f8fd7d9f5aa2ea7de42b1ce", null ]
+    [ "isReadOnly", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters.html#adbcf0d888f8fd7d9f5aa2ea7de42b1ce", null ],
+    [ "mDBPath", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters.html#ae4c781fed3fb364c940e5e81116e754a", null ],
+    [ "mReadOnly", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters.html#ac29fdcefcb15c93a9bceca832f7b61ca", null ]
 ];

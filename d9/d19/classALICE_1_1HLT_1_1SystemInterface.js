@@ -12,5 +12,15 @@ var classALICE_1_1HLT_1_1SystemInterface =
     [ "print", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a39ee67666bc2c2a621523c1560ace801", null ],
     [ "processEvent", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a0cf5745ccd8f722b69c9e855a572d406", null ],
     [ "releaseSystem", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a9d03dfb3a923b4231b4bcde651403ac0", null ],
-    [ "unloadLibrary", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a9e629873c4343dcec7f819c97b9245f3", null ]
+    [ "unloadLibrary", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a9e629873c4343dcec7f819c97b9245f3", null ],
+    [ "mEnvironment", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a6b35784ebd703fa92370bc2e411f0823", null ],
+    [ "mpAliHLTExtFctCreateComponent", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#afeaf0c2fd8573a35b3cd35c2750d395a", null ],
+    [ "mpAliHLTExtFctDeinitSystem", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#ae73e6118c079f2791b05f29178c4e433", null ],
+    [ "mpAliHLTExtFctDestroyComponent", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a96e16116c1bec4723bd1ee669e3fbf01", null ],
+    [ "mpAliHLTExtFctGetOutputDataType", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#af3fd0cf27b4d05275fce8caf889cebbb", null ],
+    [ "mpAliHLTExtFctGetOutputSize", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a361ad21c32a8bd7f7f2bdd7e02cc42a5", null ],
+    [ "mpAliHLTExtFctInitSystem", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a8ac8167c686ae70a4d48b40610ff6c31", null ],
+    [ "mpAliHLTExtFctLoadLibrary", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a01d70326ddc2ed998ed1965ee5fb0b88", null ],
+    [ "mpAliHLTExtFctProcessEvent", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a1f2ad6d14b011a6a88b485412fd33441", null ],
+    [ "mpAliHLTExtFctUnloadLibrary", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#a3dc8e0b87612205f751454d2dc0df77b", null ]
 ];

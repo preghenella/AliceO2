@@ -9,6 +9,7 @@ var classAliceO2_1_1CDB_1_1Condition =
     [ "Condition", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a22c7a53b298ab56d991d81b0638d051d", null ],
     [ "Condition", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#af24554bcfaa67f2dc7e95d63561e9373", null ],
     [ "~Condition", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#ab42f6d2dfb2d0de4bed4ed5032d4a8fc", null ],
+    [ "Condition", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#accd4f8a8d8ef06507b4d6c51bdf26bda", null ],
     [ "Compare", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a4ef55601f884cc6a4f9fcfbd02fa24a1", null ],
     [ "getConditionMetaData", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#ad5aa51799cb98e0116afc4ab43b7ecc1", null ],
     [ "getConditionMetaData", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a9c5abf2e1246f031bbbcfa8332aebbd6", null ],
@@ -19,6 +20,7 @@ var classAliceO2_1_1CDB_1_1Condition =
     [ "getObject", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#ad680bc381c47f53d12d55ec74bb4951f", null ],
     [ "isOwner", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#aae4b70150da60cc696030a1c260df5f5", null ],
     [ "IsSortable", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a17b9884c357dccdc7834596dda877ba2", null ],
+    [ "operator=", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a11cf6fc9e8c0c4cc24cbf0438b02cced", null ],
     [ "printConditionMetaData", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a0b374b4a33e6816102ca2e5bea207175", null ],
     [ "printId", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#afe4600afd0735202c0ef68bf8262fc74", null ],
     [ "setConditionMetaData", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a15f3254020653ee009009858042c5196", null ],
@@ -27,5 +29,9 @@ var classAliceO2_1_1CDB_1_1Condition =
     [ "setObject", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#ab87e81bc15007a7a3f35893d33980a8a", null ],
     [ "setOwner", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#addb0f75305899644827c90331a69fbe1", null ],
     [ "setSubVersion", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#ad62a600a30ad3c83c65ab09f9acb257d", null ],
-    [ "setVersion", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a2ebde8130aeb8689e06fc979aa97b67b", null ]
+    [ "setVersion", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a2ebde8130aeb8689e06fc979aa97b67b", null ],
+    [ "mConditionMetaData", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a92b1c9b479d2586f7617d7dc4e7dc6e4", null ],
+    [ "mId", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a304cfc37f6c5be46a4fac6187bcff8af", null ],
+    [ "mObject", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a3a4f8b02c7f452287ed008f989e77b0d", null ],
+    [ "mOwner", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a3f49186557920ae949225d5a00209766", null ]
 ];

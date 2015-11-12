@@ -25,5 +25,7 @@ var classAliceO2_1_1ITS_1_1GeometryManager =
       [ "kEMCAL", "d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a93e25f8c9c4e02febdb30a85f23f15a6af73b9daa3b6504a9eda57cc3fc867611", null ],
       [ "kLastLayer", "d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a93e25f8c9c4e02febdb30a85f23f15a6a8c2e9a325f2e8b394368f88b10f8c7f9", null ]
     ] ],
-    [ "~GeometryManager", "d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a4bc49e8b8ea278a4042daa0553cf97b4", null ]
+    [ "~GeometryManager", "d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a4bc49e8b8ea278a4042daa0553cf97b4", null ],
+    [ "GeometryManager", "d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a9cea5be0b4681b1dc6804b2740c6bea8", null ],
+    [ "ClassDef", "d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a4964b713697d94c92f522b2e3ee16ad3", null ]
 ];

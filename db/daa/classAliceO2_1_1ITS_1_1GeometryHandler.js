@@ -2,6 +2,8 @@ var classAliceO2_1_1ITS_1_1GeometryHandler =
 [
     [ "GeometryHandler", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#ae30bb732f2f45937a37644b7dc4395c5", null ],
     [ "~GeometryHandler", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#adf49f0c89dde85a33a89ed9de24ec707", null ],
+    [ "GeometryHandler", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a8c755faebf6e485c0c8cf2a8e3d174a8", null ],
+    [ "constructFullPathFromDetectorId", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a6c5d82e259c0027cb6a28ed456d7ef15", null ],
     [ "currentVolumeId", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a3933af508c2c431c7800bde938a4dbdb", null ],
     [ "currentVolumeName", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a2ddadaf0bf78d81dfd9e75b007ab5f42", null ],
     [ "currentVolumeOffId", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a836edd3b056d13ef10619a4bcfb34f9d", null ],
@@ -12,6 +14,14 @@ var classAliceO2_1_1ITS_1_1GeometryHandler =
     [ "Init", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#ac2101f0c80d962bc2dbf5dc90fadf20b", null ],
     [ "localToGlobal", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a7ac3b23ace802e82954e177dbbd26f87", null ],
     [ "navigateTo", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#aa990c420bb33c10443ac4cd4c9d588b1", null ],
+    [ "operator=", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a886826591c255ee8f8d05c5cb5db3b6b", null ],
     [ "volumeId", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a309ea31138ec41fc6011cec1b651039c", null ],
-    [ "volumeIdGeo", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#ae47d4b689cc791a392f836416a5d2740", null ]
+    [ "volumeIdGeo", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#ae47d4b689cc791a392f836416a5d2740", null ],
+    [ "mCurrentVolume", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a255f4906d5ec4284dc69850ea2df523c", null ],
+    [ "mGeometryPathHash", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#aca73293ada87b207cfa80ae2f088126f", null ],
+    [ "mGlobalCentre", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a957e2ac5063022452ae0b50b57a55f1a", null ],
+    [ "mGlobalMatrix", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#ab0f3d065c3d978d9bd5347bb43efa097", null ],
+    [ "mIsSimulation", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#a14b63895212b7b54ea2ecd389fb95d4a", null ],
+    [ "mLastUsedDetectorId", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#aa29e9fd33b066e8495bb86c04c040700", null ],
+    [ "mVolumeShape", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#aecfe677f20720162b61d0eef4a9c01e6", null ]
 ];

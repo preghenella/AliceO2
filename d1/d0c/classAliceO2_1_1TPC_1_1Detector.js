@@ -3,6 +3,7 @@ var classAliceO2_1_1TPC_1_1Detector =
     [ "Detector", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a68cd149fa5de167a6090570c9477eaa6", null ],
     [ "Detector", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#aa43b3d7bbd4b225855b4bcc93f70b225", null ],
     [ "~Detector", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#ae16b7bf62f39cb287927d56ca17663d7", null ],
+    [ "Detector", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#afa1491335d2867d1e39429019315d8b0", null ],
     [ "AddHit", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#ad7ec96b423f20c5e21eaf618d44abad6", null ],
     [ "BeginEvent", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a00bdf8add5c6e258f8c0c3d720d1c56b", null ],
     [ "BeginPrimary", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a8221cc02a9969b1e205692c294614186", null ],
@@ -13,10 +14,19 @@ var classAliceO2_1_1TPC_1_1Detector =
     [ "FinishRun", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a705cb2971dc0e4dcca3790dd25a1ae84", null ],
     [ "GetCollection", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a81c0240238c7dfc34f65b7f078292bca", null ],
     [ "Initialize", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#ae544229ee1f9fa12c5ca8ac1eef26109", null ],
+    [ "operator=", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#aaaff80914163e736e6df76adb330e3e9", null ],
     [ "PostTrack", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#ae50d9d6d2cedd5095f0786e095373a0e", null ],
     [ "PreTrack", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#aade78fd2ae5e4e063fc08d8f78e7228b", null ],
     [ "ProcessHits", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a4a66d422a6c4fa36bfe560bae0bc2703", null ],
     [ "Register", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#ac89ca74f26cad0b7df29c02c4ead5cc4", null ],
     [ "Reset", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a1dbdb55478249442fa79b9dd191e5540", null ],
-    [ "SetSpecialPhysicsCuts", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a95cc24b3e68e2419669c466b19934627", null ]
+    [ "SetSpecialPhysicsCuts", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a95cc24b3e68e2419669c466b19934627", null ],
+    [ "mEnergyLoss", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a373d3c470cecc9d28f86fb93be20d00c", null ],
+    [ "mLength", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a34bffe6100e000ac01e7b84c67ca84e2", null ],
+    [ "mMomentum", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#aae5f8935dbf7f777a0fa5d63c27150f7", null ],
+    [ "mPointCollection", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#ac05395109c5954b8c611dc41ee3f6ac2", null ],
+    [ "mPosition", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#abd5b695787565f50296679915346d6af", null ],
+    [ "mTime", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#aa39ec903716e521541b800903a92077b", null ],
+    [ "mTrackNumberID", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#ad7e8c25c9088ca63f155e6491cb166c3", null ],
+    [ "mVolumeID", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#acfdb0d4a07e80f024fffef41bd47b3d2", null ]
 ];
