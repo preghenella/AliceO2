@@ -80,9 +80,7 @@ var hierarchy =
       [ "AliceO2::Devices::FLPSender", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html", null ],
       [ "AliceO2::Devices::FLPSyncSampler", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html", null ],
       [ "O2EPNex", "d3/d79/classO2EPNex.html", null ],
-      [ "O2EPNex", "d3/d79/classO2EPNex.html", null ],
       [ "O2EpnMerger", "d0/d48/classO2EpnMerger.html", null ],
-      [ "O2FLPex", "d4/d82/classO2FLPex.html", null ],
       [ "O2FLPex", "d4/d82/classO2FLPex.html", null ],
       [ "O2Merger", "db/daa/classO2Merger.html", null ],
       [ "O2Proxy", "d9/d07/classO2Proxy.html", null ]

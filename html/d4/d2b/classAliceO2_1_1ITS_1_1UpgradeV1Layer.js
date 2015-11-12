@@ -1,10 +1,10 @@
 var classAliceO2_1_1ITS_1_1UpgradeV1Layer =
 [
-    [ "kStave", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#a235a213c721038c104a11c7da7cd57bfacc63fd820476f060e630b1390f4fbd4a", null ],
-    [ "kHalfStave", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#a235a213c721038c104a11c7da7cd57bfa80174f3cf2fca005c7668836e8a8b40b", null ],
-    [ "kModule", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#a235a213c721038c104a11c7da7cd57bfaf88b9356e64c19ade21c8d24c3287fc2", null ],
-    [ "kChip", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#a235a213c721038c104a11c7da7cd57bfa393a6cb2a12b22e6303f3570e2c75daf", null ],
-    [ "kNHLevels", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#a235a213c721038c104a11c7da7cd57bfa7d7a04b275cb50487bc1e4855bf98644", null ],
+    [ "kStave", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#aac6f319b510060a561704c2a261e2225acc63fd820476f060e630b1390f4fbd4a", null ],
+    [ "kHalfStave", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#aac6f319b510060a561704c2a261e2225a80174f3cf2fca005c7668836e8a8b40b", null ],
+    [ "kModule", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#aac6f319b510060a561704c2a261e2225af88b9356e64c19ade21c8d24c3287fc2", null ],
+    [ "kChip", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#aac6f319b510060a561704c2a261e2225a393a6cb2a12b22e6303f3570e2c75daf", null ],
+    [ "kNHLevels", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#aac6f319b510060a561704c2a261e2225a7d7a04b275cb50487bc1e4855bf98644", null ],
     [ "UpgradeV1Layer", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#aafa2ccdcf5004a30fac2372cf0ce1eca", null ],
     [ "UpgradeV1Layer", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#aecc04b059f80c8421aa3b609b2d91842", null ],
     [ "UpgradeV1Layer", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#a32ffb19f44f772d21fd5e30fc7d817f1", null ],

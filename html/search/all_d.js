@@ -7,6 +7,5 @@ var searchData=
   ['numberofcellsinz',['numberOfCellsInZ',['../d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a2d01a19dcc205b624e794d7cb97eefd4',1,'AliceO2::ITS::Segmentation::numberOfCellsInZ()'],['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a6a17b5af2c0b780293afadc1ec570ee0',1,'AliceO2::ITS::UpgradeSegmentationPixel::numberOfCellsInZ()']]],
   ['numepns',['numEPNs',['../d7/def/structDeviceOptions.html#ab6358573bb31d421e8e53a1c92de722a',1,'DeviceOptions']]],
   ['numflps',['NumFLPs',['../d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a9f86aa491afaedd94e0f90cdeca89670a1184bb60b79d338ee68cda3bb66143b7',1,'AliceO2::Devices::EPNReceiver::NumFLPs()'],['../d7/def/structDeviceOptions.html#a2dbaae8e42a31497aa4a671a0b601a40',1,'DeviceOptions::numFLPs()']]],
-  ['numinputs',['numInputs',['../d7/def/structDeviceOptions.html#aceaf2af65fd2d6c28dabecc5c81569f6',1,'DeviceOptions']]],
-  ['numoutputs',['numOutputs',['../d7/def/structDeviceOptions.html#a6d17bdc7b62ab4758a035a02d669e507',1,'DeviceOptions']]]
+  ['numinputs',['numInputs',['../d7/def/structDeviceOptions.html#aceaf2af65fd2d6c28dabecc5c81569f6',1,'DeviceOptions']]]
 ];

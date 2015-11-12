@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['outputaddress',['outputAddress',['../d7/def/structDeviceOptions.html#a0905929765f7499d149c3adac4396a00',1,'DeviceOptions::outputAddress()'],['../d7/def/structDeviceOptions.html#a2cecdc6e53dea0c40e8590aa52e50bc3',1,'DeviceOptions::outputAddress()']]],
-  ['outputbufsize',['outputBufSize',['../d7/def/structDeviceOptions.html#affe979ead74ee5a2ba207333d4405a64',1,'DeviceOptions::outputBufSize()'],['../d7/def/structDeviceOptions.html#a344d95493b4c86ceec863d8a39fb50ca',1,'DeviceOptions::outputBufSize()']]],
-  ['outputmethod',['outputMethod',['../d7/def/structDeviceOptions.html#ac8e7fc081bde26b3fcaa289e9981c35a',1,'DeviceOptions::outputMethod()'],['../d7/def/structDeviceOptions.html#a55c48e20d4afbb7255d99219a838c792',1,'DeviceOptions::outputMethod()']]],
-  ['outputsockettype',['outputSocketType',['../d7/def/structDeviceOptions.html#a8df1f887d9e5fcc7bbe0c3644f430be9',1,'DeviceOptions::outputSocketType()'],['../d7/def/structDeviceOptions.html#a158c2575654a0c9251d25279de9a2499',1,'DeviceOptions::outputSocketType()']]]
+  ['outputaddress',['outputAddress',['../d7/def/structDeviceOptions.html#ace884ffd3188315e9ad53e4fd728e24f',1,'DeviceOptions']]],
+  ['outputbufsize',['outputBufSize',['../d7/def/structDeviceOptions.html#a187f0d122710796bb51be37b8ebfa530',1,'DeviceOptions']]],
+  ['outputmethod',['outputMethod',['../d7/def/structDeviceOptions.html#a9680b4756d698f71e5012e7b624c3b5f',1,'DeviceOptions']]],
+  ['outputsockettype',['outputSocketType',['../d7/def/structDeviceOptions.html#a3d543f4f40eca8f42c2dfa58955a9170',1,'DeviceOptions']]]
 ];
