@@ -5,7 +5,5 @@ var classAliceO2_1_1ITS_1_1DigitContainer =
     [ "AddDigit", "db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html#a8853f17121f5ffa8148bef8846034efe", null ],
     [ "FillOutputContainer", "db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html#a4c63d166d71541344fd683c35f79ca62", null ],
     [ "FindDigit", "db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html#a1bdcef3d15c2aaaab358c086e3fa49cf", null ],
-    [ "Reset", "db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html#a86bab8309af939e4dbac184e75697a1a", null ],
-    [ "fDigitLayer", "db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html#a8a75d1e755e2ef957b44918e363aa29c", null ],
-    [ "fGeometry", "db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html#a6777ad3cbc7870de76a443cd5a5c5f2e", null ]
+    [ "Reset", "db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html#a86bab8309af939e4dbac184e75697a1a", null ]
 ];

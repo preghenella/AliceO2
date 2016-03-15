@@ -7,7 +7,6 @@ var classO2FLPex =
     [ "~O2FLPex", "d4/d82/classO2FLPex.html#a4f335ba50f81ac790b92410e464e6c04", null ],
     [ "GetProperty", "d4/d82/classO2FLPex.html#a2778379656f80f602406c39f5a25c088", null ],
     [ "GetProperty", "d4/d82/classO2FLPex.html#ae240d4925eb50841c36b795748ec3bf5", null ],
-    [ "Init", "d4/d82/classO2FLPex.html#a8e2ea0447addc7ead859c4e9a2d5eb48", null ],
     [ "Log", "d4/d82/classO2FLPex.html#ad620e407ce29c8c9617e1d9446270811", null ],
     [ "Run", "d4/d82/classO2FLPex.html#abe73223cd47565157671c5746617c82e", null ],
     [ "SetProperty", "d4/d82/classO2FLPex.html#a221c32adb069e771cded9373629d77c5", null ],

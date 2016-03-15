@@ -1,5 +1,16 @@
 var structDeviceOptions =
 [
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293", null ],
     [ "ackInAddress", "d7/def/structDeviceOptions.html#af34ea8ea96655453b945eca42df2160e", null ],
     [ "ackInBufSize", "d7/def/structDeviceOptions.html#aaf8ce1848e4d06017ad956dcc0311696", null ],
     [ "ackInMethod", "d7/def/structDeviceOptions.html#a7d119435df3125c311f81c4706730917", null ],
@@ -46,7 +57,9 @@ var structDeviceOptions =
     [ "inputMethod", "d7/def/structDeviceOptions.html#afd170396b5dd2c600e5a9b783238ead0", null ],
     [ "inputSocketType", "d7/def/structDeviceOptions.html#a5cbc080c2ae568ded93cfe19fe9dbffe", null ],
     [ "inputSocketType", "d7/def/structDeviceOptions.html#a0951cef8f35fdc1544a77d8f69ac4bf1", null ],
+    [ "interactive", "d7/def/structDeviceOptions.html#acb8790e1a838e1edea2c640ba05b4d22", null ],
     [ "ioThreads", "d7/def/structDeviceOptions.html#a04a262a533292a72dfebcadd380a0c35", null ],
+    [ "maxEvents", "d7/def/structDeviceOptions.html#ae08a35140446037515b9a49357046bcf", null ],
     [ "numEPNs", "d7/def/structDeviceOptions.html#ab6358573bb31d421e8e53a1c92de722a", null ],
     [ "numFLPs", "d7/def/structDeviceOptions.html#a2dbaae8e42a31497aa4a671a0b601a40", null ],
     [ "numInputs", "d7/def/structDeviceOptions.html#aceaf2af65fd2d6c28dabecc5c81569f6", null ],
@@ -56,5 +69,6 @@ var structDeviceOptions =
     [ "outputSocketType", "d7/def/structDeviceOptions.html#a3d543f4f40eca8f42c2dfa58955a9170", null ],
     [ "sendDelay", "d7/def/structDeviceOptions.html#a9658c7b51d2e808b751ce05e864b24c7", null ],
     [ "sendOffset", "d7/def/structDeviceOptions.html#a8c020b376db57283f5e0614c567acfea", null ],
+    [ "storeRTTinFile", "d7/def/structDeviceOptions.html#a19b5aace0d4fbc8c6b4c69699b9df8b6", null ],
     [ "testMode", "d7/def/structDeviceOptions.html#a7e5a32da381711f7a0f6b9aa0dd26cbe", null ]
 ];

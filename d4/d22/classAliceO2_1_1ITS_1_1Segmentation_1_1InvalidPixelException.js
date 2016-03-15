@@ -10,9 +10,5 @@ var classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException =
     [ "GetPixelID", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a08ad2a7998cf20f8778648af3d683282", null ],
     [ "IsX", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a65df7a680f54ce0c4646331c7702af2d", null ],
     [ "IsZ", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a8dc710a9a9c1d7952bd91774c8780245", null ],
-    [ "what", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a544146ff4e18e1f3af4d19fbf2600263", null ],
-    [ "fDirection", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a13cba615ffa6fffbff7e30d793729787", null ],
-    [ "fErrorMessage", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a9632bc8bba19e60c79db2607ef6b6ef6", null ],
-    [ "fMaxPixelID", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a3a1e508f17a2216a5fd41f350cdb957a", null ],
-    [ "fValue", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a88ae887b2b3719a96079336da941be4f", null ]
+    [ "what", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a544146ff4e18e1f3af4d19fbf2600263", null ]
 ];

@@ -11,7 +11,6 @@ var classAliceO2_1_1ITS_1_1Point =
     [ "Point", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#ad92f2337b839a94ce97dcdb439b4325a", null ],
     [ "Point", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a819f1cc5429e0967c264fc515834e2e4", null ],
     [ "~Point", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a395fa04b4ec126b66fc053f829a30cc1", null ],
-    [ "Point", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a39a4c66a36427614947acf2ddaf6bbf4", null ],
     [ "GetShunt", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a9bb0cee982d381a05cdfcf757c46e88f", null ],
     [ "GetStartPosition", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a9699abad1589a5955cfc3c81d4599454", null ],
     [ "GetStartTime", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a282f63b4d184e5b8b4419878e1a4d8c5", null ],
@@ -32,14 +31,6 @@ var classAliceO2_1_1ITS_1_1Point =
     [ "IsOutStart", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a908ae76dd15501ec5e506e75e8529860", null ],
     [ "IsStopped", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a5aa1515ca8c192dd1fdfe6fbbe3d8195", null ],
     [ "IsStoppedStart", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a3b5837dc024ac2149c431d30a269eedd", null ],
-    [ "operator=", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a6276137a3347c66acf30dca1699af0e8", null ],
     [ "Print", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a6e2fb2a5eb66cafd2cc56268f373eef9", null ],
-    [ "operator<<", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a595d9ae86b12d98862354fb1597b9c6d", null ],
-    [ "fShunt", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a0f9b3196e908ce4804dea3906393c727", null ],
-    [ "fStartTime", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a26937a4ae356ae679172aa03ed5fecc6", null ],
-    [ "fStartX", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a738de164fce97c375c552cc5e1c4896e", null ],
-    [ "fStartY", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a09c684a163ee129e4c67c50a1a6048dd", null ],
-    [ "fStartZ", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#ac32a956092722a185555b31c8188ae62", null ],
-    [ "fTrackStatus", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a655bd30507ce94051a780b5c0cc32498", null ],
-    [ "fTrackStatusStart", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a232082c73c33717de07d4a2c25846cf9", null ]
+    [ "operator<<", "df/d7a/classAliceO2_1_1ITS_1_1Point.html#a595d9ae86b12d98862354fb1597b9c6d", null ]
 ];

@@ -1,6 +1,8 @@
 var classAliceO2_1_1Devices_1_1FLPSyncSampler =
 [
     [ "EventRate", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fab89a032dcf3b382f1d336c3841596c46", null ],
+    [ "MaxEvents", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76faa9ae6b3eaf3bb9bf2b067c71df8892c8", null ],
+    [ "StoreRTTinFile", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fa514b8d52fee906d4891be5a4f117482e", null ],
     [ "Last", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fa0c119352cc77b3dfa0fed55c0862e612", null ],
     [ "FLPSyncSampler", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a1eb2bfe565600050dfdcbda7d90d9a8e", null ],
     [ "~FLPSyncSampler", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a38d903c7d8068bf92f18132596d730d5", null ],
@@ -14,5 +16,7 @@ var classAliceO2_1_1Devices_1_1FLPSyncSampler =
     [ "SetProperty", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a87b2e26d2cf2bffe0cf13aa21840e0eb", null ],
     [ "fEventCounter", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a2dfe02c40ef863b6394ebe585b25530e", null ],
     [ "fEventRate", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#ad39dd0425d8bf23a261fc3675841e8c4", null ],
+    [ "fMaxEvents", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#ad7f504a76fc0309ea296024f558e5b00", null ],
+    [ "fStoreRTTinFile", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#af6540a03b5a77f215d2309184317b938", null ],
     [ "fTimeframeRTT", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a91004bf3fb37978ccfae1dd143e496b5", null ]
 ];

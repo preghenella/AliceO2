@@ -11,17 +11,8 @@ var classAliceO2_1_1CDB_1_1IdPath =
     [ "doesLevel2Contain", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a51ee6b762a443a39807605abdfaa3011", null ],
     [ "getLevel", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a16653f7f0b5ab5384ca6bbb3af348824", null ],
     [ "getPathString", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a0bc872e88d8d9f07cdb97afbd1a17eea", null ],
-    [ "init", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a59fccc5089671ca22103009a98ef0539", null ],
-    [ "InitPath", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#ae9c768babe920e7696e83eca33adb824", null ],
     [ "isSupersetOf", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a24e855beea589aaf337ec43727918911", null ],
     [ "isValid", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a2a45ebc3428ca654c4e98937b2bbb44f", null ],
     [ "isWildcard", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a421184345d538b9dcbfa504248ff72dd", null ],
-    [ "isWord", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a91a6ed1e1499aadf0293bd61b332ef1f", null ],
-    [ "setPath", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#aa30d5e0d30fc9f39fe56216a82a3829f", null ],
-    [ "mLevel0", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a82ee47b72dc5110b36661196bcc12181", null ],
-    [ "mLevel1", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a2d9fb22336a9b701d42493087863f369", null ],
-    [ "mLevel2", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a8d47105f788e7783a43822887e46cc86", null ],
-    [ "mPath", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a394a86b13c39402d30519db30fcd4aa6", null ],
-    [ "mValid", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a5c936ae76022fe48d6703458236855bd", null ],
-    [ "mWildcard", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#aacf155b05b2089724b3ed96f0b14402c", null ]
+    [ "setPath", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#aa30d5e0d30fc9f39fe56216a82a3829f", null ]
 ];

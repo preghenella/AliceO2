@@ -12,6 +12,16 @@ var dir_3472b3ea63d1c5eec14900552ebe61c1 =
     [ "ConditionMetaData.h", "d1/d3f/ConditionMetaData_8h.html", [
       [ "ConditionMetaData", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData" ]
     ] ],
+    [ "ConditionsMQClient.cxx", "d4/df0/ConditionsMQClient_8cxx.html", [
+      [ "WrapTMessage", "de/dd8/classWrapTMessage.html", "de/dd8/classWrapTMessage" ]
+    ] ],
+    [ "ConditionsMQClient.h", "d4/d6b/ConditionsMQClient_8h.html", [
+      [ "ConditionsMQClient", "dc/d2f/classAliceO2_1_1CDB_1_1ConditionsMQClient.html", "dc/d2f/classAliceO2_1_1CDB_1_1ConditionsMQClient" ]
+    ] ],
+    [ "ConditionsMQServer.cxx", "da/dd3/ConditionsMQServer_8cxx.html", "da/dd3/ConditionsMQServer_8cxx" ],
+    [ "ConditionsMQServer.h", "d7/dc8/ConditionsMQServer_8h.html", [
+      [ "ConditionsMQServer", "d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer.html", "d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer" ]
+    ] ],
     [ "FileStorage.cxx", "d8/d9a/FileStorage_8cxx.html", "d8/d9a/FileStorage_8cxx" ],
     [ "FileStorage.h", "df/d0e/FileStorage_8h.html", [
       [ "FileStorage", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage" ],
@@ -45,6 +55,8 @@ var dir_3472b3ea63d1c5eec14900552ebe61c1 =
       [ "StorageParameters", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters" ]
     ] ],
     [ "O2CdbLinkDef.h", "dd/d9f/O2CdbLinkDef_8h.html", null ],
+    [ "runConditionsClient.cxx", "d4/d0f/runConditionsClient_8cxx.html", "d4/d0f/runConditionsClient_8cxx" ],
+    [ "runConditionsServer.cxx", "d1/d85/runConditionsServer_8cxx.html", "d1/d85/runConditionsServer_8cxx" ],
     [ "Storage.cxx", "db/d03/Storage_8cxx.html", "db/d03/Storage_8cxx" ],
     [ "Storage.h", "db/d6f/Storage_8h.html", [
       [ "Storage", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html", "d3/d9c/classAliceO2_1_1CDB_1_1Storage" ]

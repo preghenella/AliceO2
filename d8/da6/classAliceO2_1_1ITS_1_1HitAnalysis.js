@@ -2,25 +2,11 @@ var classAliceO2_1_1ITS_1_1HitAnalysis =
 [
     [ "HitAnalysis", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a229543622c941c9b95ed39af8b5c3557", null ],
     [ "~HitAnalysis", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#aac4a09992922966c876c85854b46dcc2", null ],
-    [ "ClassDef", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a2560669de0a7ff4ea7de2cc1497cbd2a", null ],
     [ "Exec", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a56b9b470095a45b7f2dd63078be3ab76", null ],
     [ "FinishTask", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a942dc63606179ab84c39269f238a47b9", null ],
     [ "Init", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#adfe26c45f4441ad841f86d83536217a9", null ],
     [ "ProcessChips", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a30bd493460736f894407ca4fb0ad7e70", null ],
     [ "ProcessHits", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a423076165a779865ff58b08920d614e2", null ],
     [ "SetProcessChips", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#adb057b4653de67f43ad858071f63fc97", null ],
-    [ "SetProcessHits", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a681f2d98502d812d2e301b332a2950c4", null ],
-    [ "fChips", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a4a19a78548f3aab595b6b2996b39b875", null ],
-    [ "fGeometry", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a3294f4771aa88e888708d9bcf1eb237b", null ],
-    [ "fHitCounter", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a3593b6528525fc85cd2fb406c61c60e3", null ],
-    [ "fIsInitialized", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#af0db7d272c7b1951fb01d59b4aa90eac", null ],
-    [ "fLineSegment", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#ac69fa98bd9f2ff77d4f53844ba528fec", null ],
-    [ "fLocalX0", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a1e5f46ad593f07f19c9fcd405495154c", null ],
-    [ "fLocalX1", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a67dae88743f814205fc4f0f42b14267d", null ],
-    [ "fLocalY0", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#afcb7b5dd2cfa9bd0d4b9645bef65427d", null ],
-    [ "fLocalY1", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a57898a0b2670c7a5eaeaf72a91757092", null ],
-    [ "fLocalZ0", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a2111cc14e2a12054f458faae79c466d9", null ],
-    [ "fLocalZ1", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a0993a819d60e772c06f0dacf4dcebadb", null ],
-    [ "fPointsArray", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a2581821974f9777bf5b10eaa199c2127", null ],
-    [ "fProcessChips", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a593a20a7bc18412d456aa3116b7c3a42", null ]
+    [ "SetProcessHits", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html#a681f2d98502d812d2e301b332a2950c4", null ]
 ];

@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -110,7 +109,6 @@ $(document).ready(function(){initNavTree('d7/d56/classAliceO2_1_1ITS_1_1DigitLay
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../db/d4b/classAliceO2_1_1ITS_1_1DigitLayer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AliceO2::ITS::DigitLayer Class Reference</div>  </div>
@@ -121,7 +119,7 @@ $(document).ready(function(){initNavTree('d7/d56/classAliceO2_1_1ITS_1_1DigitLay
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac57a3e581087d5e757278b4eee53691c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html#ac57a3e581087d5e757278b4eee53691c">DigitLayer</a> (Int_t <a class="el" href="../../d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html#aa237d8c043d31a288f50aa7d6b99191e">fLayerID</a>, Int_t nstaves)</td></tr>
+<tr class="memitem:ac57a3e581087d5e757278b4eee53691c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html#ac57a3e581087d5e757278b4eee53691c">DigitLayer</a> (Int_t fLayerID, Int_t nstaves)</td></tr>
 <tr class="separator:ac57a3e581087d5e757278b4eee53691c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2001236b00592d3ae8085d2374caf58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html#ab2001236b00592d3ae8085d2374caf58">~DigitLayer</a> ()</td></tr>
 <tr class="separator:ab2001236b00592d3ae8085d2374caf58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,18 +131,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a82b1d64d1e6846e35ee93135d617db19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f2c5ffb5a8c370fb96b98008a1f9cfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html#a5f2c5ffb5a8c370fb96b98008a1f9cfc">FillOutputContainer</a> (TClonesArray *output)</td></tr>
 <tr class="separator:a5f2c5ffb5a8c370fb96b98008a1f9cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:aa237d8c043d31a288f50aa7d6b99191e"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html#aa237d8c043d31a288f50aa7d6b99191e">fLayerID</a></td></tr>
-<tr class="memdesc:aa237d8c043d31a288f50aa7d6b99191e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Layer ID.  <a href="#aa237d8c043d31a288f50aa7d6b99191e">More...</a><br /></td></tr>
-<tr class="separator:aa237d8c043d31a288f50aa7d6b99191e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068e5601b2cc1359d53cadb3b7d2a908"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html#a068e5601b2cc1359d53cadb3b7d2a908">fNStaves</a></td></tr>
-<tr class="memdesc:a068e5601b2cc1359d53cadb3b7d2a908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of staves in Layer.  <a href="#a068e5601b2cc1359d53cadb3b7d2a908">More...</a><br /></td></tr>
-<tr class="separator:a068e5601b2cc1359d53cadb3b7d2a908"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5320636d93fa69f3ad99d2ec5dba3fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d02/classAliceO2_1_1ITS_1_1DigitStave.html">DigitStave</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html#af5320636d93fa69f3ad99d2ec5dba3fa">fStaves</a></td></tr>
-<tr class="memdesc:af5320636d93fa69f3ad99d2ec5dba3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container of staves.  <a href="#af5320636d93fa69f3ad99d2ec5dba3fa">More...</a><br /></td></tr>
-<tr class="separator:af5320636d93fa69f3ad99d2ec5dba3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -293,79 +279,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aa237d8c043d31a288f50aa7d6b99191e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Int_t AliceO2::ITS::DigitLayer::fLayerID</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Layer ID. </p>
-
-<p>Definition at line <a class="el" href="../../dd/d7e/DigitLayer_8h_source.html#l00035">35</a> of file <a class="el" href="../../dd/d7e/DigitLayer_8h_source.html">DigitLayer.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a068e5601b2cc1359d53cadb3b7d2a908"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Int_t AliceO2::ITS::DigitLayer::fNStaves</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Number of staves in Layer. </p>
-
-<p>Definition at line <a class="el" href="../../dd/d7e/DigitLayer_8h_source.html#l00036">36</a> of file <a class="el" href="../../dd/d7e/DigitLayer_8h_source.html">DigitLayer.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af5320636d93fa69f3ad99d2ec5dba3fa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d02/classAliceO2_1_1ITS_1_1DigitStave.html">DigitStave</a>** AliceO2::ITS::DigitLayer::fStaves</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Container of staves. </p>
-
-<p>Definition at line <a class="el" href="../../dd/d7e/DigitLayer_8h_source.html#l00037">37</a> of file <a class="el" href="../../dd/d7e/DigitLayer_8h_source.html">DigitLayer.h</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>itsmft/its/<a class="el" href="../../dd/d7e/DigitLayer_8h_source.html">DigitLayer.h</a></li>
 <li>itsmft/its/<a class="el" href="../../d7/d1c/DigitLayer_8cxx_source.html">DigitLayer.cxx</a></li>
@@ -376,7 +289,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li><li class="navelem"><a class="el" href="../../db/d51/namespaceAliceO2_1_1ITS.html">ITS</a></li><li class="navelem"><a class="el" href="../../d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html">DigitLayer</a></li>
-    <li class="footer">Generated on Thu Nov 12 2015 10:02:53 for AliceO2 by
+    <li class="footer">Generated on Tue Mar 15 2016 16:06:24 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

@@ -6,7 +6,5 @@ var classAliceO2_1_1CDB_1_1StorageParameters =
     [ "getStorageType", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html#add0e9fa7408644055b3f3f0c164e31da", null ],
     [ "getUri", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html#a343442fe0d8628bb41702e96e4729c47", null ],
     [ "setType", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html#ac8595e315f2799741b1aa4165e897171", null ],
-    [ "setUri", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html#aa48508ba50c9212a2d61194cf5867ca2", null ],
-    [ "mType", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html#a96935f4ab2f7ecea96d49e6d31eac298", null ],
-    [ "mURI", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html#a0be57220ecc95c1505385dbc67331c29", null ]
+    [ "setUri", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html#aa48508ba50c9212a2d61194cf5867ca2", null ]
 ];

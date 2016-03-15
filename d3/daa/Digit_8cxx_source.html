@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -139,7 +138,7 @@ $(document).ready(function(){initNavTree('d3/daa/Digit_8cxx_source.html','../../
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#ad451d3b0f50985ed2730ba0eb7d09b03">   29</a></span>&#160;Digit::~Digit(){}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a82f315393275aaf2f175fa411a8f1ff2">   31</a></span>&#160;<a class="code" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">Digit</a> &amp;Digit::operator+=(<span class="keyword">const</span> <a class="code" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">Digit</a> &amp;other){</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  fCharge += other.<a class="code" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#ab88cde25798e75b4f9a4674628d11f09">fCharge</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  fCharge += other.fCharge;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
@@ -154,7 +153,6 @@ $(document).ready(function(){initNavTree('d3/daa/Digit_8cxx_source.html','../../
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  output &lt;&lt; <span class="stringliteral">&quot;ITS Digit of chip index [&quot;</span> &lt;&lt; fChipIndex &lt;&lt; <span class="stringliteral">&quot;] and pixel [&quot;</span> &lt;&lt; fPixelIndex &lt;&lt; <span class="stringliteral">&quot;]with charge &quot;</span> &lt;&lt; fCharge &lt;&lt; <span class="stringliteral">&quot; at time stamp&quot;</span> &lt;&lt; fTimeStamp;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> output;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="ttc" id="classAliceO2_1_1ITS_1_1Digit_html_ab88cde25798e75b4f9a4674628d11f09"><div class="ttname"><a href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#ab88cde25798e75b4f9a4674628d11f09">AliceO2::ITS::Digit::fCharge</a></div><div class="ttdeci">Double_t fCharge</div><div class="ttdoc">Accumulated charge. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5d/Digit_8h_source.html#l00139">Digit.h:139</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1Digit_html"><div class="ttname"><a href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">AliceO2::ITS::Digit</a></div><div class="ttdoc">Digit class for the ITS. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5d/Digit_8h_source.html#l00020">Digit.h:20</a></div></div>
 <div class="ttc" id="namespaceAliceO2_html"><div class="ttname"><a href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/Base_2Detector_8h_source.html#l00010">Detector.h:10</a></div></div>
 <div class="ttc" id="TrackReference_8cxx_html_a3009a839d083cbdd1c18dfe7d9fee024"><div class="ttname"><a href="../../da/d10/TrackReference_8cxx.html#a3009a839d083cbdd1c18dfe7d9fee024">ClassImp</a></div><div class="ttdeci">ClassImp(AliceO2::Base::TrackReference) TrackReference</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d10/TrackReference_8cxx_source.html#l00015">TrackReference.cxx:15</a></div></div>
@@ -165,7 +163,7 @@ $(document).ready(function(){initNavTree('d3/daa/Digit_8cxx_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_a97657a30608f436a00544c6157aa7b8.html">itsmft</a></li><li class="navelem"><a class="el" href="../../dir_31e95aaf2ef0aa40cd374fc52012a6f9.html">its</a></li><li class="navelem"><a class="el" href="../../d3/daa/Digit_8cxx.html">Digit.cxx</a></li>
-    <li class="footer">Generated on Thu Nov 12 2015 10:02:52 for AliceO2 by
+    <li class="footer">Generated on Tue Mar 15 2016 16:06:23 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

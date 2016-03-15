@@ -5,7 +5,5 @@ var classAliceO2_1_1ITS_1_1Chip_1_1IndexException =
     [ "~IndexException", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#adb1dfc6d21d70c89ce38f386089d7f13", null ],
     [ "GetChipIndexChip", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#a15a937aa7782a2aa2a9ce8d2c444ab98", null ],
     [ "GetChipIndexHit", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#a187aaf82cf29d451e411c3d44cca33c2", null ],
-    [ "what", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#aa22b81eaad95a894b31c2564f5bfa99f", null ],
-    [ "fDetIdChip", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#aafa2840ea51a2d15d01989821542741f", null ],
-    [ "fDetIdHit", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#a4be88cadd5e9f14168f0f0b3868db823", null ]
+    [ "what", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#aa22b81eaad95a894b31c2564f5bfa99f", null ]
 ];

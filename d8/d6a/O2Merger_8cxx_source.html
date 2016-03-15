@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -115,51 +114,48 @@ $(document).ready(function(){initNavTree('d8/d6a/O2Merger_8cxx_source.html','../
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;boost/bind.hpp&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;FairMQLogger.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/dce/O2Merger_8h.html">O2Merger.h</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;FairMQPoller.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../db/daa/classO2Merger.html#a620901acb882a8afec3abca0ba6bfb6d">   14</a></span>&#160;<a class="code" href="../../db/daa/classO2Merger.html#a620901acb882a8afec3abca0ba6bfb6d">O2Merger::O2Merger</a>()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../db/daa/classO2Merger.html#af634d72ea968c0bb2475738d9646fe4e">   18</a></span>&#160;<a class="code" href="../../db/daa/classO2Merger.html#af634d72ea968c0bb2475738d9646fe4e">O2Merger::~O2Merger</a>()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../db/daa/classO2Merger.html#a4974d3a1e0ddd3f5d2536e0001724f7c">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/daa/classO2Merger.html#a4974d3a1e0ddd3f5d2536e0001724f7c">O2Merger::Run</a>()</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  FairMQPoller* poller = fTransportFactory-&gt;CreatePoller(fChannels[<span class="stringliteral">&quot;data-in&quot;</span>]);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> NoOfMsgParts = fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].size() - 1;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">while</span> (CheckCurrentState(RUNNING)) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    FairMQMessage* msg = fTransportFactory-&gt;CreateMessage();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    poller-&gt;Poll(100);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].size(); i++) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keywordflow">if</span> (poller-&gt;CheckInput(i)) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> (fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(i).Receive(msg)) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          <span class="comment">// LOG(INFO) &lt;&lt; &quot;------ recieve Msg from &quot; &lt;&lt; i ;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          <span class="keywordflow">if</span> (i &lt; NoOfMsgParts) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].at(0).Send(msg, <span class="stringliteral">&quot;snd-more&quot;</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="comment">//    LOG(INFO) &lt;&lt; &quot;------ Send  Msg Part &quot; &lt;&lt; i ;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;          } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].at(0).Send(msg);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">//    LOG(INFO) &lt;&lt; &quot;------ Send  last Msg Part &quot; &lt;&lt; i ;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">delete</span> msg;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;FairMQPoller.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/dce/O2Merger_8h.html">O2Merger.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../db/daa/classO2Merger.html#a620901acb882a8afec3abca0ba6bfb6d">   15</a></span>&#160;<a class="code" href="../../db/daa/classO2Merger.html#a620901acb882a8afec3abca0ba6bfb6d">O2Merger::O2Merger</a>()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../db/daa/classO2Merger.html#af634d72ea968c0bb2475738d9646fe4e">   19</a></span>&#160;<a class="code" href="../../db/daa/classO2Merger.html#af634d72ea968c0bb2475738d9646fe4e">O2Merger::~O2Merger</a>()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../db/daa/classO2Merger.html#a4974d3a1e0ddd3f5d2536e0001724f7c">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/daa/classO2Merger.html#a4974d3a1e0ddd3f5d2536e0001724f7c">O2Merger::Run</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  std::unique_ptr&lt;FairMQPoller&gt; poller(fTransportFactory-&gt;CreatePoller(fChannels.at(<span class="stringliteral">&quot;data-in&quot;</span>)));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">int</span> numParts = fChannels.at(<span class="stringliteral">&quot;data-in&quot;</span>).size() - 1;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">while</span> (CheckCurrentState(RUNNING)) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::unique_ptr&lt;FairMQMessage&gt; msg(fTransportFactory-&gt;CreateMessage());</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    poller-&gt;Poll(100);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; fChannels.at(<span class="stringliteral">&quot;data-in&quot;</span>).size(); i++) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordflow">if</span> (poller-&gt;CheckInput(i)) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (fChannels.at(<span class="stringliteral">&quot;data-in&quot;</span>).at(i).Receive(msg) &gt;= 0) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          <span class="comment">// LOG(INFO) &lt;&lt; &quot;------ recieve Msg from &quot; &lt;&lt; i ;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          <span class="keywordflow">if</span> (i &lt; numParts) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            fChannels.at(<span class="stringliteral">&quot;data-out&quot;</span>).at(0).SendPart(msg);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">//    LOG(INFO) &lt;&lt; &quot;------ Send  Msg Part &quot; &lt;&lt; i ;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            fChannels.at(<span class="stringliteral">&quot;data-out&quot;</span>).at(0).Send(msg);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">//    LOG(INFO) &lt;&lt; &quot;------ Send  last Msg Part &quot; &lt;&lt; i ;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">delete</span> poller;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="ttc" id="classO2Merger_html_a620901acb882a8afec3abca0ba6bfb6d"><div class="ttname"><a href="../../db/daa/classO2Merger.html#a620901acb882a8afec3abca0ba6bfb6d">O2Merger::O2Merger</a></div><div class="ttdeci">O2Merger()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6a/O2Merger_8cxx_source.html#l00014">O2Merger.cxx:14</a></div></div>
-<div class="ttc" id="classO2Merger_html_a4974d3a1e0ddd3f5d2536e0001724f7c"><div class="ttname"><a href="../../db/daa/classO2Merger.html#a4974d3a1e0ddd3f5d2536e0001724f7c">O2Merger::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6a/O2Merger_8cxx_source.html#l00022">O2Merger.cxx:22</a></div></div>
-<div class="ttc" id="classO2Merger_html_af634d72ea968c0bb2475738d9646fe4e"><div class="ttname"><a href="../../db/daa/classO2Merger.html#af634d72ea968c0bb2475738d9646fe4e">O2Merger::~O2Merger</a></div><div class="ttdeci">virtual ~O2Merger()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6a/O2Merger_8cxx_source.html#l00018">O2Merger.cxx:18</a></div></div>
+<div class="ttc" id="classO2Merger_html_a620901acb882a8afec3abca0ba6bfb6d"><div class="ttname"><a href="../../db/daa/classO2Merger.html#a620901acb882a8afec3abca0ba6bfb6d">O2Merger::O2Merger</a></div><div class="ttdeci">O2Merger()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6a/O2Merger_8cxx_source.html#l00015">O2Merger.cxx:15</a></div></div>
+<div class="ttc" id="classO2Merger_html_a4974d3a1e0ddd3f5d2536e0001724f7c"><div class="ttname"><a href="../../db/daa/classO2Merger.html#a4974d3a1e0ddd3f5d2536e0001724f7c">O2Merger::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6a/O2Merger_8cxx_source.html#l00023">O2Merger.cxx:23</a></div></div>
+<div class="ttc" id="classO2Merger_html_af634d72ea968c0bb2475738d9646fe4e"><div class="ttname"><a href="../../db/daa/classO2Merger.html#af634d72ea968c0bb2475738d9646fe4e">O2Merger::~O2Merger</a></div><div class="ttdeci">virtual ~O2Merger()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6a/O2Merger_8cxx_source.html#l00019">O2Merger.cxx:19</a></div></div>
 <div class="ttc" id="O2Merger_8h_html"><div class="ttname"><a href="../../dc/dce/O2Merger_8h.html">O2Merger.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -167,7 +163,7 @@ $(document).ready(function(){initNavTree('d8/d6a/O2Merger_8cxx_source.html','../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d8825559e0a3f2643aa079b2cf0ac6c3.html">devices</a></li><li class="navelem"><a class="el" href="../../dir_ce40628757e3bffb4840225cf7b8335a.html">flp2epn</a></li><li class="navelem"><a class="el" href="../../d8/d6a/O2Merger_8cxx.html">O2Merger.cxx</a></li>
-    <li class="footer">Generated on Thu Nov 12 2015 10:02:52 for AliceO2 by
+    <li class="footer">Generated on Tue Mar 15 2016 16:06:23 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

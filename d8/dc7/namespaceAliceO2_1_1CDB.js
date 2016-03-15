@@ -3,6 +3,8 @@ var namespaceAliceO2_1_1CDB =
     [ "Condition", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html", "df/d2c/classAliceO2_1_1CDB_1_1Condition" ],
     [ "ConditionId", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html", "df/de3/classAliceO2_1_1CDB_1_1ConditionId" ],
     [ "ConditionMetaData", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData" ],
+    [ "ConditionsMQClient", "dc/d2f/classAliceO2_1_1CDB_1_1ConditionsMQClient.html", "dc/d2f/classAliceO2_1_1CDB_1_1ConditionsMQClient" ],
+    [ "ConditionsMQServer", "d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer.html", "d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer" ],
     [ "FileStorage", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage" ],
     [ "FileStorageFactory", "d4/dc7/classAliceO2_1_1CDB_1_1FileStorageFactory.html", "d4/dc7/classAliceO2_1_1CDB_1_1FileStorageFactory" ],
     [ "FileStorageParameters", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters.html", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters" ],

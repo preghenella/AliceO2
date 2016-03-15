@@ -17,11 +17,5 @@ var classAliceO2_1_1CDB_1_1ConditionMetaData =
     [ "setComment", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a9dbc17cdfc4f05d7d2c44e584c9c3489", null ],
     [ "setObjectClassName", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a3ec200a889668b848e894cccab163e86", null ],
     [ "setProperty", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a6ce10e1d2d338fae8aceac1eed725eab", null ],
-    [ "setResponsible", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#acc6697d26e6d0552c52024bf00205b97", null ],
-    [ "mAliRootVersion", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#aa33591e237b69d53fa69e1c1d5b2da12", null ],
-    [ "mBeamPeriod", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a30e5643822964512e79d9617580e0148", null ],
-    [ "mComment", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a851cb408f5b802a0fefeec4225d906b6", null ],
-    [ "mObjectClassName", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a2515b27d6a10891e2501b68b8c47b7c0", null ],
-    [ "mProperties", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ae9da85c0c9d0536c0e5daffdbabb8add", null ],
-    [ "mResponsible", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a94441534f10ecee48a5d52e34bd891d4", null ]
+    [ "setResponsible", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#acc6697d26e6d0552c52024bf00205b97", null ]
 ];

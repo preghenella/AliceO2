@@ -1,28 +1,14 @@
 var classAliceO2_1_1CDB_1_1FileStorage =
 [
-    [ "FileStorage", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a5ac9903081532bdc4934bc4b70e4d803", null ],
-    [ "FileStorage", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a47df652083d30cd76ef6cdfc3d556a17", null ],
-    [ "~FileStorage", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a336c41583d9b31f33988319e4397c5fc", null ],
     [ "getAllEntries", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a12cc6b0053c61eb89b323e4b477545c5", null ],
     [ "getCondition", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a891be552d04fab334df34d26d3cd458b", null ],
     [ "getConditionId", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#ae23881d8b02edfabbca0a17c1fadf9e2", null ],
-    [ "getEntriesForLevel0", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#ab0082abf3737494808c30a00d2cdd442", null ],
-    [ "getEntriesForLevel1", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a3a06c7e2ef454255ecad68e692ac0241", null ],
-    [ "getId", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a67b3037bfc1192c67bee283fc270c032", null ],
     [ "getIdListFromFile", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#ac96daf0df5eeecfce1197ae264b1df37", null ],
     [ "hasConditionType", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#ac960987662c6b6f6f3b8a47f37d07ff8", null ],
     [ "hasSubVersion", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a07852c245dbc9241b8507bcf3ed8e646", null ],
     [ "idToFilename", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a697dfb9c0ff030e343ababecccad1c44", null ],
-    [ "idToKeyName", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a815b005697a4383af328cb3e60b00e8c", null ],
     [ "isReadOnly", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#aaeaeb8271bd0fc24eb9425958085f886", null ],
-    [ "keyNameToId", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#acabde63b898a59daa02e069be009055e", null ],
-    [ "makeDir", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#ac2f51253e3a1f64f9d41c4d9a6ce8f9c", null ],
-    [ "operator=", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#aec5244ad4a8ccce6b96e6765d385c629", null ],
-    [ "prepareId", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a51826c5f242ebb02a6d15012b9594226", null ],
     [ "putCondition", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a24bd815d3e9dc7a14c800cb234540a3e", null ],
-    [ "queryValidFiles", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a71ea266b8f5a2202e026eff0fd227a24", null ],
     [ "setRetry", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#aa86db27e77723c80e0bac999ce51147e", null ],
-    [ "FileStorageFactory", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#aac73cc5a9770c275443523424328213b", null ],
-    [ "mFile", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a332ee9e35407b14345dc413b4bd3d2d8", null ],
-    [ "mReadOnly", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#a339206a142d5efbb8e24efaa0073b9f5", null ]
+    [ "FileStorageFactory", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html#aac73cc5a9770c275443523424328213b", null ]
 ];

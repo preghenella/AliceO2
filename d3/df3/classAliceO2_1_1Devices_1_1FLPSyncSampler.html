@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -135,6 +134,8 @@ Inheritance diagram for AliceO2::Devices::FLPSyncSampler:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a89869f5b1e094a23fb98e0be5a20f76f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fab89a032dcf3b382f1d336c3841596c46">EventRate</a> = FairMQDevice::Last, 
+<a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76faa9ae6b3eaf3bb9bf2b067c71df8892c8">MaxEvents</a>, 
+<a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fa514b8d52fee906d4891be5a4f117482e">StoreRTTinFile</a>, 
 <a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fa0c119352cc77b3dfa0fed55c0862e612">Last</a>
  }<tr class="separator:a89869f5b1e094a23fb98e0be5a20f76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
@@ -179,6 +180,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ad39dd0425d8bf23a261fc3675841e8c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#ad39dd0425d8bf23a261fc3675841e8c4">fEventRate</a></td></tr>
 <tr class="memdesc:ad39dd0425d8bf23a261fc3675841e8c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishing rate of the timeframe IDs.  <a href="#ad39dd0425d8bf23a261fc3675841e8c4">More...</a><br /></td></tr>
 <tr class="separator:ad39dd0425d8bf23a261fc3675841e8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f504a76fc0309ea296024f558e5b00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#ad7f504a76fc0309ea296024f558e5b00">fMaxEvents</a></td></tr>
+<tr class="memdesc:ad7f504a76fc0309ea296024f558e5b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of events to send (0 - unlimited)  <a href="#ad7f504a76fc0309ea296024f558e5b00">More...</a><br /></td></tr>
+<tr class="separator:ad7f504a76fc0309ea296024f558e5b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6540a03b5a77f215d2309184317b938"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#af6540a03b5a77f215d2309184317b938">fStoreRTTinFile</a></td></tr>
+<tr class="memdesc:af6540a03b5a77f215d2309184317b938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store round trip time measurements in a file.  <a href="#af6540a03b5a77f215d2309184317b938">More...</a><br /></td></tr>
+<tr class="separator:af6540a03b5a77f215d2309184317b938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dfe02c40ef863b6394ebe585b25530e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a2dfe02c40ef863b6394ebe585b25530e">fEventCounter</a></td></tr>
 <tr class="memdesc:a2dfe02c40ef863b6394ebe585b25530e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the send rate of the timeframe IDs.  <a href="#a2dfe02c40ef863b6394ebe585b25530e">More...</a><br /></td></tr>
 <tr class="separator:a2dfe02c40ef863b6394ebe585b25530e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,6 +207,12 @@ Protected Attributes</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a89869f5b1e094a23fb98e0be5a20f76fab89a032dcf3b382f1d336c3841596c46"></a>EventRate&#160;</td><td class="fielddoc">
 <p>Publishing rate of the timeframe IDs. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a89869f5b1e094a23fb98e0be5a20f76faa9ae6b3eaf3bb9bf2b067c71df8892c8"></a>MaxEvents&#160;</td><td class="fielddoc">
+<p>Maximum number of events to send (0 - unlimited) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a89869f5b1e094a23fb98e0be5a20f76fa514b8d52fee906d4891be5a4f117482e"></a>StoreRTTinFile&#160;</td><td class="fielddoc">
+<p>Store round trip time measurements in a file. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a89869f5b1e094a23fb98e0be5a20f76fa0c119352cc77b3dfa0fed55c0862e612"></a>Last&#160;</td><td class="fielddoc">
 </td></tr>
@@ -252,7 +265,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Default destructor. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00029">29</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00031">31</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -339,7 +352,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Property value </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00156">156</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00184">184</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -366,7 +379,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Overloads the <a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89e04b495375a00b22428e8701721878" title="Overloads the InitTask() method of FairMQDevice. ">InitTask()</a> method of FairMQDevice. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00033">33</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00035">35</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -385,7 +398,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Listens for acknowledgements from the epnReceivers when they collected full timeframe. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00082">82</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00085">85</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -404,7 +417,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Controls the send rate of the timeframe IDs. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00114">114</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00136">136</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -431,7 +444,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Overloads the <a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a0d0e314f29399e6a690efe5c88d96313" title="Overloads the Run() method of FairMQDevice. ">Run()</a> method of FairMQDevice. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00040">40</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00042">42</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -515,7 +528,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00144">144</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00166">166</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -540,7 +553,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Controls the send rate of the timeframe IDs. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00077">77</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00081">81</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
 
 </div>
 </div>
@@ -564,7 +577,55 @@ Protected Attributes</h2></td></tr>
 
 <p>Publishing rate of the timeframe IDs. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00076">76</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00078">78</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad7f504a76fc0309ea296024f558e5b00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AliceO2::Devices::FLPSyncSampler::fMaxEvents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum number of events to send (0 - unlimited) </p>
+
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00079">79</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af6540a03b5a77f215d2309184317b938"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AliceO2::Devices::FLPSyncSampler::fStoreRTTinFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Store round trip time measurements in a file. </p>
+
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00080">80</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
 
 </div>
 </div>
@@ -588,7 +649,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Container for the roundtrip values per timeframe ID. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00075">75</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00077">77</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
 
 </div>
 </div>
@@ -602,7 +663,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li><li class="navelem"><a class="el" href="../../d3/d4f/namespaceAliceO2_1_1Devices.html">Devices</a></li><li class="navelem"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html">FLPSyncSampler</a></li>
-    <li class="footer">Generated on Thu Nov 12 2015 10:02:53 for AliceO2 by
+    <li class="footer">Generated on Tue Mar 15 2016 16:06:24 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

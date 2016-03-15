@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -112,9 +111,6 @@ $(document).ready(function(){initNavTree('d0/de6/classAliceO2_1_1ITS_1_1Geometry
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="../../dd/dba/classAliceO2_1_1ITS_1_1GeometryManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AliceO2::ITS::GeometryManager Class Reference</div>  </div>
@@ -176,24 +172,6 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1699ef59a82b2e362761d58a9b91aa3c"><td class="memItemLeft" align="right" valign="top">static Bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a1699ef59a82b2e362761d58a9b91aa3c">getOriginalGlobalMatrix</a> (const char *symname, TGeoHMatrix &amp;m)</td></tr>
 <tr class="separator:a1699ef59a82b2e362761d58a9b91aa3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a9cea5be0b4681b1dc6804b2740c6bea8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a9cea5be0b4681b1dc6804b2740c6bea8">GeometryManager</a> ()</td></tr>
-<tr class="memdesc:a9cea5be0b4681b1dc6804b2740c6bea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a9cea5be0b4681b1dc6804b2740c6bea8">More...</a><br /></td></tr>
-<tr class="separator:a9cea5be0b4681b1dc6804b2740c6bea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4964b713697d94c92f522b2e3ee16ad3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a4964b713697d94c92f522b2e3ee16ad3">ClassDef</a> (<a class="el" href="../../d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html">GeometryManager</a>, 0)</td></tr>
-<tr class="separator:a4964b713697d94c92f522b2e3ee16ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a807b46f873897dff51fa41dfaf622743"><td class="memItemLeft" align="right" valign="top">static Bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a807b46f873897dff51fa41dfaf622743">getOriginalGlobalMatrixFromPath</a> (const char *path, TGeoHMatrix &amp;m)</td></tr>
-<tr class="separator:a807b46f873897dff51fa41dfaf622743"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:abd7ae4a7e07d467e9b60089763c21b78"><td class="memItemLeft" align="right" valign="top">static TGeoManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#abd7ae4a7e07d467e9b60089763c21b78">mGeometry</a></td></tr>
-<tr class="separator:abd7ae4a7e07d467e9b60089763c21b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for interfacing to the geometry; it also builds and manages the look-up tables for fast access to geometry and alignment information for sensitive alignable volumes: 1) the look-up table mapping unique volume ids to TGeoPNEntries. This allows to access directly by means of the unique index the associated symbolic name and original global matrix in addition to the functionality of the physical node associated to a given alignable volume 2) the look-up table of the alignment objects associated to the indexed alignable volumes </p>
@@ -282,66 +260,7 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9cea5be0b4681b1dc6804b2740c6bea8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">AliceO2::ITS::GeometryManager::GeometryManager </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default constructor. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4964b713697d94c92f522b2e3ee16ad3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">AliceO2::ITS::GeometryManager::ClassDef </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html">GeometryManager</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">0&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a1699ef59a82b2e362761d58a9b91aa3c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -379,66 +298,6 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a807b46f873897dff51fa41dfaf622743"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Bool_t GeometryManager::getOriginalGlobalMatrixFromPath </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TGeoHMatrix &amp;&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The method returns the global matrix for the volume identified by 'path' in the ideal detector geometry. The output global matrix is stored in 'm'. Returns kFALSE in case TGeo has not been initialized or the volume path is not valid. </p>
-
-<p>Definition at line <a class="el" href="../../db/df1/GeometryManager_8cxx_source.html#l00069">69</a> of file <a class="el" href="../../db/df1/GeometryManager_8cxx_source.html">GeometryManager.cxx</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="abd7ae4a7e07d467e9b60089763c21b78"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TGeoManager* AliceO2::ITS::GeometryManager::mGeometry</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../da/d41/GeometryManager_8h_source.html#l00068">68</a> of file <a class="el" href="../../da/d41/GeometryManager_8h_source.html">GeometryManager.h</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>itsmft/its/<a class="el" href="../../da/d41/GeometryManager_8h_source.html">GeometryManager.h</a></li>
 <li>itsmft/its/<a class="el" href="../../db/df1/GeometryManager_8cxx_source.html">GeometryManager.cxx</a></li>
@@ -449,7 +308,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li><li class="navelem"><a class="el" href="../../db/d51/namespaceAliceO2_1_1ITS.html">ITS</a></li><li class="navelem"><a class="el" href="../../d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html">GeometryManager</a></li>
-    <li class="footer">Generated on Thu Nov 12 2015 10:02:53 for AliceO2 by
+    <li class="footer">Generated on Tue Mar 15 2016 16:06:24 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

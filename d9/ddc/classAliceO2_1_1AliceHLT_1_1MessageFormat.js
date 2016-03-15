@@ -7,7 +7,6 @@ var classAliceO2_1_1AliceHLT_1_1MessageFormat =
     [ "kOutputModeLast", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a2232ac95edf9fa82968df4e8dfbdb3a6a696c45335bce577b996daec69ebea56e", null ],
     [ "MessageFormat", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a73f254207f45e88091d3a50b0480a227", null ],
     [ "~MessageFormat", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#ac3d053428f690aa2d369c50ed8a7ab9a", null ],
-    [ "MessageFormat", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a8a57dd8fd75ae8bfa45f2ffc1465aacc", null ],
     [ "addMessage", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#acc9be4cbe5b7e81a9db1cc605120fb86", null ],
     [ "addMessages", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a45124937dd4d3b9bb63a2cafa3190b32", null ],
     [ "byteSwap32", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#ab3a10da4c864f9d38bb2afcdd70c2f9c", null ],
@@ -19,14 +18,7 @@ var classAliceO2_1_1AliceHLT_1_1MessageFormat =
     [ "getBlockDescriptors", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a9c83da8ac78eece1e0b5a1f4e4df9f9d", null ],
     [ "getEvtDataList", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a894f17bedd140aad021f4c9b29ece3e2", null ],
     [ "insertEvtData", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a0cb44738ac036c4c389212e9e90da75d", null ],
-    [ "operator=", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#ad1c23960c0aa78434ffc9cc4ea818efc", null ],
     [ "readBlockSequence", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a1b0c182f04d86d65fbc22257fce914af", null ],
     [ "readHOMERFormat", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#adba2685b7e0bfe474c9c1e7fe38e861c", null ],
-    [ "setOutputMode", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#af9994faea7b4e155bd0ef9abc4393d12", null ],
-    [ "mBlockDescriptors", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a4314aa77d5ec1fef3c2473be35600878", null ],
-    [ "mDataBuffer", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a1b4cfd6717068434e753c99542533479", null ],
-    [ "mListEvtData", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a9480fbac24c88d3c06dc8ec7483af283", null ],
-    [ "mMessages", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a74b587c7fcbe2a010240be4ab932db97", null ],
-    [ "mOutputMode", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a2811189380c10e577e2df9ee44690647", null ],
-    [ "mpFactory", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#aa2a9ce7688dd65c7ed2f0b23d6f11f96", null ]
+    [ "setOutputMode", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#af9994faea7b4e155bd0ef9abc4393d12", null ]
 ];

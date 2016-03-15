@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -110,7 +109,6 @@ $(document).ready(function(){initNavTree('d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d6/d66/classAliceO2_1_1ITS_1_1Chip_1_1IndexException-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AliceO2::ITS::Chip::IndexException Class Reference</div>  </div>
@@ -145,15 +143,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a15a937aa7782a2aa2a9ce8d2c444ab98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a187aaf82cf29d451e411c3d44cca33c2"><td class="memItemLeft" align="right" valign="top">ULong_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#a187aaf82cf29d451e411c3d44cca33c2">GetChipIndexHit</a> () const </td></tr>
 <tr class="separator:a187aaf82cf29d451e411c3d44cca33c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:aafa2840ea51a2d15d01989821542741f"><td class="memItemLeft" align="right" valign="top">ULong_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#aafa2840ea51a2d15d01989821542741f">fDetIdChip</a></td></tr>
-<tr class="memdesc:aafa2840ea51a2d15d01989821542741f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the chip stored in the chip.  <a href="#aafa2840ea51a2d15d01989821542741f">More...</a><br /></td></tr>
-<tr class="separator:aafa2840ea51a2d15d01989821542741f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4be88cadd5e9f14168f0f0b3868db823"><td class="memItemLeft" align="right" valign="top">ULong_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html#a4be88cadd5e9f14168f0f0b3868db823">fDetIdHit</a></td></tr>
-<tr class="memdesc:a4be88cadd5e9f14168f0f0b3868db823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the chip stored in the hit.  <a href="#a4be88cadd5e9f14168f0f0b3868db823">More...</a><br /></td></tr>
-<tr class="separator:a4be88cadd5e9f14168f0f0b3868db823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handling discrepancies between <a class="el" href="../../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html" title="Container for similated points connected to a given chip. ">Chip</a> index stored in the hit and <a class="el" href="../../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html" title="Container for similated points connected to a given chip. ">Chip</a> index stored in the chip. </p>
@@ -347,55 +336,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aafa2840ea51a2d15d01989821542741f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ULong_t AliceO2::ITS::Chip::IndexException::fDetIdChip</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Index of the chip stored in the chip. </p>
-
-<p>Definition at line <a class="el" href="../../d9/d55/Chip_8h_source.html#l00075">75</a> of file <a class="el" href="../../d9/d55/Chip_8h_source.html">Chip.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4be88cadd5e9f14168f0f0b3868db823"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ULong_t AliceO2::ITS::Chip::IndexException::fDetIdHit</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Index of the chip stored in the hit. </p>
-
-<p>Definition at line <a class="el" href="../../d9/d55/Chip_8h_source.html#l00076">76</a> of file <a class="el" href="../../d9/d55/Chip_8h_source.html">Chip.h</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>itsmft/its/<a class="el" href="../../d9/d55/Chip_8h_source.html">Chip.h</a></li>
 </ul>
@@ -405,7 +345,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li><li class="navelem"><a class="el" href="../../db/d51/namespaceAliceO2_1_1ITS.html">ITS</a></li><li class="navelem"><a class="el" href="../../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html">Chip</a></li><li class="navelem"><a class="el" href="../../d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html">IndexException</a></li>
-    <li class="footer">Generated on Thu Nov 12 2015 10:02:53 for AliceO2 by
+    <li class="footer">Generated on Tue Mar 15 2016 16:06:24 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

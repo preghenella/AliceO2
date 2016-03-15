@@ -5,7 +5,6 @@ var classMCTrack =
     [ "MCTrack", "d9/d12/classMCTrack.html#a5f5ed29b12ebe6e72313ef565492b19a", null ],
     [ "MCTrack", "d9/d12/classMCTrack.html#adae9e2c38a80eedf9ad363b356d02f2b", null ],
     [ "~MCTrack", "d9/d12/classMCTrack.html#a734e194ae4c56ea80861a67b76f5de32", null ],
-    [ "ClassDef", "d9/d12/classMCTrack.html#ae51ac8cd8b00c98e0161820cee902859", null ],
     [ "Get4Momentum", "d9/d12/classMCTrack.html#a98d2ad339ccc4f08fcf64f5d592a1759", null ],
     [ "GetEnergy", "d9/d12/classMCTrack.html#abd89d715e86cf91bade46699e863ceab", null ],
     [ "GetMass", "d9/d12/classMCTrack.html#ac8e52ad31a797d247c1b1313d710b40c", null ],
@@ -26,15 +25,5 @@ var classMCTrack =
     [ "GetStartVertexMomentumZ", "d9/d12/classMCTrack.html#a42654cbd4d15ac433d58cb33bd0abd0f", null ],
     [ "Print", "d9/d12/classMCTrack.html#a25255b3b0bdfc1bca14a4d72cb20d6a1", null ],
     [ "SetMotherTrackId", "d9/d12/classMCTrack.html#a16228ee317e2adf798faa05f1da877ab", null ],
-    [ "setNumberOfPoints", "d9/d12/classMCTrack.html#a7e74b93299a6ce20a97d115cde01253e", null ],
-    [ "mMotherTrackId", "d9/d12/classMCTrack.html#a53e7392417918c2aaaeb1c7d91c13b2d", null ],
-    [ "mNumberOfPoints", "d9/d12/classMCTrack.html#a32c84343389aae4c5e99f8f72e9da292", null ],
-    [ "mPdgCode", "d9/d12/classMCTrack.html#a5e9c3de2df3ff57f522387291c861d0c", null ],
-    [ "mStartVertexCoordinatesT", "d9/d12/classMCTrack.html#a9c3b1d728fdb89eff304d2e614a70106", null ],
-    [ "mStartVertexCoordinatesX", "d9/d12/classMCTrack.html#a6bc0d4a2ee414872b69abde51f509299", null ],
-    [ "mStartVertexCoordinatesY", "d9/d12/classMCTrack.html#a3f5edc83a9ea183a210d78311e56f5e8", null ],
-    [ "mStartVertexCoordinatesZ", "d9/d12/classMCTrack.html#abce90d1f1a1979cf44355764b7447a29", null ],
-    [ "mStartVertexMomentumX", "d9/d12/classMCTrack.html#a8fe819e1629bc1ce4a924e5d0b82de7b", null ],
-    [ "mStartVertexMomentumY", "d9/d12/classMCTrack.html#a7786294b2d147fa49dfecdd32dfc6294", null ],
-    [ "mStartVertexMomentumZ", "d9/d12/classMCTrack.html#a4588f03a52c3bdf9fdb7c6c01a964ded", null ]
+    [ "setNumberOfPoints", "d9/d12/classMCTrack.html#a7e74b93299a6ce20a97d115cde01253e", null ]
 ];

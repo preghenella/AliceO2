@@ -5,5 +5,6 @@ var searchData=
   ['inputbufsize',['inputBufSize',['../d7/def/structDeviceOptions.html#a024dfcf496849348cb63f85bbff7483f',1,'DeviceOptions::inputBufSize()'],['../d7/def/structDeviceOptions.html#a0d228df2650ecc1f3ec43b2a5a1a4e0c',1,'DeviceOptions::inputBufSize()']]],
   ['inputmethod',['inputMethod',['../d7/def/structDeviceOptions.html#a53c0e4873f2bd820bb65ba1b4d2cf255',1,'DeviceOptions::inputMethod()'],['../d7/def/structDeviceOptions.html#afd170396b5dd2c600e5a9b783238ead0',1,'DeviceOptions::inputMethod()']]],
   ['inputsockettype',['inputSocketType',['../d7/def/structDeviceOptions.html#a5cbc080c2ae568ded93cfe19fe9dbffe',1,'DeviceOptions::inputSocketType()'],['../d7/def/structDeviceOptions.html#a0951cef8f35fdc1544a77d8f69ac4bf1',1,'DeviceOptions::inputSocketType()']]],
+  ['interactive',['interactive',['../d7/def/structDeviceOptions.html#acb8790e1a838e1edea2c640ba05b4d22',1,'DeviceOptions']]],
   ['iothreads',['ioThreads',['../d7/def/structDeviceOptions.html#a04a262a533292a72dfebcadd380a0c35',1,'DeviceOptions']]]
 ];

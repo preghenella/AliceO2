@@ -7,6 +7,5 @@ var classAliceO2_1_1CDB_1_1LocalStorageParameters =
     [ "cloneParam", "d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html#ad64c93e23fa00d8082697c3919a76ae5", null ],
     [ "getHash", "d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html#ab24b56d29c8acc3c9fb193ea72ee2de8", null ],
     [ "getPathString", "d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html#ac69100890cae108de9f6a14eb2517cae", null ],
-    [ "isEqual", "d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html#abdce87b192acdd55af015f0f963b9020", null ],
-    [ "mDBPath", "d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html#af416b2137499749b607be379eb322c1f", null ]
+    [ "isEqual", "d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html#abdce87b192acdd55af015f0f963b9020", null ]
 ];

@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -112,8 +111,6 @@ $(document).ready(function(){initNavTree('d8/dc0/classAliceO2_1_1Devices_1_1FLPS
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../dc/d54/classAliceO2_1_1Devices_1_1FLPSender-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AliceO2::Devices::FLPSender Class Reference</div>  </div>
@@ -171,60 +168,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0344b996ea24dc86cb0b045e3893010c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c">Run</a> ()</td></tr>
 <tr class="memdesc:a0344b996ea24dc86cb0b045e3893010c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads the <a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c" title="Overloads the Run() method of FairMQDevice. ">Run()</a> method of FairMQDevice.  <a href="#a0344b996ea24dc86cb0b045e3893010c">More...</a><br /></td></tr>
 <tr class="separator:a0344b996ea24dc86cb0b045e3893010c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a5ec4a9ed7e1717f40c0b050c8e0db774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a5ec4a9ed7e1717f40c0b050c8e0db774">receiveHeartbeats</a> ()</td></tr>
-<tr class="memdesc:a5ec4a9ed7e1717f40c0b050c8e0db774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives heartbeats from epnReceivers.  <a href="#a5ec4a9ed7e1717f40c0b050c8e0db774">More...</a><br /></td></tr>
-<tr class="separator:a5ec4a9ed7e1717f40c0b050c8e0db774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a658254957d3d6671e7e259873c82d3b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a658254957d3d6671e7e259873c82d3b7">sendFrontData</a> ()</td></tr>
-<tr class="memdesc:a658254957d3d6671e7e259873c82d3b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the "oldest" element from the sub-timeframe container.  <a href="#a658254957d3d6671e7e259873c82d3b7">More...</a><br /></td></tr>
-<tr class="separator:a658254957d3d6671e7e259873c82d3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a4bd761b6ecd4c79861e7e6c0915971b1"><td class="memItemLeft" align="right" valign="top">std::queue&lt; FairMQMessage * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a4bd761b6ecd4c79861e7e6c0915971b1">fHeaderBuffer</a></td></tr>
-<tr class="memdesc:a4bd761b6ecd4c79861e7e6c0915971b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores sub-timeframe headers.  <a href="#a4bd761b6ecd4c79861e7e6c0915971b1">More...</a><br /></td></tr>
-<tr class="separator:a4bd761b6ecd4c79861e7e6c0915971b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaa2641783aa01440842b0266293b580"><td class="memItemLeft" align="right" valign="top">std::queue&lt; FairMQMessage * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#abaa2641783aa01440842b0266293b580">fDataBuffer</a></td></tr>
-<tr class="memdesc:abaa2641783aa01440842b0266293b580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores sub-timeframe bodies.  <a href="#abaa2641783aa01440842b0266293b580">More...</a><br /></td></tr>
-<tr class="separator:abaa2641783aa01440842b0266293b580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acba5b667a31f4a4411c9467afaf73304"><td class="memItemLeft" align="right" valign="top">std::queue&lt; boost::posix_time::ptime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#acba5b667a31f4a4411c9467afaf73304">fArrivalTime</a></td></tr>
-<tr class="memdesc:acba5b667a31f4a4411c9467afaf73304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores arrival times of sub-timeframes.  <a href="#acba5b667a31f4a4411c9467afaf73304">More...</a><br /></td></tr>
-<tr class="separator:acba5b667a31f4a4411c9467afaf73304"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a882bfedc4b1c5eeed383a5bf0f2ccefd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a882bfedc4b1c5eeed383a5bf0f2ccefd">fNumEPNs</a></td></tr>
-<tr class="memdesc:a882bfedc4b1c5eeed383a5bf0f2ccefd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of epnReceivers.  <a href="#a882bfedc4b1c5eeed383a5bf0f2ccefd">More...</a><br /></td></tr>
-<tr class="separator:a882bfedc4b1c5eeed383a5bf0f2ccefd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a336a31f69bf82498f36f0ce0b3d225aa"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a336a31f69bf82498f36f0ce0b3d225aa">fIndex</a></td></tr>
-<tr class="memdesc:a336a31f69bf82498f36f0ce0b3d225aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the flpSender among other flpSenders.  <a href="#a336a31f69bf82498f36f0ce0b3d225aa">More...</a><br /></td></tr>
-<tr class="separator:a336a31f69bf82498f36f0ce0b3d225aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ea9de9024e9d59224754a0ed0a56b10"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a7ea9de9024e9d59224754a0ed0a56b10">fSendOffset</a></td></tr>
-<tr class="memdesc:a7ea9de9024e9d59224754a0ed0a56b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset for staggering output.  <a href="#a7ea9de9024e9d59224754a0ed0a56b10">More...</a><br /></td></tr>
-<tr class="separator:a7ea9de9024e9d59224754a0ed0a56b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca6ca79e8109fac10e77e055518ff08"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a8ca6ca79e8109fac10e77e055518ff08">fSendDelay</a></td></tr>
-<tr class="memdesc:a8ca6ca79e8109fac10e77e055518ff08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay for staggering output.  <a href="#a8ca6ca79e8109fac10e77e055518ff08">More...</a><br /></td></tr>
-<tr class="separator:a8ca6ca79e8109fac10e77e055518ff08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20f71f2e57275ca5d99cee50e4dde5a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a20f71f2e57275ca5d99cee50e4dde5a2">fSndMoreFlag</a></td></tr>
-<tr class="memdesc:a20f71f2e57275ca5d99cee50e4dde5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for faster access to multipart sending.  <a href="#a20f71f2e57275ca5d99cee50e4dde5a2">More...</a><br /></td></tr>
-<tr class="separator:a20f71f2e57275ca5d99cee50e4dde5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab31ad09daad4d4d18e257c4713490343"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab31ad09daad4d4d18e257c4713490343">fNoBlockFlag</a></td></tr>
-<tr class="memdesc:ab31ad09daad4d4d18e257c4713490343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for faster access to sending without blocking.  <a href="#ab31ad09daad4d4d18e257c4713490343">More...</a><br /></td></tr>
-<tr class="separator:ab31ad09daad4d4d18e257c4713490343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aa1b795214c71b85f46d1c3ba7421a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a4aa1b795214c71b85f46d1c3ba7421a6">fEventSize</a></td></tr>
-<tr class="memdesc:a4aa1b795214c71b85f46d1c3ba7421a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the sub-timeframe body (only for test mode)  <a href="#a4aa1b795214c71b85f46d1c3ba7421a6">More...</a><br /></td></tr>
-<tr class="separator:a4aa1b795214c71b85f46d1c3ba7421a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bad641877879494600d93907153336e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a1bad641877879494600d93907153336e">fTestMode</a></td></tr>
-<tr class="memdesc:a1bad641877879494600d93907153336e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the device in test mode (only syncSampler+flpSender+epnReceiver)  <a href="#a1bad641877879494600d93907153336e">More...</a><br /></td></tr>
-<tr class="separator:a1bad641877879494600d93907153336e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1a6add41f1fb4b69bb39dc68342428d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ae1a6add41f1fb4b69bb39dc68342428d">fHeartbeatTimeoutInMs</a></td></tr>
-<tr class="memdesc:ae1a6add41f1fb4b69bb39dc68342428d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heartbeat timeout for epnReceivers.  <a href="#ae1a6add41f1fb4b69bb39dc68342428d">More...</a><br /></td></tr>
-<tr class="separator:ae1a6add41f1fb4b69bb39dc68342428d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fb5354c726b9683bf565d031ab6bd4f"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, boost::posix_time::ptime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a4fb5354c726b9683bf565d031ab6bd4f">fHeartbeats</a></td></tr>
-<tr class="memdesc:a4fb5354c726b9683bf565d031ab6bd4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores heartbeats from epnReceiver.  <a href="#a4fb5354c726b9683bf565d031ab6bd4f">More...</a><br /></td></tr>
-<tr class="separator:a4fb5354c726b9683bf565d031ab6bd4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6133eb69db47580c145803fd7bb6a46"><td class="memItemLeft" align="right" valign="top">boost::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#aa6133eb69db47580c145803fd7bb6a46">fHeartbeatMutex</a></td></tr>
-<tr class="memdesc:aa6133eb69db47580c145803fd7bb6a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex for heartbeat synchronization.  <a href="#aa6133eb69db47580c145803fd7bb6a46">More...</a><br /></td></tr>
-<tr class="separator:aa6133eb69db47580c145803fd7bb6a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sends sub-timframes to epnReceivers</p>
@@ -313,7 +256,7 @@ Private Attributes</h2></td></tr>
 
 <p>Default destructor. </p>
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00048">48</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00046">46</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
@@ -400,7 +343,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Property value </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00266">266</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00258">258</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
@@ -427,34 +370,7 @@ Private Attributes</h2></td></tr>
 
 <p>Overloads the <a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a404d9e344939933bf61a2e955249a9bd" title="Overloads the InitTask() method of FairMQDevice. ">InitTask()</a> method of FairMQDevice. </p>
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00052">52</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5ec4a9ed7e1717f40c0b050c8e0db774"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void FLPSender::receiveHeartbeats </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Receives heartbeats from epnReceivers. </p>
-
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00063">63</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00050">50</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
@@ -481,34 +397,7 @@ Private Attributes</h2></td></tr>
 
 <p>Overloads the <a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c" title="Overloads the Run() method of FairMQDevice. ">Run()</a> method of FairMQDevice. </p>
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00099">99</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a658254957d3d6671e7e259873c82d3b7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void FLPSender::sendFrontData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sends the "oldest" element from the sub-timeframe container. </p>
-
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00185">185</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00095">95</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
@@ -592,344 +481,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00239">239</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="acba5b667a31f4a4411c9467afaf73304"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::queue&lt;boost::posix_time::ptime&gt; AliceO2::Devices::FLPSender::fArrivalTime</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stores arrival times of sub-timeframes. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00080">80</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abaa2641783aa01440842b0266293b580"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::queue&lt;FairMQMessage*&gt; AliceO2::Devices::FLPSender::fDataBuffer</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stores sub-timeframe bodies. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00079">79</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4aa1b795214c71b85f46d1c3ba7421a6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AliceO2::Devices::FLPSender::fEventSize</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Size of the sub-timeframe body (only for test mode) </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00090">90</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4bd761b6ecd4c79861e7e6c0915971b1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::queue&lt;FairMQMessage*&gt; AliceO2::Devices::FLPSender::fHeaderBuffer</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stores sub-timeframe headers. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00078">78</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa6133eb69db47580c145803fd7bb6a46"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::shared_mutex AliceO2::Devices::FLPSender::fHeartbeatMutex</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Mutex for heartbeat synchronization. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00095">95</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4fb5354c726b9683bf565d031ab6bd4f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;std::string,boost::posix_time::ptime&gt; AliceO2::Devices::FLPSender::fHeartbeats</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stores heartbeats from epnReceiver. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00094">94</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae1a6add41f1fb4b69bb39dc68342428d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AliceO2::Devices::FLPSender::fHeartbeatTimeoutInMs</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Heartbeat timeout for epnReceivers. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00093">93</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a336a31f69bf82498f36f0ce0b3d225aa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int AliceO2::Devices::FLPSender::fIndex</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Index of the flpSender among other flpSenders. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00083">83</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab31ad09daad4d4d18e257c4713490343"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AliceO2::Devices::FLPSender::fNoBlockFlag</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Flag for faster access to sending without blocking. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00088">88</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a882bfedc4b1c5eeed383a5bf0f2ccefd"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AliceO2::Devices::FLPSender::fNumEPNs</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Number of epnReceivers. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00082">82</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8ca6ca79e8109fac10e77e055518ff08"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int AliceO2::Devices::FLPSender::fSendDelay</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Delay for staggering output. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00085">85</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7ea9de9024e9d59224754a0ed0a56b10"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int AliceO2::Devices::FLPSender::fSendOffset</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Offset for staggering output. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00084">84</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a20f71f2e57275ca5d99cee50e4dde5a2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AliceO2::Devices::FLPSender::fSndMoreFlag</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Flag for faster access to multipart sending. </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00087">87</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1bad641877879494600d93907153336e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AliceO2::Devices::FLPSender::fTestMode</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Run the device in test mode (only syncSampler+flpSender+epnReceiver) </p>
-
-<p>Definition at line <a class="el" href="../../d0/d8b/FLPSender_8h_source.html#l00091">91</a> of file <a class="el" href="../../d0/d8b/FLPSender_8h_source.html">FLPSender.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00231">231</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
@@ -943,7 +495,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li><li class="navelem"><a class="el" href="../../d3/d4f/namespaceAliceO2_1_1Devices.html">Devices</a></li><li class="navelem"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html">FLPSender</a></li>
-    <li class="footer">Generated on Thu Nov 12 2015 10:02:53 for AliceO2 by
+    <li class="footer">Generated on Tue Mar 15 2016 16:06:24 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

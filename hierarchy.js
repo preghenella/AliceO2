@@ -76,14 +76,19 @@ var hierarchy =
     [ "FairMQDevice", null, [
       [ "ALICE::HLT::EventSampler", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html", null ],
       [ "ALICE::HLT::WrapperDevice", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html", null ],
+      [ "AliceO2::CDB::ConditionsMQClient", "dc/d2f/classAliceO2_1_1CDB_1_1ConditionsMQClient.html", null ],
+      [ "AliceO2::CDB::ConditionsMQServer", "d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer.html", null ],
       [ "AliceO2::Devices::EPNReceiver", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html", null ],
       [ "AliceO2::Devices::FLPSender", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html", null ],
       [ "AliceO2::Devices::FLPSyncSampler", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html", null ],
+      [ "MergerDevice", "dd/df5/classMergerDevice.html", null ],
       [ "O2EPNex", "d3/d79/classO2EPNex.html", null ],
       [ "O2EpnMerger", "d0/d48/classO2EpnMerger.html", null ],
       [ "O2FLPex", "d4/d82/classO2FLPex.html", null ],
       [ "O2Merger", "db/daa/classO2Merger.html", null ],
-      [ "O2Proxy", "d9/d07/classO2Proxy.html", null ]
+      [ "O2Proxy", "d9/d07/classO2Proxy.html", null ],
+      [ "ProducerDevice", "db/d5d/classProducerDevice.html", null ],
+      [ "ViewerDevice", "de/d26/classViewerDevice.html", null ]
     ] ],
     [ "FairParGenericSet", null, [
       [ "AliceO2::ITS::MisalignmentParameter", "db/da0/classAliceO2_1_1ITS_1_1MisalignmentParameter.html", null ]
@@ -99,7 +104,12 @@ var hierarchy =
       [ "AliceO2::ITS::DigitWriteoutBuffer", "d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html", null ]
     ] ],
     [ "ALICE::HLT::HOMERFactory", "d5/de6/classALICE_1_1HLT_1_1HOMERFactory.html", null ],
+    [ "Merger", "de/d60/classMerger.html", null ],
     [ "AliceO2::AliceHLT::MessageFormat", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html", null ],
+    [ "Producer", "dd/d93/classProducer.html", [
+      [ "HistogramProducer", "d5/d94/classHistogramProducer.html", null ],
+      [ "TreeProducer", "d5/d06/classTreeProducer.html", null ]
+    ] ],
     [ "RndmEngine", null, [
       [ "PyTr1Rng", "d5/d4d/classPyTr1Rng.html", null ],
       [ "PyTr3Rng", "dd/d80/classPyTr3Rng.html", null ]
@@ -109,6 +119,10 @@ var hierarchy =
     [ "AliHLTHOMERWriter::TBlockData", "d8/de3/structAliHLTHOMERWriter_1_1TBlockData.html", null ],
     [ "AliceO2::Devices::TFBuffer", "dd/d53/structAliceO2_1_1Devices_1_1TFBuffer.html", null ],
     [ "AliceO2::Devices::timeframeDuration", "d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html", null ],
+    [ "TMessage", null, [
+      [ "HistogramTMessage", "de/d2e/classHistogramTMessage.html", null ],
+      [ "WrapTMessage", "de/dd8/classWrapTMessage.html", null ]
+    ] ],
     [ "TNamed", null, [
       [ "AliceO2::Field::MagneticWrapperChebyshev", "d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html", null ],
       [ "AliceO2::MathUtils::Chebyshev3D", "d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html", null ],

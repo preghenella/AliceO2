@@ -2,7 +2,6 @@ var classAliceO2_1_1CDB_1_1Storage =
 [
     [ "Storage", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#aa2d16b597c2e929eeb5b079cfec1c3b5", null ],
     [ "~Storage", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a73cf30f0a34250396f9eabee7dc5c93d", null ],
-    [ "Storage", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a6970050ddebc20c3cea98f0560c15fdb", null ],
     [ "addSelection", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a3e870c9c7806a2ff60e1ff42b312bda2", null ],
     [ "addSelection", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#af8159911ca9589a6c021f01674ed26a7", null ],
     [ "addSelection", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a181c6f6f7612decaf9a3df261c4bec00", null ],
@@ -30,7 +29,6 @@ var classAliceO2_1_1CDB_1_1Storage =
     [ "idToFilename", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a823eb518a3c8fa6ea990eaebae55bea1", null ],
     [ "isReadOnly", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a005bf477c500627f5fa8bd1bf846ab2c", null ],
     [ "loadTreeFromFile", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#aa2af59a66e6e648f4e15763ea29587a4", null ],
-    [ "operator=", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a48c612aa7eeb0a29bbdd855d9098118d", null ],
     [ "printrQueryStorages", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a6e653a9c3311a83d7f094a32fe0472db", null ],
     [ "printSelectionList", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#ac39aa02e5e64fd7e14e795aded33e68b", null ],
     [ "putCondition", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a6548b026939a49cd61969b3d17bab53b", null ],
