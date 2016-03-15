@@ -1,6 +1,10 @@
 var NAVTREE =
 [
   [ "AliceO2", "index.html", [
+    [ "#### Prototype Devices for the transport between FLPs and EPNs", "d9/d4a/md_devices_flp2epn-distributed_README.html", null ],
+    [ "Hough Transform", "d7/db9/md_devices_hough_README.html", null ],
+    [ "Generating Doxygen documentation", "dd/d76/md_doxygen_README.html", null ],
+    [ "O2qa", "d7/d64/md_o2qa_README.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -47,12 +51,12 @@ var NAVTREEINDEX =
 "d5/d8c/group__alihlt__component__datatypes.html#ga4e958a80c2ff5604b0fc42834c73451b",
 "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a1c27578504aa9a0200c5d93f251615a0",
 "d6/d26/runFLPSender_8cxx.html#a92dd00554a39c05d84f9d6afd961bc37",
-"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a37c8722c122c77d24b1e82ca940c140f",
-"d8/d8d/Chebyshev3D_8cxx.html",
-"d9/d51/classAliceO2_1_1ITS_1_1Detector.html#a8c62625b91c75634f1b5d6db5c5c0836",
-"db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a5f4fa88fb8ba2849b7d519e9694a77cc",
-"dc/dbf/classAliceO2_1_1CDB_1_1GridStorageFactory.html#a6b460c92b3b2d88cfdc18bbe103766f5",
-"df/d7a/classAliceO2_1_1ITS_1_1Point.html"
+"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a354265eadcac32613016d3eebe27e8de",
+"d8/d6a/O2Merger_8cxx.html",
+"d9/d51/classAliceO2_1_1ITS_1_1Detector.html#a85371295ad6a0da8e0e84d46196382ae",
+"db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a37f9387d9e0f841172c8aa3743f9be70",
+"dc/dbf/classAliceO2_1_1CDB_1_1GridStorageFactory.html#a2e0b14c16cbb93b21365abbf944e6206",
+"df/d65/2Prototype_2runFLPSender_8cxx.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

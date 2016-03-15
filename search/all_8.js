@@ -34,5 +34,6 @@ var searchData=
   ['homerfactory_2ecxx',['HOMERFactory.cxx',['../df/da5/HOMERFactory_8cxx.html',1,'']]],
   ['homerfactory_2eh',['HOMERFactory.h',['../d2/de6/HOMERFactory_8h.html',1,'']]],
   ['homerreader',['HOMERReader',['../d6/de3/AliHLTHOMERReader_8h.html#a90eb5552d271a17a13cd3e17111591b2',1,'AliHLTHOMERReader.h']]],
-  ['homerwriter',['HOMERWriter',['../d0/d3f/AliHLTHOMERWriter_8h.html#a944927f8faf392be3a1052df9368a2f6',1,'AliHLTHOMERWriter.h']]]
+  ['homerwriter',['HOMERWriter',['../d0/d3f/AliHLTHOMERWriter_8h.html#a944927f8faf392be3a1052df9368a2f6',1,'AliHLTHOMERWriter.h']]],
+  ['hough_20transform',['Hough Transform',['../d7/db9/md_devices_hough_README.html',1,'']]]
 ];
