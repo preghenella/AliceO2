@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>AliceO2: itsmft/its/DigitWriteoutBuffer.h Source File</title>
+<title>AliceO2: Detectors/ITSMFT/ITS/simulation/include/DigitWriteoutBuffer.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -125,7 +124,7 @@ $(document).ready(function(){initNavTree('d9/dea/DigitWriteoutBuffer_8h_source.h
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;TString.h&gt;</span>             <span class="comment">// for TString</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;FairWriteoutBuffer.h&quot;</span>  <span class="comment">// for FairWriteoutBuffer</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Rtypes.h&quot;</span>              <span class="comment">// for DigitWriteoutBuffer::Class, Bool_t, etc</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d5d/Digit_8h.html">itsmft/its/Digit.h</a>&quot;</span>            <span class="comment">// for Digit</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d5d/Digit_8h.html">Digit.h</a>&quot;</span>            <span class="comment">// for Digit</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a> {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">namespace </span>ITS {</div>
@@ -134,16 +133,16 @@ $(document).ready(function(){initNavTree('d9/dea/DigitWriteoutBuffer_8h_source.h
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#afd6b3a0dbfc31492c944c48993d9684f">DigitWriteoutBuffer</a>();</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#afd6b3a0dbfc31492c944c48993d9684f">DigitWriteoutBuffer</a>(TString branchname, TString foldername, Bool_t persistance);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#a882e4bf8434e33d01401f2bb740dd53c">~DigitWriteoutBuffer</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="comment">// Implementation of virtual function required by the interface</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#a772a27b60c9e4a56499eeae72234b7fe">AddNewDataToTClonesArray</a>(FairTimeStamp *);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#aa09a3b4462fd140fafb07f1d36df3688">FindTimeForData</a>(FairTimeStamp *);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#ade5e3391c74adc5026dc9fbd7a449323">FillDataMap</a>(FairTimeStamp *data, <span class="keywordtype">double</span> activeTime);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#af0c67e4765705702619d40c21523ef37">EraseDataFromDataMap</a>(FairTimeStamp *data);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#ad7c74b8d2abff21ac9daf42801471a42">   33</a></span>&#160;            std::map&lt;Digit, double&gt;             <a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#ad7c74b8d2abff21ac9daf42801471a42">fData_map</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#acfe9505e2ab7b5f75614c26e51b6e879">ClassDef</a>(<a class="code" href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html">DigitWriteoutBuffer</a>, 1);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        };</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
@@ -153,7 +152,7 @@ $(document).ready(function(){initNavTree('d9/dea/DigitWriteoutBuffer_8h_source.h
 <div class="ttc" id="classAliceO2_1_1ITS_1_1DigitWriteoutBuffer_html_aa09a3b4462fd140fafb07f1d36df3688"><div class="ttname"><a href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#aa09a3b4462fd140fafb07f1d36df3688">AliceO2::ITS::DigitWriteoutBuffer::FindTimeForData</a></div><div class="ttdeci">virtual double FindTimeForData(FairTimeStamp *)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d60/DigitWriteoutBuffer_8cxx_source.html#l00043">DigitWriteoutBuffer.cxx:43</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1DigitWriteoutBuffer_html_acfe9505e2ab7b5f75614c26e51b6e879"><div class="ttname"><a href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#acfe9505e2ab7b5f75614c26e51b6e879">AliceO2::ITS::DigitWriteoutBuffer::ClassDef</a></div><div class="ttdeci">ClassDef(DigitWriteoutBuffer, 1)</div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1DigitWriteoutBuffer_html_a772a27b60c9e4a56499eeae72234b7fe"><div class="ttname"><a href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#a772a27b60c9e4a56499eeae72234b7fe">AliceO2::ITS::DigitWriteoutBuffer::AddNewDataToTClonesArray</a></div><div class="ttdeci">void AddNewDataToTClonesArray(FairTimeStamp *)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d60/DigitWriteoutBuffer_8cxx_source.html#l00036">DigitWriteoutBuffer.cxx:36</a></div></div>
-<div class="ttc" id="namespaceAliceO2_html"><div class="ttname"><a href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/Base_2Detector_8h_source.html#l00010">Detector.h:10</a></div></div>
+<div class="ttc" id="namespaceAliceO2_html"><div class="ttname"><a href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/Condition_8h_source.html#l00013">Condition.h:13</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1DigitWriteoutBuffer_html_af0c67e4765705702619d40c21523ef37"><div class="ttname"><a href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#af0c67e4765705702619d40c21523ef37">AliceO2::ITS::DigitWriteoutBuffer::EraseDataFromDataMap</a></div><div class="ttdeci">virtual void EraseDataFromDataMap(FairTimeStamp *data)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d60/DigitWriteoutBuffer_8cxx_source.html#l00057">DigitWriteoutBuffer.cxx:57</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1DigitWriteoutBuffer_html_ad7c74b8d2abff21ac9daf42801471a42"><div class="ttname"><a href="../../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#ad7c74b8d2abff21ac9daf42801471a42">AliceO2::ITS::DigitWriteoutBuffer::fData_map</a></div><div class="ttdeci">std::map&lt; Digit, double &gt; fData_map</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dea/DigitWriteoutBuffer_8h_source.html#l00033">DigitWriteoutBuffer.h:33</a></div></div>
 <div class="ttc" id="Digit_8h_html"><div class="ttname"><a href="../../da/d5d/Digit_8h.html">Digit.h</a></div></div>
@@ -166,8 +165,8 @@ $(document).ready(function(){initNavTree('d9/dea/DigitWriteoutBuffer_8h_source.h
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_a97657a30608f436a00544c6157aa7b8.html">itsmft</a></li><li class="navelem"><a class="el" href="../../dir_31e95aaf2ef0aa40cd374fc52012a6f9.html">its</a></li><li class="navelem"><a class="el" href="../../d9/dea/DigitWriteoutBuffer_8h.html">DigitWriteoutBuffer.h</a></li>
-    <li class="footer">Generated on Tue Mar 15 2016 16:16:08 for AliceO2 by
+    <li class="navelem"><a class="el" href="../../dir_051dca18e802f8e9474f2e30d29c04e0.html">Detectors</a></li><li class="navelem"><a class="el" href="../../dir_1306292b77b40360479b729ac9ee7efe.html">ITSMFT</a></li><li class="navelem"><a class="el" href="../../dir_871aad07cbf94d6cd423c3d8d5bdf4e9.html">ITS</a></li><li class="navelem"><a class="el" href="../../dir_e6f6998399f381fa585023934f76a907.html">simulation</a></li><li class="navelem"><a class="el" href="../../dir_703936e7bdda211beb61e967f1c6d8f5.html">include</a></li><li class="navelem"><a class="el" href="../../d9/dea/DigitWriteoutBuffer_8h.html">DigitWriteoutBuffer.h</a></li>
+    <li class="footer">Generated on Thu May 12 2016 10:44:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

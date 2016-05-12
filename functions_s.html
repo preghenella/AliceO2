@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -83,6 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
@@ -155,8 +155,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a59b013a0fffad12b838531ab547dde26">ALICE::HLT::EventSampler</a>
 </li>
 <li>saveData()
-: <a class="el" href="d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a737cd06e5e07bb29439b59ff92b91cb9">AliceO2::MathUtils::Chebyshev3D</a>
-, <a class="el" href="d6/db8/classAliceO2_1_1MathUtils_1_1Chebyshev3DCalc.html#afe19aa3c4642a3a92076f5ee8e5e4c64">AliceO2::MathUtils::Chebyshev3DCalc</a>
+: <a class="el" href="d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a6743899bd7afe2374602dc05e6f15100">AliceO2::Field::MagneticWrapperChebyshev</a>
+, <a class="el" href="d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a7acc299e4f6ec024af7e2e53e8d21a85">AliceO2::MathUtils::Chebyshev3D</a>
+, <a class="el" href="d6/db8/classAliceO2_1_1MathUtils_1_1Chebyshev3DCalc.html#afca286c52bd499a08bb7d84d0f789f3b">AliceO2::MathUtils::Chebyshev3DCalc</a>
 </li>
 <li>sCelsius
 : <a class="el" href="dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#adf4964d3bf8536a0bd39ac823ff300fa">AliceO2::ITS::V11Geometry</a>
@@ -167,17 +168,17 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>sDegree
 : <a class="el" href="dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#aae9153c11813df66aa03ac425e3763ad">AliceO2::ITS::V11Geometry</a>
 </li>
-<li>SecondInputName
-: <a class="el" href="d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer.html#a1c4a18d16a27719346ae961d25a0ef05a9b8acbab830488ef5af1ca9906314c5d">AliceO2::CDB::ConditionsMQServer</a>
-</li>
-<li>SecondInputType
-: <a class="el" href="d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer.html#a1c4a18d16a27719346ae961d25a0ef05a0a976eff4a02123b219f58ad61472c0c">AliceO2::CDB::ConditionsMQServer</a>
-</li>
 <li>Segmentation()
 : <a class="el" href="d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#ad11348d7823677c4e4e95ef163ce37ae">AliceO2::ITS::Segmentation</a>
 </li>
+<li>segmentDimension()
+: <a class="el" href="d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a19bac515a249d69a50b920fbaa54098e">AliceO2::Field::MagneticWrapperChebyshev</a>
+</li>
 <li>selectSpecificStorage()
 : <a class="el" href="db/dea/classAliceO2_1_1CDB_1_1Manager.html#a4265a21442f894f08c61852dfdda8a3e">AliceO2::CDB::Manager</a>
+</li>
+<li>self_type
+: <a class="el" href="de/d5b/classAliceO2_1_1Format_1_1messageList_1_1iterator.html#a85638b0aa358dc491b441730bf7d8f73">AliceO2::Format::messageList&lt; MsgT, HdrT &gt;::iterator</a>
 </li>
 <li>SendDelay
 : <a class="el" href="d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa6b870fe852c8ad1e12a7fabfadb070be">AliceO2::Devices::FLPSender</a>
@@ -474,18 +475,17 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="d5/dd4/classAliHLTHOMERBlockDescriptor.html#a0546230bc1265c51c8d4e9bc30c37aa4">AliHLTHOMERBlockDescriptor</a>
 </li>
 <li>SetProperty()
-: <a class="el" href="d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ab595a5dc1a7ea830ab6a76c7aa7650f3">ALICE::HLT::EventSampler</a>
+: <a class="el" href="d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ae0fe23fba9c757154c3adac30b2d688f">ALICE::HLT::EventSampler</a>
 , <a class="el" href="d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a960317d8f1b83b1ef913c2e2b76665d7">ALICE::HLT::WrapperDevice</a>
 </li>
 <li>setProperty()
 : <a class="el" href="d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a6ce10e1d2d338fae8aceac1eed725eab">AliceO2::CDB::ConditionMetaData</a>
 </li>
 <li>SetProperty()
-: <a class="el" href="dc/d2f/classAliceO2_1_1CDB_1_1ConditionsMQClient.html#affdd35fbcc222fec24db1463d7076fd5">AliceO2::CDB::ConditionsMQClient</a>
-, <a class="el" href="d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer.html#a0ddc225fd8f99088b14901f3246f1bca">AliceO2::CDB::ConditionsMQServer</a>
+: <a class="el" href="dc/d2f/classAliceO2_1_1CDB_1_1ConditionsMQClient.html#af0c96e56b6670b3f3ce807a98e02e352">AliceO2::CDB::ConditionsMQClient</a>
 , <a class="el" href="d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#afad6dcfe35334e7a6083b01bc372219c">AliceO2::Devices::EPNReceiver</a>
 , <a class="el" href="d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">AliceO2::Devices::FLPSender</a>
-, <a class="el" href="d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a04791b42664b40906f4d06c83f626671">AliceO2::Devices::FLPSyncSampler</a>
+, <a class="el" href="d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a87b2e26d2cf2bffe0cf13aa21840e0eb">AliceO2::Devices::FLPSyncSampler</a>
 , <a class="el" href="d4/d82/classO2FLPex.html#a221c32adb069e771cded9373629d77c5">O2FLPex</a>
 </li>
 <li>setRadius()
@@ -584,7 +584,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html#aa48508ba50c9212a2d61194cf5867ca2">AliceO2::CDB::StorageParameters</a>
 </li>
 <li>setuserFunction()
-: <a class="el" href="d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#aa23afea1d6616570a3998d56a576f677">AliceO2::MathUtils::Chebyshev3D</a>
+: <a class="el" href="d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a6b4301101b4bbef8b76e1906b9c26eed">AliceO2::MathUtils::Chebyshev3D</a>
 </li>
 <li>setUserId()
 : <a class="el" href="da/d18/classAliceO2_1_1Base_1_1TrackReference.html#a7016aa50c066a4dfe8d0dcad9fbbaf1d">AliceO2::Base::TrackReference</a>
@@ -614,14 +614,19 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>shiftBound()
 : <a class="el" href="d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a8cd696761cabc1ef3a3d89248319047e">AliceO2::MathUtils::Chebyshev3D</a>
 </li>
+<li>SimpleHeader_t()
+: <a class="el" href="de/d0a/structSimpleHeader__t.html#af6ba7922b965b0f618758e8e98c436a2">SimpleHeader_t</a>
+</li>
 <li>sinD()
 : <a class="el" href="dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a5d96c8aa5361b66f25d21e08bb3a1f1d">AliceO2::ITS::V11Geometry</a>
 </li>
 <li>sInstance
 : <a class="el" href="db/dea/classAliceO2_1_1CDB_1_1Manager.html#a1ea369402ffe579ba28cbb6bda712e95">AliceO2::CDB::Manager</a>
 </li>
-<li>size
-: <a class="el" href="dc/d2f/structSocketProperties__t.html#afc71ffeaaad423aac6cbbd432022ea60">SocketProperties_t</a>
+<li>size()
+: <a class="el" href="de/d5b/classAliceO2_1_1Format_1_1messageList_1_1iterator.html#ae51bc3881c505579d2eb40ef1b8802e3">AliceO2::Format::messageList&lt; MsgT, HdrT &gt;::iterator</a>
+, <a class="el" href="d1/d95/classAliceO2_1_1Format_1_1messageList.html#a645022b32f7615e50aa9d24ecc2b6a6c">AliceO2::Format::messageList&lt; MsgT, HdrT &gt;</a>
+, <a class="el" href="dc/d2f/structSocketProperties__t.html#afc71ffeaaad423aac6cbbd432022ea60">SocketProperties_t</a>
 </li>
 <li>sKEV
 : <a class="el" href="dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a11a7f8357f96461719b0624ec4956b8a">AliceO2::ITS::V11Geometry</a>
@@ -633,8 +638,8 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a8d90e5796ba218d0d19b2dc400c14bb6">AliceO2::ITS::V11Geometry</a>
 </li>
 <li>SkipProcessing
-: <a class="el" href="d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ad45061a2eb8cb8505add52e52921bfc7adf3729d7a5ec45db4bb36f58abb907b3">ALICE::HLT::EventSampler</a>
-, <a class="el" href="d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a023a6a624692bb5bd86515c73074ded3a5dd608cfda92597963e5254229ce1bf0">ALICE::HLT::WrapperDevice</a>
+: <a class="el" href="d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a777b960ff91f058ae2a0ae920973bdabadf3729d7a5ec45db4bb36f58abb907b3">ALICE::HLT::EventSampler</a>
+, <a class="el" href="d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a99987800d6f04420c2b4280157252a8ba5dd608cfda92597963e5254229ce1bf0">ALICE::HLT::WrapperDevice</a>
 </li>
 <li>sKPascal
 : <a class="el" href="dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a64dfdaa08caa36ab18634477eb3969e1">AliceO2::ITS::V11Geometry</a>
@@ -655,13 +660,16 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="db/dea/classAliceO2_1_1CDB_1_1Manager.html#a8bc175d4aacc5f38171ab5189f6208f7">AliceO2::CDB::Manager</a>
 </li>
 <li>SocketProperties_t()
-: <a class="el" href="dc/d2f/structSocketProperties__t.html#a90b9973cc46a3406ba155c2f73d4993f">SocketProperties_t</a>
+: <a class="el" href="dc/d2f/structSocketProperties__t.html#aa51374ee9bfd1fae676f6acafd83242d">SocketProperties_t</a>
 </li>
 <li>solenoidField()
 : <a class="el" href="d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a4335c04f17172fc6b06d3df51de62edc">AliceO2::Field::MagneticField</a>
 </li>
 <li>sPascal
 : <a class="el" href="dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#aab4a62d4c90ec2ab9e41099f49bc2652">AliceO2::ITS::V11Geometry</a>
+</li>
+<li>specification
+: <a class="el" href="de/d0a/structSimpleHeader__t.html#afc495cdc8a83c8ec0cc8e31943a467ea">SimpleHeader_t</a>
 </li>
 <li>sPolarityConvention
 : <a class="el" href="d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#af188c298cb668f7c1b03d4e804438e73">AliceO2::Field::MagneticField</a>
@@ -706,7 +714,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="d8/d98/classAliceO2_1_1Data_1_1Stack.html#ac8ded5b77626c453b4d2783ecb386f89">AliceO2::Data::Stack</a>
 </li>
 <li>Swap()
-: <a class="el" href="d5/d54/classAliHLTHOMERReader.html#a62fb96f98c743d5b11fa5965faf6abb3">AliHLTHOMERReader</a>
+: <a class="el" href="d5/d54/classAliHLTHOMERReader.html#aa7f6e77f28ff551abf27566cefb58643">AliHLTHOMERReader</a>
 </li>
 <li>SystemInterface()
 : <a class="el" href="d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#aa8f2e291b1eb3225ab0cf2b8775bd04b">ALICE::HLT::SystemInterface</a>
@@ -717,7 +725,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Mar 15 2016 16:16:09 for AliceO2 by
+    <li class="footer">Generated on Thu May 12 2016 10:44:20 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

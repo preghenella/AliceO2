@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -127,6 +126,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d8/d36/namespaceAliceO2_1_1Field"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d36/namespaceAliceO2_1_1Field.html">Field</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d1/ddd/namespaceAliceO2_1_1Format"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/ddd/namespaceAliceO2_1_1Format.html">Format</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:db/d51/namespaceAliceO2_1_1ITS"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d51/namespaceAliceO2_1_1ITS.html">ITS</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:da/ddc/namespaceAliceO2_1_1MathUtils"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/ddc/namespaceAliceO2_1_1MathUtils.html">MathUtils</a></td></tr>
@@ -137,7 +138,21 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="../../d5/dcc/EPNReceiver_8h.html">EPNReceiver.h</a></p>
+<div class="textblock"><p><a class="el" href="../../d4/d6b/ConditionsMQClient_8h.html">ConditionsMQClient.h</a></p>
+<dl class="section since"><dt>Since</dt><dd>2016-01-11 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>R. Grosso, from examples/MQ/7-parameters/FairMQExample7Client.h</dd></dl>
+<p><a class="el" href="../../d7/dc8/ConditionsMQServer_8h.html">ConditionsMQServer.h</a></p>
+<dl class="section since"><dt>Since</dt><dd>2016-01-11 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>R. Grosso, from parmq/ParameterMQServer.h</dd></dl>
+<p>The defined headers are a tradeoff to provide the necessary information in a lightweight way and to allow for evolution and compatibility.</p>
+<p>General header format</p><ul>
+<li>Starts with basic header information, never serialized, with unique version number</li>
+<li>Strict policy enforced: no changes to members (e.g. width) or sequence of members</li>
+<li>New members can be appended</li>
+<li>All basic header structs are defined with fixed endianess and padding</li>
+<li>Header-stack concept: optional headers can follow the basic header</li>
+</ul>
+<p><a class="el" href="../../d5/dcc/EPNReceiver_8h.html">EPNReceiver.h</a></p>
 <dl class="section since"><dt>Since</dt><dd>2013-01-09 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>D. Klein, A. Rybalchenko, M. Al-Turany, C. Kouzinopoulos</dd></dl>
 <p><a class="el" href="../../d0/d8b/FLPSender_8h.html">FLPSender.h</a></p>
@@ -145,17 +160,14 @@ Namespaces</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>D. Klein, A. Rybalchenko, M. Al-Turany, C. Kouzinopoulos</dd></dl>
 <p><a class="el" href="../../d6/d0a/FLPSyncSampler_8h.html">FLPSyncSampler.h</a></p>
 <dl class="section since"><dt>Since</dt><dd>2013-04-23 </dd></dl>
-<dl class="section author"><dt>Author</dt><dd>D. Klein, A. Rybalchenko</dd></dl>
-<p><a class="el" href="../../d4/d6b/ConditionsMQClient_8h.html">ConditionsMQClient.h</a></p>
-<dl class="section since"><dt>Since</dt><dd>2016-01-11 </dd></dl>
-<dl class="section author"><dt>Author</dt><dd>R. Grosso, from examples/MQ/7-parameters/FairMQExample7Client.h </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>D. Klein, A. Rybalchenko </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li>
-    <li class="footer">Generated on Tue Mar 15 2016 16:16:08 for AliceO2 by
+    <li class="footer">Generated on Thu May 12 2016 10:44:19 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

@@ -42,7 +42,9 @@ var annotated_dup =
     [ "Pythia8Generator", "de/d55/classPythia8Generator.html", "de/d55/classPythia8Generator" ],
     [ "PyTr1Rng", "d5/d4d/classPyTr1Rng.html", "d5/d4d/classPyTr1Rng" ],
     [ "PyTr3Rng", "dd/d80/classPyTr3Rng.html", "dd/d80/classPyTr3Rng" ],
+    [ "SimpleHeader_t", "de/d0a/structSimpleHeader__t.html", "de/d0a/structSimpleHeader__t" ],
     [ "SocketProperties_t", "dc/d2f/structSocketProperties__t.html", "dc/d2f/structSocketProperties__t" ],
+    [ "TestMsg", "db/d5f/classTestMsg.html", "db/d5f/classTestMsg" ],
     [ "TreeProducer", "d5/d06/classTreeProducer.html", "d5/d06/classTreeProducer" ],
     [ "ViewerDevice", "de/d26/classViewerDevice.html", "de/d26/classViewerDevice" ],
     [ "WrapTMessage", "de/dd8/classWrapTMessage.html", "de/dd8/classWrapTMessage" ]

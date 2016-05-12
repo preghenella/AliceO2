@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -83,6 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
@@ -155,10 +155,9 @@ $(document).ready(function(){initNavTree('functions_l.html','');});
 : <a class="el" href="da/d18/classAliceO2_1_1Base_1_1TrackReference.html#a883db10a3941acca5df821aafc67f389">AliceO2::Base::TrackReference</a>
 </li>
 <li>Last
-: <a class="el" href="d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#ad45061a2eb8cb8505add52e52921bfc7a20eb4f6b5cfbcbf8da471e0b4c10ad70">ALICE::HLT::EventSampler</a>
-, <a class="el" href="d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a023a6a624692bb5bd86515c73074ded3a0522a767e1e1bb5bb83b098b1db3fdc5">ALICE::HLT::WrapperDevice</a>
-, <a class="el" href="dc/d2f/classAliceO2_1_1CDB_1_1ConditionsMQClient.html#a89ed2b8d3433e2635ec17ac7d1eb96bfae3e138776bbb34d79b972bfa16766734">AliceO2::CDB::ConditionsMQClient</a>
-, <a class="el" href="d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer.html#a1c4a18d16a27719346ae961d25a0ef05af006080080faddedbcb21fb3c6650dc7">AliceO2::CDB::ConditionsMQServer</a>
+: <a class="el" href="d2/dd9/classALICE_1_1HLT_1_1EventSampler.html#a777b960ff91f058ae2a0ae920973bdaba20eb4f6b5cfbcbf8da471e0b4c10ad70">ALICE::HLT::EventSampler</a>
+, <a class="el" href="d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a99987800d6f04420c2b4280157252a8ba0522a767e1e1bb5bb83b098b1db3fdc5">ALICE::HLT::WrapperDevice</a>
+, <a class="el" href="dc/d2f/classAliceO2_1_1CDB_1_1ConditionsMQClient.html#a8aa3608f280444c5609de2307810c6f2ae3e138776bbb34d79b972bfa16766734">AliceO2::CDB::ConditionsMQClient</a>
 , <a class="el" href="d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a9f86aa491afaedd94e0f90cdeca89670a50707d205669b9bb485c61b2220a60cf">AliceO2::Devices::EPNReceiver</a>
 , <a class="el" href="d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faf6ef0804ce4e5e7055543650c01ea72c">AliceO2::Devices::FLPSender</a>
 , <a class="el" href="d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fa0c119352cc77b3dfa0fed55c0862e612">AliceO2::Devices::FLPSyncSampler</a>
@@ -177,7 +176,8 @@ $(document).ready(function(){initNavTree('functions_l.html','');});
 : <a class="el" href="d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a9fcd18397d36426facf2e696d36432a3">AliceO2::Devices::FLPSyncSampler</a>
 </li>
 <li>loadData()
-: <a class="el" href="d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a1dbfbb62ba1f1afbfca16acea32748d8">AliceO2::MathUtils::Chebyshev3D</a>
+: <a class="el" href="d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a6ccdf2a0f9a5730c0fb69c295326b2db">AliceO2::Field::MagneticWrapperChebyshev</a>
+, <a class="el" href="d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a1dbfbb62ba1f1afbfca16acea32748d8">AliceO2::MathUtils::Chebyshev3D</a>
 , <a class="el" href="d6/db8/classAliceO2_1_1MathUtils_1_1Chebyshev3DCalc.html#a62038e88714b2f34e9cdd03c268eef77">AliceO2::MathUtils::Chebyshev3DCalc</a>
 </li>
 <li>loadLibrary()
@@ -227,7 +227,7 @@ $(document).ready(function(){initNavTree('functions_l.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Mar 15 2016 16:16:09 for AliceO2 by
+    <li class="footer">Generated on Thu May 12 2016 10:44:20 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

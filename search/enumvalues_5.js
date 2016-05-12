@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['firstinputname',['FirstInputName',['../d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer.html#a1c4a18d16a27719346ae961d25a0ef05a0978de24f4302e0ebe952bd56835cd89',1,'AliceO2::CDB::ConditionsMQServer']]],
-  ['firstinputtype',['FirstInputType',['../d3/d24/classAliceO2_1_1CDB_1_1ConditionsMQServer.html#a1c4a18d16a27719346ae961d25a0ef05a7955a5ba55590ae76dc21de7739ba5c1',1,'AliceO2::CDB::ConditionsMQServer']]]
+  ['heartbeatintervalinms',['HeartbeatIntervalInMs',['../d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a9f86aa491afaedd94e0f90cdeca89670aaa1bae262d378d5a6cd603b416e9d425',1,'AliceO2::Devices::EPNReceiver']]],
+  ['heartbeattimeoutinms',['HeartbeatTimeoutInMs',['../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5',1,'AliceO2::Devices::FLPSender']]]
 ];

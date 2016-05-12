@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>AliceO2: field/MagneticField.cxx Source File</title>
+<title>AliceO2: Common/Field/src/MagneticField.cxx Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -112,12 +111,12 @@ $(document).ready(function(){initNavTree('d2/d78/MagneticField_8cxx_source.html'
 <div class="contents">
 <a href="../../d2/d78/MagneticField_8cxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d4b/MagneticField_8h.html">MagneticField.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;TFile.h&gt;</span>                     <span class="comment">// for TFile</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;TPRegexp.h&gt;</span>                  <span class="comment">// for TPRegexp</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;TSystem.h&gt;</span>                   <span class="comment">// for TSystem, gSystem</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span>                     <span class="comment">// for snprintf</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;FairLogger.h&quot;</span>                <span class="comment">// for FairLogger, MESSAGE_ORIGIN</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/dfb/MagneticWrapperChebyshev_8h.html">MagneticWrapperChebyshev.h</a>&quot;</span>  <span class="comment">// for MagneticWrapperChebyshev</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/dfb/MagneticWrapperChebyshev_8h.html">MagneticWrapperChebyshev.h</a>&quot;</span>  <span class="comment">// for MagneticWrapperChebyshev</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;TFile.h&gt;</span>                     <span class="comment">// for TFile</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;TPRegexp.h&gt;</span>                  <span class="comment">// for TPRegexp</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;TSystem.h&gt;</span>                   <span class="comment">// for TSystem, gSystem</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span>                     <span class="comment">// for snprintf</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;FairLogger.h&quot;</span>                <span class="comment">// for FairLogger, MESSAGE_ORIGIN</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;TMathBase.h&quot;</span>                 <span class="comment">// for Abs, Sign</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;TObject.h&quot;</span>                   <span class="comment">// for TObject</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;TString.h&quot;</span>                   <span class="comment">// for TString</span></div>
@@ -125,7 +124,7 @@ $(document).ready(function(){initNavTree('d2/d78/MagneticField_8cxx_source.html'
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d8/d36/namespaceAliceO2_1_1Field.html">AliceO2::Field</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="../../da/d10/TrackReference_8cxx.html#a3009a839d083cbdd1c18dfe7d9fee024">ClassImp</a>(<a class="code" href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html">MagneticField</a>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="../../d2/d1c/Condition_8cxx.html#a0c7f66a889011efdf2562689fa354cce">ClassImp</a>(<a class="code" href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html">MagneticField</a>)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;const Double_t <a class="code" href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html">MagneticField</a>::sSolenoidToDipoleZ = -700.;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
@@ -694,8 +693,8 @@ $(document).ready(function(){initNavTree('d2/d78/MagneticField_8cxx_source.html'
 <div class="ttc" id="classAliceO2_1_1Field_1_1MagneticField_html_ad7fa29e80376d4fed536d89d76e76fec"><div class="ttname"><a href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#ad7fa29e80376d4fed536d89d76e76fec">AliceO2::Field::MagneticField::BMap_t</a></div><div class="ttdeci">BMap_t</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4b/MagneticField_8h_source.html#l00025">MagneticField.h:25</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Field_1_1MagneticField_html_a13dbf7eacf40473bf15db08c5faaa915"><div class="ttname"><a href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a13dbf7eacf40473bf15db08c5faaa915">AliceO2::Field::MagneticField::mMultipicativeFactorSolenoid</a></div><div class="ttdeci">Double_t mMultipicativeFactorSolenoid</div><div class="ttdoc">Multiplicative factor for solenoid. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4b/MagneticField_8h_source.html#l00206">MagneticField.h:206</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Field_1_1MagneticField_html_ab6279dcb8273599818d01947f66554c5"><div class="ttname"><a href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#ab6279dcb8273599818d01947f66554c5">AliceO2::Field::MagneticField::mSolenoid</a></div><div class="ttdeci">Double_t mSolenoid</div><div class="ttdoc">Solenoid field setting. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4b/MagneticField_8h_source.html#l00200">MagneticField.h:200</a></div></div>
-<div class="ttc" id="TrackReference_8cxx_html_a3009a839d083cbdd1c18dfe7d9fee024"><div class="ttname"><a href="../../da/d10/TrackReference_8cxx.html#a3009a839d083cbdd1c18dfe7d9fee024">ClassImp</a></div><div class="ttdeci">ClassImp(AliceO2::Base::TrackReference) TrackReference</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d10/TrackReference_8cxx_source.html#l00015">TrackReference.cxx:15</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Field_1_1MagneticField_html_a230e27ae6dfbf358b1de1a353f2c8806a5d5233e2a74136f7335f4823b125180d"><div class="ttname"><a href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a230e27ae6dfbf358b1de1a353f2c8806a5d5233e2a74136f7335f4823b125180d">AliceO2::Field::MagneticField::kBeamTypepp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4b/MagneticField_8h_source.html#l00026">MagneticField.h:26</a></div></div>
+<div class="ttc" id="Condition_8cxx_html_a0c7f66a889011efdf2562689fa354cce"><div class="ttname"><a href="../../d2/d1c/Condition_8cxx.html#a0c7f66a889011efdf2562689fa354cce">ClassImp</a></div><div class="ttdeci">ClassImp(Condition) Condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1c/Condition_8cxx_source.html#l00012">Condition.cxx:12</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Field_1_1MagneticField_html_a995e0569216ab4ec9a7018dc3503ecd4"><div class="ttname"><a href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a995e0569216ab4ec9a7018dc3503ecd4">AliceO2::Field::MagneticField::Field</a></div><div class="ttdeci">virtual void Field(const Double_t *x, Double_t *b)</div><div class="ttdoc">Method to calculate the field at point xyz. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d78/MagneticField_8cxx_source.html#l00200">MagneticField.cxx:200</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Field_1_1MagneticField_html_a111548fbdbe8098eff54c60129f0a557"><div class="ttname"><a href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a111548fbdbe8098eff54c60129f0a557">AliceO2::Field::MagneticField::getTPCIntegral</a></div><div class="ttdeci">void getTPCIntegral(const Double_t *xyz, Double_t *b) const </div><div class="ttdoc">Method to calculate the integral_0^z of br,bt,bz. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d78/MagneticField_8cxx_source.html#l00356">MagneticField.cxx:356</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Field_1_1MagneticField_html_a230e27ae6dfbf358b1de1a353f2c8806"><div class="ttname"><a href="../../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a230e27ae6dfbf358b1de1a353f2c8806">AliceO2::Field::MagneticField::BeamType_t</a></div><div class="ttdeci">BeamType_t</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4b/MagneticField_8h_source.html#l00026">MagneticField.h:26</a></div></div>
@@ -727,8 +726,8 @@ $(document).ready(function(){initNavTree('d2/d78/MagneticField_8cxx_source.html'
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_7d1ffb3aa8dcf96acb6dd41dfa3fdc09.html">field</a></li><li class="navelem"><a class="el" href="../../d2/d78/MagneticField_8cxx.html">MagneticField.cxx</a></li>
-    <li class="footer">Generated on Tue Mar 15 2016 16:16:07 for AliceO2 by
+    <li class="navelem"><a class="el" href="../../dir_4ab6b4cc6a7edbff49100e9123df213f.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_91c9f7c5ec503f33747eecaa76c19aa0.html">Field</a></li><li class="navelem"><a class="el" href="../../dir_43838c4b39018742caa88523ee39d462.html">src</a></li><li class="navelem"><a class="el" href="../../d2/d78/MagneticField_8cxx.html">MagneticField.cxx</a></li>
+    <li class="footer">Generated on Thu May 12 2016 10:44:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

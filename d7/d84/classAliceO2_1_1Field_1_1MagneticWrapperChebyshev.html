@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -230,6 +229,54 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aed65ddf684639620d74e851ef91f83aa"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#aed65ddf684639620d74e851ef91f83aa">findDipoleSegment</a> (const Double_t *xyz) const </td></tr>
 <tr class="memdesc:aed65ddf684639620d74e851ef91f83aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the segment containing point xyz. If it is outside it finds the closest segment.  <a href="#aed65ddf684639620d74e851ef91f83aa">More...</a><br /></td></tr>
 <tr class="separator:aed65ddf684639620d74e851ef91f83aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ccdf2a0f9a5730c0fb69c295326b2db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a6ccdf2a0f9a5730c0fb69c295326b2db">loadData</a> (const char *inpfile)</td></tr>
+<tr class="memdesc:a6ccdf2a0f9a5730c0fb69c295326b2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads coefficients data from the text file.  <a href="#a6ccdf2a0f9a5730c0fb69c295326b2db">More...</a><br /></td></tr>
+<tr class="separator:a6ccdf2a0f9a5730c0fb69c295326b2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8acab27182fe5d64886bc653fc700f22"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a8acab27182fe5d64886bc653fc700f22">MagneticWrapperChebyshev</a> (const char *inputFile)</td></tr>
+<tr class="memdesc:a8acab27182fe5d64886bc653fc700f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from coefficients from the text file.  <a href="#a8acab27182fe5d64886bc653fc700f22">More...</a><br /></td></tr>
+<tr class="separator:a8acab27182fe5d64886bc653fc700f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6743899bd7afe2374602dc05e6f15100"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a6743899bd7afe2374602dc05e6f15100">saveData</a> (const char *outfile) const </td></tr>
+<tr class="memdesc:a6743899bd7afe2374602dc05e6f15100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes coefficients data to output text file.  <a href="#a6743899bd7afe2374602dc05e6f15100">More...</a><br /></td></tr>
+<tr class="separator:a6743899bd7afe2374602dc05e6f15100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19bac515a249d69a50b920fbaa54098e"><td class="memItemLeft" align="right" valign="top">Int_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a19bac515a249d69a50b920fbaa54098e">segmentDimension</a> (Float_t **seg, const TObjArray *par, int npar, int dim, Float_t xmn, Float_t xmx, Float_t ymn, Float_t ymx, Float_t zmn, Float_t zmx)</td></tr>
+<tr class="separator:a19bac515a249d69a50b920fbaa54098e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ca4dad1508a338c89841d07b065442"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a16ca4dad1508a338c89841d07b065442">addParameterSolenoid</a> (const <a class="el" href="../../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html">AliceO2::MathUtils::Chebyshev3D</a> *param)</td></tr>
+<tr class="separator:a16ca4dad1508a338c89841d07b065442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5cc9771c3d11428b720de91bc9f3ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a8e5cc9771c3d11428b720de91bc9f3ba">addParameterTPCIntegral</a> (const <a class="el" href="../../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html">AliceO2::MathUtils::Chebyshev3D</a> *param)</td></tr>
+<tr class="separator:a8e5cc9771c3d11428b720de91bc9f3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cbf01acf3345d316c5907125378dd97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a2cbf01acf3345d316c5907125378dd97">addParameterTPCRatIntegral</a> (const <a class="el" href="../../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html">AliceO2::MathUtils::Chebyshev3D</a> *param)</td></tr>
+<tr class="memdesc:a2cbf01acf3345d316c5907125378dd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new parameterization piece for TPCRatInt.  <a href="#a2cbf01acf3345d316c5907125378dd97">More...</a><br /></td></tr>
+<tr class="separator:a2cbf01acf3345d316c5907125378dd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d088c0f4a521cc1bd3bfaffd3bddd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a64d088c0f4a521cc1bd3bfaffd3bddd0">addParameterDipole</a> (const <a class="el" href="../../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html">AliceO2::MathUtils::Chebyshev3D</a> *param)</td></tr>
+<tr class="memdesc:a64d088c0f4a521cc1bd3bfaffd3bddd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new parameterization piece for Dipole.  <a href="#a64d088c0f4a521cc1bd3bfaffd3bddd0">More...</a><br /></td></tr>
+<tr class="separator:a64d088c0f4a521cc1bd3bfaffd3bddd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ead0f072af65def861f0aaee5617c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a06ead0f072af65def861f0aaee5617c9">buildTable</a> (Int_t npar, TObjArray *parArr, Int_t &amp;nZSeg, Int_t &amp;nYSeg, Int_t &amp;nXSeg, Float_t &amp;minZ, Float_t &amp;maxZ, Float_t **segZ, Float_t **segY, Float_t **segX, Int_t **begSegY, Int_t **nSegY, Int_t **begSegX, Int_t **nSegX, Int_t **segID)</td></tr>
+<tr class="memdesc:a06ead0f072af65def861f0aaee5617c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds lookup table for dipole.  <a href="#a06ead0f072af65def861f0aaee5617c9">More...</a><br /></td></tr>
+<tr class="separator:a06ead0f072af65def861f0aaee5617c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84cc529e230abd615ffe9eb101adf74a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a84cc529e230abd615ffe9eb101adf74a">buildTableSolenoid</a> ()</td></tr>
+<tr class="memdesc:a84cc529e230abd615ffe9eb101adf74a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds lookup table.  <a href="#a84cc529e230abd615ffe9eb101adf74a">More...</a><br /></td></tr>
+<tr class="separator:a84cc529e230abd615ffe9eb101adf74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2474db9e06d8191adebefc83d4804190"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a2474db9e06d8191adebefc83d4804190">buildTableDipole</a> ()</td></tr>
+<tr class="memdesc:a2474db9e06d8191adebefc83d4804190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds lookup table.  <a href="#a2474db9e06d8191adebefc83d4804190">More...</a><br /></td></tr>
+<tr class="separator:a2474db9e06d8191adebefc83d4804190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc8e9e1eed2c76b76fc36381833beea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a8dc8e9e1eed2c76b76fc36381833beea">buildTableTPCIntegral</a> ()</td></tr>
+<tr class="memdesc:a8dc8e9e1eed2c76b76fc36381833beea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds lookup table.  <a href="#a8dc8e9e1eed2c76b76fc36381833beea">More...</a><br /></td></tr>
+<tr class="separator:a8dc8e9e1eed2c76b76fc36381833beea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44d4c3115dc511f69f2bcc03d0339d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a44d4c3115dc511f69f2bcc03d0339d44">buildTableTPCRatIntegral</a> ()</td></tr>
+<tr class="memdesc:a44d4c3115dc511f69f2bcc03d0339d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds lookup table.  <a href="#a44d4c3115dc511f69f2bcc03d0339d44">More...</a><br /></td></tr>
+<tr class="separator:a44d4c3115dc511f69f2bcc03d0339d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1013c6608eeb5ff27ff0eed6dcb54aca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a1013c6608eeb5ff27ff0eed6dcb54aca">resetTPCIntegral</a> ()</td></tr>
+<tr class="memdesc:a1013c6608eeb5ff27ff0eed6dcb54aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans <a class="el" href="../../dc/d7b/namespaceAliceO2_1_1TPC.html">TPC</a> field integral (used for update)  <a href="#a1013c6608eeb5ff27ff0eed6dcb54aca">More...</a><br /></td></tr>
+<tr class="separator:a1013c6608eeb5ff27ff0eed6dcb54aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a171a756659273d022ef2d0b6f97557fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a171a756659273d022ef2d0b6f97557fa">resetTPCRatIntegral</a> ()</td></tr>
+<tr class="memdesc:a171a756659273d022ef2d0b6f97557fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans TPCRat field integral (used for update)  <a href="#a171a756659273d022ef2d0b6f97557fa">More...</a><br /></td></tr>
+<tr class="separator:a171a756659273d022ef2d0b6f97557fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8324ea5e486f45c9e6cab473571955"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#abd8324ea5e486f45c9e6cab473571955">resetSolenoid</a> ()</td></tr>
+<tr class="memdesc:abd8324ea5e486f45c9e6cab473571955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans Solenoid field (used for update)  <a href="#abd8324ea5e486f45c9e6cab473571955">More...</a><br /></td></tr>
+<tr class="separator:abd8324ea5e486f45c9e6cab473571955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036bb5367dbbe5f853b573a3fd476437"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a036bb5367dbbe5f853b573a3fd476437">resetDipole</a> ()</td></tr>
+<tr class="memdesc:a036bb5367dbbe5f853b573a3fd476437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans Dipole field (used for update)  <a href="#a036bb5367dbbe5f853b573a3fd476437">More...</a><br /></td></tr>
+<tr class="separator:a036bb5367dbbe5f853b573a3fd476437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -485,7 +532,268 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8acab27182fe5d64886bc653fc700f22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AliceO2::Field::MagneticWrapperChebyshev::MagneticWrapperChebyshev </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>inputFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct from coefficients from the text file. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a64d088c0f4a521cc1bd3bfaffd3bddd0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::addParameterDipole </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html">AliceO2::MathUtils::Chebyshev3D</a> *&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds new parameterization piece for Dipole. </p>
+
+</div>
+</div>
+<a class="anchor" id="a16ca4dad1508a338c89841d07b065442"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::addParameterSolenoid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html">AliceO2::MathUtils::Chebyshev3D</a> *&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds new parameterization piece for Solenoid NOTE: pieces must be added strictly in increasing R then increasing Z order </p>
+
+</div>
+</div>
+<a class="anchor" id="a8e5cc9771c3d11428b720de91bc9f3ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::addParameterTPCIntegral </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html">AliceO2::MathUtils::Chebyshev3D</a> *&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2cbf01acf3345d316c5907125378dd97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::addParameterTPCRatIntegral </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html">AliceO2::MathUtils::Chebyshev3D</a> *&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds new parameterization piece for TPCRatInt. </p>
+
+</div>
+</div>
+<a class="anchor" id="a06ead0f072af65def861f0aaee5617c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::buildTable </td>
+          <td>(</td>
+          <td class="paramtype">Int_t&#160;</td>
+          <td class="paramname"><em>npar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TObjArray *&#160;</td>
+          <td class="paramname"><em>parArr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t &amp;&#160;</td>
+          <td class="paramname"><em>nZSeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t &amp;&#160;</td>
+          <td class="paramname"><em>nYSeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t &amp;&#160;</td>
+          <td class="paramname"><em>nXSeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t &amp;&#160;</td>
+          <td class="paramname"><em>minZ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t &amp;&#160;</td>
+          <td class="paramname"><em>maxZ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t **&#160;</td>
+          <td class="paramname"><em>segZ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t **&#160;</td>
+          <td class="paramname"><em>segY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t **&#160;</td>
+          <td class="paramname"><em>segX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t **&#160;</td>
+          <td class="paramname"><em>begSegY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t **&#160;</td>
+          <td class="paramname"><em>nSegY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t **&#160;</td>
+          <td class="paramname"><em>begSegX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t **&#160;</td>
+          <td class="paramname"><em>nSegX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int_t **&#160;</td>
+          <td class="paramname"><em>segID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds lookup table for dipole. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2474db9e06d8191adebefc83d4804190"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::buildTableDipole </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds lookup table. </p>
+
+</div>
+</div>
+<a class="anchor" id="a84cc529e230abd615ffe9eb101adf74a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::buildTableSolenoid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds lookup table. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8dc8e9e1eed2c76b76fc36381833beea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::buildTableTPCIntegral </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds lookup table. </p>
+
+</div>
+</div>
+<a class="anchor" id="a44d4c3115dc511f69f2bcc03d0339d44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::buildTableTPCRatIntegral </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds lookup table. </p>
+
+</div>
+</div>
 <a class="anchor" id="a4ab336d94d35a74af0c85e57931e2da4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1788,6 +2096,24 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6ccdf2a0f9a5730c0fb69c295326b2db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::loadData </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>inpfile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads coefficients data from the text file. </p>
+
+</div>
+</div>
 <a class="anchor" id="a025a283b077dde912d70ef376ad70cfd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1833,6 +2159,167 @@ Protected Attributes</h2></td></tr>
 <p>Prints info. </p>
 
 <p>Definition at line <a class="el" href="../../de/d97/MagneticWrapperChebyshev_8cxx_source.html#l00461">461</a> of file <a class="el" href="../../de/d97/MagneticWrapperChebyshev_8cxx_source.html">MagneticWrapperChebyshev.cxx</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a036bb5367dbbe5f853b573a3fd476437"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::resetDipole </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cleans Dipole field (used for update) </p>
+
+</div>
+</div>
+<a class="anchor" id="abd8324ea5e486f45c9e6cab473571955"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::resetSolenoid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cleans Solenoid field (used for update) </p>
+
+</div>
+</div>
+<a class="anchor" id="a1013c6608eeb5ff27ff0eed6dcb54aca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::resetTPCIntegral </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cleans <a class="el" href="../../dc/d7b/namespaceAliceO2_1_1TPC.html">TPC</a> field integral (used for update) </p>
+
+</div>
+</div>
+<a class="anchor" id="a171a756659273d022ef2d0b6f97557fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::resetTPCRatIntegral </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cleans TPCRat field integral (used for update) </p>
+
+</div>
+</div>
+<a class="anchor" id="a6743899bd7afe2374602dc05e6f15100"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AliceO2::Field::MagneticWrapperChebyshev::saveData </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>outfile</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes coefficients data to output text file. </p>
+
+</div>
+</div>
+<a class="anchor" id="a19bac515a249d69a50b920fbaa54098e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Int_t AliceO2::Field::MagneticWrapperChebyshev::segmentDimension </td>
+          <td>(</td>
+          <td class="paramtype">Float_t **&#160;</td>
+          <td class="paramname"><em>seg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TObjArray *&#160;</td>
+          <td class="paramname"><em>par</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>npar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t&#160;</td>
+          <td class="paramname"><em>xmn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t&#160;</td>
+          <td class="paramname"><em>xmx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t&#160;</td>
+          <td class="paramname"><em>ymn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t&#160;</td>
+          <td class="paramname"><em>ymx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t&#160;</td>
+          <td class="paramname"><em>zmn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Float_t&#160;</td>
+          <td class="paramname"><em>zmx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Finds all boundaries in dimension dim for boxes in given region. if mn &gt; mx for given projection the check is not done for it. </p>
 
 </div>
 </div>
@@ -3307,8 +3794,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>field/<a class="el" href="../../dd/dfb/MagneticWrapperChebyshev_8h_source.html">MagneticWrapperChebyshev.h</a></li>
-<li>field/<a class="el" href="../../de/d97/MagneticWrapperChebyshev_8cxx_source.html">MagneticWrapperChebyshev.cxx</a></li>
+<li>Common/Field/include/<a class="el" href="../../dd/dfb/MagneticWrapperChebyshev_8h_source.html">MagneticWrapperChebyshev.h</a></li>
+<li>Common/Field/src/<a class="el" href="../../de/d97/MagneticWrapperChebyshev_8cxx_source.html">MagneticWrapperChebyshev.cxx</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -3316,7 +3803,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li><li class="navelem"><a class="el" href="../../d8/d36/namespaceAliceO2_1_1Field.html">Field</a></li><li class="navelem"><a class="el" href="../../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html">MagneticWrapperChebyshev</a></li>
-    <li class="footer">Generated on Tue Mar 15 2016 16:16:09 for AliceO2 by
+    <li class="footer">Generated on Thu May 12 2016 10:44:19 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

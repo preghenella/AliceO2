@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>AliceO2: devices/flp2epn-distributed/FLPSender.cxx Source File</title>
+<title>AliceO2: Examples/flp2epn-distributed/FLPSender.cxx Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -203,40 +202,40 @@ $(document).ready(function(){initNavTree('d0/dc2/FLPSender_8cxx_source.html','..
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// boost::thread heartbeatReceiver(boost::bind(&amp;FLPSender::receiveHeartbeats, this));</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">// base buffer, to be copied from for every timeframe body (zero-copy)</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span>* buffer = <span class="keyword">operator</span> <span class="keyword">new</span>[](fEventSize);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  unique_ptr&lt;FairMQMessage&gt; baseMsg(fTransportFactory-&gt;CreateMessage(buffer, fEventSize));</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  uint16_t timeFrameId = 0;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// store the channel reference to avoid traversing the map on every loop iteration</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  FairMQChannel&amp; dataInChannel = fChannels.at(<span class="stringliteral">&quot;data-in&quot;</span>).at(0);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">while</span> (CheckCurrentState(RUNNING)) {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// initialize f2e header</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>* h = <span class="keyword">new</span> <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (fTestMode &gt; 0) {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="comment">// test-mode: receive and store id part in the buffer.</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      unique_ptr&lt;FairMQMessage&gt; idPart(fTransportFactory-&gt;CreateMessage());</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keywordflow">if</span> (dataInChannel.Receive(idPart) &gt; 0) {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a135104a12a334a87deecf620e9b5f520">timeFrameId</a> = *(<span class="keyword">static_cast&lt;</span>uint16_t*<span class="keyword">&gt;</span>(idPart-&gt;GetData()));</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a08b6283854fb6fa5cbb37641ce314f35">flpIndex</a> = fIndex;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">// if nothing was received, try again</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">delete</span> h;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="comment">// regular mode: use the id generated locally</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a135104a12a334a87deecf620e9b5f520">timeFrameId</a> = timeFrameId;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a08b6283854fb6fa5cbb37641ce314f35">flpIndex</a> = fIndex;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordflow">if</span> (++timeFrameId == UINT16_MAX - 1) {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        timeFrameId = 0;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    unique_ptr&lt;FairMQMessage&gt; headerPart(fTransportFactory-&gt;CreateMessage(h, <span class="keyword">sizeof</span>(<a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>)));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  unique_ptr&lt;FairMQMessage&gt; baseMsg(fTransportFactory-&gt;CreateMessage(fEventSize));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  uint16_t timeFrameId = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="comment">// store the channel reference to avoid traversing the map on every loop iteration</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  FairMQChannel&amp; dataInChannel = fChannels.at(<span class="stringliteral">&quot;data-in&quot;</span>).at(0);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">while</span> (CheckCurrentState(RUNNING)) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// initialize f2e header</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>* h = <span class="keyword">new</span> <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> (fTestMode &gt; 0) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="comment">// test-mode: receive and store id part in the buffer.</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      unique_ptr&lt;FairMQMessage&gt; idPart(fTransportFactory-&gt;CreateMessage());</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keywordflow">if</span> (dataInChannel.Receive(idPart) &gt; 0) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a135104a12a334a87deecf620e9b5f520">timeFrameId</a> = *(<span class="keyword">static_cast&lt;</span>uint16_t*<span class="keyword">&gt;</span>(idPart-&gt;GetData()));</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a08b6283854fb6fa5cbb37641ce314f35">flpIndex</a> = fIndex;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">// if nothing was received, try again</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">delete</span> h;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="comment">// regular mode: use the id generated locally</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a135104a12a334a87deecf620e9b5f520">timeFrameId</a> = timeFrameId;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a08b6283854fb6fa5cbb37641ce314f35">flpIndex</a> = fIndex;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">if</span> (++timeFrameId == UINT16_MAX - 1) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        timeFrameId = 0;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   <span class="comment">// unique_ptr&lt;FairMQMessage&gt; headerPart(fTransportFactory-&gt;CreateMessage(sizeof(f2eHeader)));</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    unique_ptr&lt;FairMQMessage&gt; headerPart(fTransportFactory-&gt;CreateMessage(h, <span class="keyword">sizeof</span>(<a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>), [](<span class="keywordtype">void</span>* data, <span class="keywordtype">void</span>* hint){ delete static_cast&lt;f2eHeader*&gt;(hint); }, h));</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    unique_ptr&lt;FairMQMessage&gt; dataPart(fTransportFactory-&gt;CreateMessage());</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// save the arrival time of the message.</span></div>
@@ -402,8 +401,8 @@ $(document).ready(function(){initNavTree('d0/dc2/FLPSender_8cxx_source.html','..
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d8825559e0a3f2643aa079b2cf0ac6c3.html">devices</a></li><li class="navelem"><a class="el" href="../../dir_0286deae6ce289509f1af9894c5e2ae4.html">flp2epn-distributed</a></li><li class="navelem"><a class="el" href="../../d0/dc2/FLPSender_8cxx.html">FLPSender.cxx</a></li>
-    <li class="footer">Generated on Tue Mar 15 2016 16:16:07 for AliceO2 by
+    <li class="navelem"><a class="el" href="../../dir_03680f297d755c096b0a1ead13ee12b7.html">Examples</a></li><li class="navelem"><a class="el" href="../../dir_87f9a983135fc5f02c1a00f3a6273132.html">flp2epn-distributed</a></li><li class="navelem"><a class="el" href="../../d0/dc2/FLPSender_8cxx.html">FLPSender.cxx</a></li>
+    <li class="footer">Generated on Thu May 12 2016 10:44:19 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

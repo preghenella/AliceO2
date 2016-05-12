@@ -6,6 +6,7 @@ var namespaceAliceO2 =
     [ "Data", "d4/d13/namespaceAliceO2_1_1Data.html", "d4/d13/namespaceAliceO2_1_1Data" ],
     [ "Devices", "d3/d4f/namespaceAliceO2_1_1Devices.html", "d3/d4f/namespaceAliceO2_1_1Devices" ],
     [ "Field", "d8/d36/namespaceAliceO2_1_1Field.html", "d8/d36/namespaceAliceO2_1_1Field" ],
+    [ "Format", "d1/ddd/namespaceAliceO2_1_1Format.html", "d1/ddd/namespaceAliceO2_1_1Format" ],
     [ "ITS", "db/d51/namespaceAliceO2_1_1ITS.html", "db/d51/namespaceAliceO2_1_1ITS" ],
     [ "MathUtils", "da/ddc/namespaceAliceO2_1_1MathUtils.html", "da/ddc/namespaceAliceO2_1_1MathUtils" ],
     [ "Passive", "d8/dd3/namespaceAliceO2_1_1Passive.html", "d8/dd3/namespaceAliceO2_1_1Passive" ],

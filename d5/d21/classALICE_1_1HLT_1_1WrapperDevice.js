@@ -1,9 +1,9 @@
 var classALICE_1_1HLT_1_1WrapperDevice =
 [
-    [ "Id", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a023a6a624692bb5bd86515c73074ded3ad351918fe431fee294dfbcc88b5fa72f", null ],
-    [ "PollingPeriod", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a023a6a624692bb5bd86515c73074ded3acad469d8721927810b38c26db0e89303", null ],
-    [ "SkipProcessing", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a023a6a624692bb5bd86515c73074ded3a5dd608cfda92597963e5254229ce1bf0", null ],
-    [ "Last", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a023a6a624692bb5bd86515c73074ded3a0522a767e1e1bb5bb83b098b1db3fdc5", null ],
+    [ "Id", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a99987800d6f04420c2b4280157252a8bad351918fe431fee294dfbcc88b5fa72f", null ],
+    [ "PollingPeriod", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a99987800d6f04420c2b4280157252a8bacad469d8721927810b38c26db0e89303", null ],
+    [ "SkipProcessing", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a99987800d6f04420c2b4280157252a8ba5dd608cfda92597963e5254229ce1bf0", null ],
+    [ "Last", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a99987800d6f04420c2b4280157252a8ba0522a767e1e1bb5bb83b098b1db3fdc5", null ],
     [ "WrapperDevice", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a549db2d976a1fdc80da7500634a0eeb2", null ],
     [ "~WrapperDevice", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a183c5dabc150471dc08efd032df00e8b", null ],
     [ "GetProperty", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#aae8e864d1a3c0161a01358a57cb991b4", null ],

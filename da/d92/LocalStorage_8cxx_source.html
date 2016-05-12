@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>AliceO2: o2cdb/LocalStorage.cxx Source File</title>
+<title>AliceO2: CCDB/src/LocalStorage.cxx Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -47,7 +47,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
@@ -1277,7 +1276,7 @@ $(document).ready(function(){initNavTree('da/d92/LocalStorage_8cxx_source.html',
 <div class="ttc" id="classAliceO2_1_1CDB_1_1Condition_html_a9b7ca64bd2ea2350ba88f5d4fb808e01"><div class="ttname"><a href="../../df/d2c/classAliceO2_1_1CDB_1_1Condition.html#a9b7ca64bd2ea2350ba88f5d4fb808e01">AliceO2::CDB::Condition::getId</a></div><div class="ttdeci">ConditionId &amp; getId()</div><div class="ttdoc">ConditionId accessor. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/Condition_8h_source.html#l00064">Condition.h:64</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1LocalStorageParameters_html_ad64c93e23fa00d8082697c3919a76ae5"><div class="ttname"><a href="../../d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html#ad64c93e23fa00d8082697c3919a76ae5">AliceO2::CDB::LocalStorageParameters::cloneParam</a></div><div class="ttdeci">virtual StorageParameters * cloneParam() const </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d92/LocalStorage_8cxx_source.html#l01133">LocalStorage.cxx:1133</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionId_html_ac7fb228235802f9b003653c233a1d1d8"><div class="ttname"><a href="../../df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#ac7fb228235802f9b003653c233a1d1d8">AliceO2::CDB::ConditionId::isEqual</a></div><div class="ttdeci">virtual Bool_t isEqual(const TObject *obj) const </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d25/ConditionId_8cxx_source.html#l00100">ConditionId.cxx:100</a></div></div>
-<div class="ttc" id="Condition_8h_html"><div class="ttname"><a href="../../da/d6a/Condition_8h.html">Condition.h</a></div><div class="ttdoc">Implementation of the Condition class (CDB object) containing the condition and its metadata...</div></div>
+<div class="ttc" id="Condition_8h_html"><div class="ttname"><a href="../../da/d6a/Condition_8h.html">Condition.h</a></div><div class="ttdoc">Definition of the Condition class (CDB object) containing the condition and its metadata. </div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionId_html_a3bbccfff1586a4e8122899237608b09b"><div class="ttname"><a href="../../df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a3bbccfff1586a4e8122899237608b09b">AliceO2::CDB::ConditionId::setPath</a></div><div class="ttdeci">void setPath(const char *path)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d53/ConditionId_8h_source.html#l00042">ConditionId.h:42</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionId_html_abee1ef51bb703ded09a5b69cd02c0f16"><div class="ttname"><a href="../../df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#abee1ef51bb703ded09a5b69cd02c0f16">AliceO2::CDB::ConditionId::isSpecified</a></div><div class="ttdeci">Bool_t isSpecified() const </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d53/ConditionId_8h_source.html#l00107">ConditionId.h:107</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1Storage_html_a485a9316c12733f30a3f8cbab9e9af09"><div class="ttname"><a href="../../d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a485a9316c12733f30a3f8cbab9e9af09">AliceO2::CDB::Storage::mRun</a></div><div class="ttdeci">Int_t mRun</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6f/Storage_8h_source.html#l00096">Storage.h:96</a></div></div>
@@ -1327,7 +1326,7 @@ $(document).ready(function(){initNavTree('da/d92/LocalStorage_8cxx_source.html',
 <div class="ttc" id="classAliceO2_1_1CDB_1_1LocalStorage_html_a07d69fd801f0c1b1dfd39693c2752a1e"><div class="ttname"><a href="../../d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html#a07d69fd801f0c1b1dfd39693c2752a1e">AliceO2::CDB::LocalStorage::getIdListFromFile</a></div><div class="ttdeci">virtual TList * getIdListFromFile(const char *fileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d92/LocalStorage_8cxx_source.html#l00755">LocalStorage.cxx:755</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1LocalStorageParameters_html_abdce87b192acdd55af015f0f963b9020"><div class="ttname"><a href="../../d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html#abdce87b192acdd55af015f0f963b9020">AliceO2::CDB::LocalStorageParameters::isEqual</a></div><div class="ttdeci">virtual Bool_t isEqual(const TObject *obj) const </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d92/LocalStorage_8cxx_source.html#l01147">LocalStorage.cxx:1147</a></div></div>
 <div class="ttc" id="LocalStorage_8cxx_html_aeef59e37e92d749cf6f19421a05909a6"><div class="ttname"><a href="../../da/d92/LocalStorage_8cxx.html#aeef59e37e92d749cf6f19421a05909a6">ClassImp</a></div><div class="ttdeci">ClassImp(LocalStorage) LocalStorage</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d92/LocalStorage_8cxx_source.html#l00025">LocalStorage.cxx:25</a></div></div>
-<div class="ttc" id="namespaceAliceO2_1_1CDB_html"><div class="ttname"><a href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1c/Condition_8cxx_source.html#l00007">Condition.cxx:7</a></div></div>
+<div class="ttc" id="namespaceAliceO2_1_1CDB_html"><div class="ttname"><a href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/Condition_8h_source.html#l00013">Condition.h:13</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html_a24e855beea589aaf337ec43727918911"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a24e855beea589aaf337ec43727918911">AliceO2::CDB::IdPath::isSupersetOf</a></div><div class="ttdeci">Bool_t isSupersetOf(const IdPath &amp;other) const </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d04/IdPath_8cxx_source.html#l00191">IdPath.cxx:191</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1LocalStorageParameters_html_ab24b56d29c8acc3c9fb193ea72ee2de8"><div class="ttname"><a href="../../d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html#ab24b56d29c8acc3c9fb193ea72ee2de8">AliceO2::CDB::LocalStorageParameters::getHash</a></div><div class="ttdeci">virtual ULong_t getHash() const </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d92/LocalStorage_8cxx_source.html#l01140">LocalStorage.cxx:1140</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1Condition_html"><div class="ttname"><a href="../../df/d2c/classAliceO2_1_1CDB_1_1Condition.html">AliceO2::CDB::Condition</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/Condition_8h_source.html#l00023">Condition.h:23</a></div></div>
@@ -1348,8 +1347,8 @@ $(document).ready(function(){initNavTree('da/d92/LocalStorage_8cxx_source.html',
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_3472b3ea63d1c5eec14900552ebe61c1.html">o2cdb</a></li><li class="navelem"><a class="el" href="../../da/d92/LocalStorage_8cxx.html">LocalStorage.cxx</a></li>
-    <li class="footer">Generated on Tue Mar 15 2016 16:16:08 for AliceO2 by
+    <li class="navelem"><a class="el" href="../../dir_6af676bf18881990e4083e191d0e63e0.html">CCDB</a></li><li class="navelem"><a class="el" href="../../dir_befd4b94ad9227be1ceff0153bf9ca7d.html">src</a></li><li class="navelem"><a class="el" href="../../da/d92/LocalStorage_8cxx.html">LocalStorage.cxx</a></li>
+    <li class="footer">Generated on Thu May 12 2016 10:44:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

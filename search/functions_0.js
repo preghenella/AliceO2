@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['add',['add',['../d1/d95/classAliceO2_1_1Format_1_1messageList.html#a400ab5aa34a52297f05b6a1c085c9390',1,'AliceO2::Format::messageList']]],
   ['addblock',['AddBlock',['../df/d17/classAliHLTMonitoringWriter.html#a94b58287cd9a5d9f30c0fa9e3779e06f',1,'AliHLTMonitoringWriter::AddBlock()'],['../dd/d46/classAliHLTHOMERWriter.html#abe7e8d6b7bf5a1aed88faee82972cd84',1,'AliHLTHOMERWriter::AddBlock(const void *homerHeader, const void *data)'],['../dd/d46/classAliHLTHOMERWriter.html#a8d6b0d778881e482106dffa4316b7696',1,'AliHLTHOMERWriter::AddBlock(const HOMERBlockDescriptor *descriptor, const void *data)'],['../dd/d46/classAliHLTHOMERWriter.html#ac69a699a3ef612f66cf9a154001321c7',1,'AliHLTHOMERWriter::AddBlock(HOMERBlockDescriptor *descriptor, const void *data)']]],
   ['adddatasource',['AddDataSource',['../d5/d54/classAliHLTHOMERReader.html#ad6a789c38e35441b89c9902b5dcaa547',1,'AliHLTHOMERReader::AddDataSource(const char *hostname, unsigned short port, DataSource &amp;source)'],['../d5/d54/classAliHLTHOMERReader.html#a35848984f2826ba2a53bfb69d05c4b9e',1,'AliHLTHOMERReader::AddDataSource(key_t shmKey, int shmSize, DataSource &amp;source)'],['../d5/d54/classAliHLTHOMERReader.html#ac8abe422ac546201090a24bccb816229',1,'AliHLTHOMERReader::AddDataSource(void *pBuffer, int size, DataSource &amp;source)']]],
   ['adddatatocoordinatesvector',['addDataToCoordinatesVector',['../d5/df3/runHough_8cxx.html#aa2edecc3e4e54904620c0a555f83d80c',1,'runHough.cxx']]],
@@ -10,6 +11,10 @@ var searchData=
   ['addmessage',['addMessage',['../d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#acc9be4cbe5b7e81a9db1cc605120fb86',1,'AliceO2::AliceHLT::MessageFormat']]],
   ['addmessages',['addMessages',['../d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a45124937dd4d3b9bb63a2cafa3190b32',1,'AliceO2::AliceHLT::MessageFormat']]],
   ['addnewdatatotclonesarray',['AddNewDataToTClonesArray',['../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#a772a27b60c9e4a56499eeae72234b7fe',1,'AliceO2::ITS::DigitWriteoutBuffer']]],
+  ['addparameterdipole',['addParameterDipole',['../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a64d088c0f4a521cc1bd3bfaffd3bddd0',1,'AliceO2::Field::MagneticWrapperChebyshev']]],
+  ['addparametersolenoid',['addParameterSolenoid',['../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a16ca4dad1508a338c89841d07b065442',1,'AliceO2::Field::MagneticWrapperChebyshev']]],
+  ['addparametertpcintegral',['addParameterTPCIntegral',['../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a8e5cc9771c3d11428b720de91bc9f3ba',1,'AliceO2::Field::MagneticWrapperChebyshev']]],
+  ['addparametertpcratintegral',['addParameterTPCRatIntegral',['../d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a2cbf01acf3345d316c5907125378dd97',1,'AliceO2::Field::MagneticWrapperChebyshev']]],
   ['addparticle',['AddParticle',['../d8/d98/classAliceO2_1_1Data_1_1Stack.html#a70184b73be4b9cca3f5ae154d904b40c',1,'AliceO2::Data::Stack']]],
   ['addpoint',['AddPoint',['../d8/d98/classAliceO2_1_1Data_1_1Stack.html#aad8c05bbeb36817a4a90bb66d5c39346',1,'AliceO2::Data::Stack::AddPoint(DetectorId iDet)'],['../d8/d98/classAliceO2_1_1Data_1_1Stack.html#a145b31a7f786e87a12fdaefa1ecd92c5',1,'AliceO2::Data::Stack::AddPoint(DetectorId iDet, Int_t iTrack)']]],
   ['addreceivedobjecttomapbyname',['addReceivedObjectToMapByName',['../de/d60/classMerger.html#a2417ded4d86b2c3c251c96fed8a5b49e',1,'Merger']]],
@@ -28,7 +33,7 @@ var searchData=
   ['alihlthomerwriterdelete',['AliHLTHOMERWriterDelete',['../d0/d3f/AliHLTHOMERWriter_8h.html#a9d5f7ba1f1b61660beac43c0184f7efe',1,'AliHLTHOMERWriter.h']]],
   ['alihltmonitoringreader',['AliHLTMonitoringReader',['../db/daf/classAliHLTMonitoringReader.html#a54e66a425c8934ecaa5b0ef517a4bd66',1,'AliHLTMonitoringReader']]],
   ['alihltmonitoringwriter',['AliHLTMonitoringWriter',['../df/d17/classAliHLTMonitoringWriter.html#a04c4d842759fe3e83aaa7e7da47e5d6c',1,'AliHLTMonitoringWriter']]],
-  ['alloc',['alloc',['../d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#aef88e3174b6b6476e85591d927e39a32',1,'ALICE::HLT::SystemInterface']]],
+  ['alloc',['alloc',['../db/d5f/classTestMsg.html#af5a40089d86e071144a112dfe90d047f',1,'TestMsg::alloc()'],['../d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#aef88e3174b6b6476e85591d927e39a32',1,'ALICE::HLT::SystemInterface::alloc()']]],
   ['allocdatasources',['AllocDataSources',['../d5/d54/classAliHLTHOMERReader.html#adbb2d3e8efeff7d0a71e5c7d477082f7',1,'AliHLTHOMERReader']]],
   ['alpha',['Alpha',['../da/d18/classAliceO2_1_1Base_1_1TrackReference.html#a2c5b0a73f77e968538949dcd6af7359f',1,'AliceO2::Base::TrackReference']]],
   ['angleofintersectionwithline',['angleOfIntersectionWithLine',['../dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#aa716012a65fed68a30d5b0c775ac2310',1,'AliceO2::ITS::V11Geometry']]],

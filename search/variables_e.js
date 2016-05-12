@@ -22,6 +22,7 @@ var searchData=
   ['socketkeys',['socketkeys',['../d3/dc5/aliceHLTEventSampler_8cxx.html#a2cfbc15bf5e0a35eb6389ab4e0c86474',1,'socketkeys():&#160;aliceHLTEventSampler.cxx'],['../d2/d92/aliceHLTWrapper_8cxx.html#a2cfbc15bf5e0a35eb6389ab4e0c86474',1,'socketkeys():&#160;aliceHLTWrapper.cxx']]],
   ['spacepoints',['spacepoints',['../d5/df3/runHough_8cxx.html#a7f6714d42fbfa26e16dba99820d27a20',1,'runHough.cxx']]],
   ['spascal',['sPascal',['../dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#aab4a62d4c90ec2ab9e41099f49bc2652',1,'AliceO2::ITS::V11Geometry']]],
+  ['specification',['specification',['../de/d0a/structSimpleHeader__t.html#afc495cdc8a83c8ec0cc8e31943a467ea',1,'SimpleHeader_t']]],
   ['spolarityconvention',['sPolarityConvention',['../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#af188c298cb668f7c1b03d4e804438e73',1,'AliceO2::Field::MagneticField']]],
   ['sradian',['sRadian',['../dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#adbfc046886345eabdcaae2dfe97923fc',1,'AliceO2::ITS::V11Geometry']]],
   ['ssegmentationslistname',['sSegmentationsListName',['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a204177c250ebc92595af5b6ad11c3334',1,'AliceO2::ITS::UpgradeSegmentationPixel']]],

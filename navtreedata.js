@@ -1,10 +1,6 @@
 var NAVTREE =
 [
   [ "AliceO2", "index.html", [
-    [ "#### Prototype Devices for the transport between FLPs and EPNs", "d9/d4a/md_devices_flp2epn-distributed_README.html", null ],
-    [ "Hough Transform", "d7/db9/md_devices_hough_README.html", null ],
-    [ "Generating Doxygen documentation", "dd/d76/md_doxygen_README.html", null ],
-    [ "O2qa", "d7/d64/md_o2qa_README.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -22,6 +18,7 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
+        [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
@@ -45,18 +42,19 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d11/structAliHLTFXSHeader.html",
-"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a96f8f8e7a77f43a2edadcd3b170c95f0",
-"d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#ace209a55f8a6ae9ab4896b09745816c1",
-"d5/d8c/group__alihlt__component__datatypes.html#ga4e958a80c2ff5604b0fc42834c73451b",
-"d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a1c27578504aa9a0200c5d93f251615a0",
-"d6/d26/runFLPSender_8cxx.html#a92dd00554a39c05d84f9d6afd961bc37",
-"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a354265eadcac32613016d3eebe27e8de",
-"d8/d6a/O2Merger_8cxx.html",
-"d9/d51/classAliceO2_1_1ITS_1_1Detector.html#a85371295ad6a0da8e0e84d46196382ae",
-"db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a37f9387d9e0f841172c8aa3743f9be70",
-"dc/dbf/classAliceO2_1_1CDB_1_1GridStorageFactory.html#a2e0b14c16cbb93b21365abbf944e6206",
-"df/d65/2Prototype_2runFLPSender_8cxx.html"
+"d1/d95/classAliceO2_1_1Format_1_1messageList.html#ac6f0fdf6f1dca9129704c64237c85a73",
+"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#a6e653a9c3311a83d7f094a32fe0472db",
+"d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a9d0ce172c02f24808e82418b447517c0",
+"d5/d8c/group__alihlt__component__datatypes.html#ga47a52cbceb65cb74676b93c5799db9fe",
+"d5/dd4/classAliHLTHOMERBlockDescriptor.html#ab467b190f225d38a248b5279eeb5c51b",
+"d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a7fb89e04ae25a99942c305364ee967f3",
+"d7/d77/structAliceO2_1_1Format_1_1messageList_1_1messagePair.html#aef95141329bd2377538c9ba5b82bb8a5",
+"d7/df1/GridStorage_8cxx.html",
+"d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#acfe9505e2ab7b5f75614c26e51b6e879",
+"db/d02/classAliceO2_1_1ITS_1_1DigitStave.html#a1a29be4f68e47ee133922162fb1f90a5",
+"dc/d1c/structAliHLTHOMERReader_1_1DataSource.html#a44a8c0c0d194dde0d8383ae86fa395f5",
+"de/d55/classPythia8Generator.html#ab6c5005905fdc3b24f5f88b3e8b7b8e7",
+"dir_e977c6a9672cee72083a88d55f0ce0c6.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

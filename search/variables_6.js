@@ -25,6 +25,5 @@ var searchData=
   ['gkalihltfxsheaderffileidsize',['gkAliHLTFXSHeaderfFileIDSize',['../d6/d34/AliHLTDataTypes_8h.html#a68cc2c169553c7ce1294a04777f6affb',1,'AliHLTDataTypes.h']]],
   ['gkalihltfxsheaderforiginsize',['gkAliHLTFXSHeaderfOriginSize',['../d6/d34/AliHLTDataTypes_8h.html#af80700bdbed1e81d918178bcde6f3b7c',1,'AliHLTDataTypes.h']]],
   ['gknctptriggerclasses',['gkNCTPTriggerClasses',['../d6/d34/AliHLTDataTypes_8h.html#a238b9be94fb66827f442bde0541079b3',1,'AliHLTDataTypes.h']]],
-  ['gmaxlayers',['gMaxLayers',['../db/d51/namespaceAliceO2_1_1ITS.html#a73da94f96d0ba545047b98f9502d4e3a',1,'AliceO2::ITS']]],
-  ['gusrfunchebyshev3d',['gUsrFunChebyshev3D',['../d8/d8d/Chebyshev3D_8cxx.html#a7f8bf32f439e63078850ec1a3ef6ce53',1,'Chebyshev3D.cxx']]]
+  ['gmaxlayers',['gMaxLayers',['../db/d51/namespaceAliceO2_1_1ITS.html#a73da94f96d0ba545047b98f9502d4e3a',1,'AliceO2::ITS']]]
 ];

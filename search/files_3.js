@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['datalinkdef_2eh',['DataLinkDef.h',['../da/d8d/DataLinkDef_8h.html',1,'']]],
-  ['detector_2ecxx',['Detector.cxx',['../d6/da3/itsmft_2its_2Detector_8cxx.html',1,'']]],
-  ['detector_2ecxx',['Detector.cxx',['../d1/dae/Base_2Detector_8cxx.html',1,'']]],
-  ['detector_2ecxx',['Detector.cxx',['../d5/d73/tpc_2Detector_8cxx.html',1,'']]],
-  ['detector_2eh',['Detector.h',['../d1/de1/Base_2Detector_8h.html',1,'']]],
-  ['detector_2eh',['Detector.h',['../d3/d2a/itsmft_2its_2Detector_8h.html',1,'']]],
-  ['detector_2eh',['Detector.h',['../dc/d32/tpc_2Detector_8h.html',1,'']]],
+  ['detector_2ecxx',['Detector.cxx',['../d3/dee/Base_2src_2Detector_8cxx.html',1,'']]],
+  ['detector_2ecxx',['Detector.cxx',['../d9/d0d/ITSMFT_2ITS_2simulation_2src_2Detector_8cxx.html',1,'']]],
+  ['detector_2ecxx',['Detector.cxx',['../d2/d2c/TPC_2simulation_2src_2Detector_8cxx.html',1,'']]],
+  ['detector_2eh',['Detector.h',['../db/de5/Base_2include_2Detector_8h.html',1,'']]],
+  ['detector_2eh',['Detector.h',['../d7/d7d/TPC_2simulation_2include_2Detector_8h.html',1,'']]],
+  ['detector_2eh',['Detector.h',['../d7/d62/ITSMFT_2ITS_2simulation_2include_2Detector_8h.html',1,'']]],
   ['detectorlist_2eh',['DetectorList.h',['../df/dbf/DetectorList_8h.html',1,'']]],
   ['digit_2ecxx',['Digit.cxx',['../d3/daa/Digit_8cxx.html',1,'']]],
   ['digit_2eh',['Digit.h',['../da/d5d/Digit_8h.html',1,'']]],
