@@ -136,6 +136,7 @@ o2_define_bucket(
     DEPENDENCIES
     Base
     Headers
+    DataFlow
     O2Device
     dl
 )
