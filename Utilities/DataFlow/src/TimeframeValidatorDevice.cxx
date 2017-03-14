@@ -26,7 +26,7 @@ AliceO2::DataFlow::TimeframeValidatorDevice::TimeframeValidatorDevice()
 
 void AliceO2::DataFlow::TimeframeValidatorDevice::InitTask()
 {
-  mInChannelName = fConfig->GetValue<std::string>(OptionKeyInputChannelName);
+  mInChannelName = GetConfig()->GetValue<std::string>(OptionKeyInputChannelName);
 }
 
 void AliceO2::DataFlow::TimeframeValidatorDevice::Run()
