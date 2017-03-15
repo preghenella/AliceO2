@@ -14,13 +14,15 @@
 #include "FairMQProgOptions.h"
 
 #include "FLP2EPNex_distributed/FLPSender.h"
-#include "Headers/DataHeader.h"
-#include "DataFlow/SubframeMetadata.h"
 
 using namespace std;
 using namespace std::chrono;
 using namespace AliceO2::Devices;
-using SubframeMetadata = AliceO2::DataFlow::SubframeMetadata;
+
+struct f2eHeader {
+  uint16_t timeFrameId;
+  int      flpIndex;
+};
 
 FLPSender::FLPSender()
   : fSTFBuffer()
@@ -53,37 +55,61 @@ void FLPSender::InitTask()
   fOutChannelName = GetConfig()->GetValue<string>("out-chan-name");
 }
 
-
 void FLPSender::Run()
 {
   // base buffer, to be copied from for every timeframe body (zero-copy)
   FairMQMessagePtr baseMsg(NewMessage(fEventSize));
 
   // store the channel reference to avoid traversing the map on every loop iteration
-  //FairMQChannel& dataInChannel = fChannels.at(fInChannelName).at(0);
+  FairMQChannel& dataInChannel = fChannels.at(fInChannelName).at(0);
 
   while (CheckCurrentState(RUNNING)) {
-    // - Get the SubtimeframeMetadata
-    // - Add the current FLP id to the SubtimeframeMetadata
-    // - Forward to the EPN the whole subtimeframe
-    FairMQParts subtimeframeParts;
-    if (Receive(subtimeframeParts, fInChannelName, 0, 100) <= 0)
-      continue;
+    // initialize f2e header
+    f2eHeader* header = new f2eHeader;
+    if (fTestMode > 0) {
+      // test-mode: receive and store id part in the buffer.
+      FairMQMessagePtr id(NewMessage());
+      if (dataInChannel.Receive(id) > 0) {
+        header->timeFrameId = *(static_cast<uint16_t*>(id->GetData()));
+        header->flpIndex = fIndex;
+      } else {
+        // if nothing was received, try again
+        delete header;
+        continue;
+      }
+    } else {
+      // regular mode: use the id generated locally
+      header->timeFrameId = fTimeFrameId;
+      header->flpIndex = fIndex;
 
-    assert(subtimeframeParts.Size() != 0);
-    assert(subtimeframeParts.Size() >= 2);
-    Header::DataHeader* dh = reinterpret_cast<Header::DataHeader*>(subtimeframeParts.At(0)->GetData());
-    assert(strncmp(dh->dataDescription.str, "SUBTIMEFRAMEMD", 16) == 0);
+      if (++fTimeFrameId == UINT16_MAX - 1) {
+        fTimeFrameId = 0;
+      }
+    }
 
-    SubframeMetadata* sfm = reinterpret_cast<SubframeMetadata*>(subtimeframeParts.At(1)->GetData());
-    sfm->flpIndex = fIndex;
+    FairMQParts parts;
 
+    parts.AddPart(NewMessage(header, sizeof(f2eHeader), [](void* data, void* hint){ delete static_cast<f2eHeader*>(hint); }, header));
+    parts.AddPart(NewMessage());
+
+    // save the arrival time of the message.
     fArrivalTime.push(steady_clock::now());
-    fSTFBuffer.push(move(subtimeframeParts));
+
+    if (fTestMode > 0) {
+      // test-mode: initialize and store data part in the buffer.
+      parts.At(1)->Copy(baseMsg);
+      fSTFBuffer.push(move(parts));
+    } else {
+      // regular mode: receive data part from input
+      if (dataInChannel.Receive(parts.At(1)) >= 0) {
+        fSTFBuffer.push(move(parts));
+      } else {
+        // if nothing was received, try again
+        continue;
+      }
+    }
 
     // if offset is 0 - send data out without staggering.
-    assert(fSTFBuffer.size() > 0);
-
     if (fSendOffset == 0 && fSTFBuffer.size() > 0) {
       sendFrontData();
     } else if (fSTFBuffer.size() > 0) {
@@ -98,14 +124,8 @@ void FLPSender::Run()
 
 inline void FLPSender::sendFrontData()
 {
-  SubframeMetadata *sfm = static_cast<SubframeMetadata*>(fSTFBuffer.front().At(1)->GetData());
-  uint16_t currentTimeframeId = AliceO2::DataFlow::timeframeIdFromTimestamp(sfm->startTime, sfm->duration);
-  if (mLastTimeframeId != -1) {
-    if (currentTimeframeId == mLastTimeframeId) {
-      LOG(ERROR) << "Sent same consecutive timeframe ids\n";
-    }
-  }
-  mLastTimeframeId = currentTimeframeId;
+  f2eHeader header = *(static_cast<f2eHeader*>(fSTFBuffer.front().At(0)->GetData()));
+  uint16_t currentTimeframeId = header.timeFrameId;
 
   // for which EPN is the message?
   int direction = currentTimeframeId % fNumEPNs;

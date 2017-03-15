@@ -54,7 +54,7 @@ class EPNReceiver : public FairMQDevice
     std::unordered_set<uint16_t> fDiscardedSet; ///< Set containing IDs of dropped timeframes
 
     int fNumFLPs; ///< Number of flpSenders
-    int fBufferTimeoutInMs = 5000; ///< Time after which incomplete timeframes are dropped
+    int fBufferTimeoutInMs; ///< Time after which incomplete timeframes are dropped
     int fTestMode; ///< Run the device in test mode (only syncSampler+flpSender+epnReceiver)
 
     std::string fInChannelName;

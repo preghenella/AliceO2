@@ -58,7 +58,6 @@ class FLPSender : public FairMQDevice
 
     std::string fInChannelName;
     std::string fOutChannelName;
-    int mLastTimeframeId = -1;
 };
 
 } // namespace Devices
