@@ -21,6 +21,8 @@ set(SRCS
     src/HeartbeatSampler.cxx
     src/SubframeBuilderDevice.cxx
     src/TimeframeValidatorDevice.cxx
+    src/EPNReceiver.cxx
+    src/FLPSender.cxx
     )
 
 set(LIBRARY_NAME ${MODULE_NAME})
@@ -37,12 +39,16 @@ Set(Exe_Names
     heartbeatSampler
     SubframeBuilderDevice
     TimeframeValidatorDevice
+    EPNReceiverDevice
+    FLPSenderDevice
     )
 
 set(Exe_Source
     src/runHeartbeatSampler.cxx
     src/runSubframeBuilderDevice.cxx
     src/runTimeframeValidatorDevice.cxx
+    src/runEPNReceiver.cxx
+    src/runFLPSender.cxx
     )
 
 list(LENGTH Exe_Names _length)

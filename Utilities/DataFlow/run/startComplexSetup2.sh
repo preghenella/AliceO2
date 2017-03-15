@@ -21,19 +21,16 @@ xterm -geometry 80x25+1000+0 -hold -e SubframeBuilderDevice --id subframeBuilder
 xterm -geometry 80x25+1000+400 -hold -e SubframeBuilderDevice --id subframeBuilderITS --mq-config confComplexSetup2.json --detector ITS &
 
 # this is the flp for TPC
-xterm -geometry 80x25+1500+0 -hold -e flpSender --id flpSenderTPC --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-epns 4 --flp-index 0 &
+xterm -geometry 80x25+1500+0 -hold -e FLPSenderDevice --id flpSenderTPC --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-epns 4 --flp-index 0 &
 
 # this is the flp for ITS
-xterm -geometry 80x25+1500+400 -hold -e flpSender --id flpSenderITS --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-epns 4 --flp-index 1 &
+xterm -geometry 80x25+1500+400 -hold -e FLPSenderDevice --id flpSenderITS --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-epns 4 --flp-index 1 &
 
 # we have 4 epn and 2 flps
-xterm -geometry 80x25+2000+0 -hold -e epnReceiver --id epnReceiver1 --mq-config confComplexSetup2.json  --buffer-timeout 10000 --in-chan-name input --out-chan-name output --num-flps 2 &
-
-xterm -geometry 80x25+2000+400 -hold -e epnReceiver --id epnReceiver2 --mq-config confComplexSetup2.json  --buffer-timeout 10000 --in-chan-name input --out-chan-name output --num-flps 2 &
-
-xterm -geometry 80x25+2000+800 -hold -e epnReceiver --id epnReceiver3 --mq-config confComplexSetup2.json  --buffer-timeout 10000 --in-chan-name input --out-chan-name output --num-flps 2 &
-
-xterm -geometry 80x25+2000+1200 -hold -e epnReceiver --id epnReceiver4 --mq-config confComplexSetup2.json  --buffer-timeout 10000 --in-chan-name input --out-chan-name output --num-flps 2 &
+xterm -geometry 80x25+2000+0 -hold -e EPNReceiverDevice --id epnReceiver1 --mq-config confComplexSetup2.json  --buffer-timeout 10000 --in-chan-name input --out-chan-name output --num-flps 2 &
+xterm -geometry 80x25+2000+400 -hold -e EPNReceiverDevice --id epnReceiver2 --mq-config confComplexSetup2.json  --buffer-timeout 10000 --in-chan-name input --out-chan-name output --num-flps 2 &
+xterm -geometry 80x25+2000+800 -hold -e EPNReceiverDevice --id epnReceiver3 --mq-config confComplexSetup2.json  --buffer-timeout 10000 --in-chan-name input --out-chan-name output --num-flps 2 &
+xterm -geometry 80x25+2000+1200 -hold -e EPNReceiverDevice --id epnReceiver4 --mq-config confComplexSetup2.json  --buffer-timeout 10000 --in-chan-name input --out-chan-name output --num-flps 2 &
 
 # consumer and validator of the full EPN time frame
 xterm -geometry 80x25+2000+500 -hold -e TimeframeValidatorDevice --id timeframeValidator --mq-config confComplexSetup2.json --input-channel-name input &

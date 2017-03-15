@@ -26,16 +26,16 @@ split-window SubframeBuilderDevice --id subframeBuilderITS --mq-config confCompl
 
 new-window 'flp'
 # this is the flp for TPC
-split-window flpSender --id flpSenderTPC --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-epns 4 --flp-index 0
+split-window FLPSenderDevice --id flpSenderTPC --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-epns 4 --flp-index 0
 # this is the flp for ITS
-split-window flpSender --id flpSenderITS --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-epns 4 --flp-index 1
+split-window FLPSenderDevice --id flpSenderITS --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-epns 4 --flp-index 1
 
 new-window 'epn'
 # we have 4 epn and 2 flps
-split-window epnReceiver --id epnReceiver1 --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-flps 2
-split-window epnReceiver --id epnReceiver2 --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-flps 2
-split-window epnReceiver --id epnReceiver3 --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-flps 2
-split-window epnReceiver --id epnReceiver4 --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-flps 2
+split-window EPNReceiverDevice --id epnReceiver1 --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-flps 2
+split-window EPNReceiverDevice --id epnReceiver2 --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-flps 2
+split-window EPNReceiverDevice --id epnReceiver3 --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-flps 2
+split-window EPNReceiverDevice --id epnReceiver4 --mq-config confComplexSetup2.json --in-chan-name input --out-chan-name output --num-flps 2
 
 new-window 'validator'
 # consumer and validator of the full EPN time frame

@@ -24,7 +24,6 @@ struct SubframeMetadata
 // the lower 16 bits. Overlaps will only happen every ~ 22 minutes.
 constexpr uint16_t
 timeframeIdFromTimestamp(uint64_t timestamp, uint64_t timeFrameDuration) {
-  assert(timeFrameDuration);
   return (timestamp / timeFrameDuration) & 0xffff;
 }
 
