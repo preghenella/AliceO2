@@ -14,11 +14,13 @@ using HeartbeatTrailer = AliceO2::Header::HeartbeatTrailer;
 using TPCTestCluster = AliceO2::DataFlow::TPCTestCluster;
 using ITSRawData = AliceO2::DataFlow::ITSRawData;
 
+using DataDescription = AliceO2::Header::DataDescription;
 
 template <typename T>
 void fakePayload(std::vector<byte> &buffer, std::function<void(T&,int)> filler, int numOfElements) {
   // LOG(INFO) << "SENDING TPC PAYLOAD\n";
   auto payloadSize = sizeof(T)*numOfElements;
+  LOG(INFO) << "Payload size " << payloadSize << "\n";
   buffer.resize(buffer.size() + payloadSize);
 
   T *payload = reinterpret_cast<T*>(buffer.data() + sizeof(HeartbeatHeader));
@@ -63,7 +65,10 @@ void AliceO2::Utilities::DataPublisherDevice::InitTask()
   // * create the unsigned integer value once from the configurable string and
   //   check in the registry
   // * constructors and assignment operators taking the integer type as argument
-  mDataDescription = AliceO2::Header::DataDescription("FILEDATA");
+  if (GetConfig()->GetValue<std::string>(OptionKeyDataDescription) == "TPCCLUSTER")
+    mDataDescription = DataDescription("TPCCLUSTER");
+  else if (GetConfig()->GetValue<std::string>(OptionKeyDataDescription) == "ITSRAW")
+    mDataDescription = DataDescription("ITSRAW");
   mDataOrigin = AliceO2::Header::DataOrigin("TEST");
   mSubSpecification = GetConfig()->GetValue<SubSpecificationT>(OptionKeySubspecification);
   mFileName = GetConfig()->GetValue<std::string>(OptionKeyFileName);
@@ -75,11 +80,12 @@ void AliceO2::Utilities::DataPublisherDevice::InitTask()
 
   if (!mFileName.empty()) {
     AppendFile(mFileName.c_str(), mFileBuffer);
-  } else if (strncmp(mDataDescription.str, "TPC", 16)) {
+  } else if (strncmp(mDataDescription.str, "TPCCLUSTER", 16) == 0) {
     auto f = [](TPCTestCluster &cluster, int idx) {cluster.timeStamp = idx;};
     fakePayload<TPCTestCluster>(mFileBuffer, f, 1000);
+    LOG(INFO) << "Payload size (after) " << mFileBuffer.size() << "\n";
     // For the moment, add the data as another part to this message
-  } else if (strncmp(mDataDescription.str, "ITS", 16)) {
+  } else if (strncmp(mDataDescription.str, "ITSRAW", 16) == 0) {
     auto f = [](ITSRawData &cluster, int idx) {cluster.timeStamp = idx;};
     fakePayload<ITSRawData>(mFileBuffer, f, 500);
   }

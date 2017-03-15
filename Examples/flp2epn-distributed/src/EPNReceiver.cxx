@@ -129,7 +129,12 @@ void EPNReceiver::Run()
          assert( header->payloadSize == subtimeframeParts.At(part+1)->GetSize() );
          TPCTestCluster *cl = reinterpret_cast<TPCTestCluster*>(subtimeframeParts.At(part+1)->GetData());
          auto numberofClusters = header->payloadSize / sizeof(TPCTestCluster);
-         assert( header->payloadSize % sizeof(TPCTestCluster) == 0 );
+         if (header->payloadSize % sizeof(TPCTestCluster) != 0)
+         {
+            LOG(ERROR) << "Unexpected size for TPCTestCluster: got an extra " 
+                       << header->payloadSize % sizeof(TPCTestCluster)
+                       << " total size " << header->payloadSize << "\n";
+         }
         LOG(DEBUG) << "TPCCLUSTER found\n";
       }
     }

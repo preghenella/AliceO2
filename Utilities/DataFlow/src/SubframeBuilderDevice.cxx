@@ -20,6 +20,7 @@ using DataHeader = AliceO2::Header::DataHeader;
 AliceO2::DataFlow::SubframeBuilderDevice::SubframeBuilderDevice()
   : O2Device()
 {
+  LOG(INFO) << "AliceO2::DataFlow::SubframeBuilderDevice::SubframeBuilderDevice " << mDuration << "\n";
 }
 
 AliceO2::DataFlow::SubframeBuilderDevice::~SubframeBuilderDevice()
@@ -43,6 +44,7 @@ void AliceO2::DataFlow::SubframeBuilderDevice::InitTask()
   } else {
     LOG(INFO) << "Self triggered mode. Doing nothing for now.\n";
   }
+  LOG(INFO) << "AliceO2::DataFlow::SubframeBuilderDevice::InitTask " << mDuration << "\n";
 }
 
 // FIXME: how do we actually find out the payload size???
@@ -53,6 +55,7 @@ int64_t extractDetectorPayload(char **payload, char *buffer, size_t bufferSize) 
 
 bool AliceO2::DataFlow::SubframeBuilderDevice::BuildAndSendFrame(FairMQParts &inParts)
 {
+  LOG(INFO) << "AliceO2::DataFlow::SubframeBuilderDevice::BuildAndSendFrame" << mDuration << "\n";
   char *incomingBuffer = (char *)inParts.At(1)->GetData();
   HeartbeatHeader *hbh = reinterpret_cast<HeartbeatHeader*>(incomingBuffer);
 
@@ -70,9 +73,11 @@ bool AliceO2::DataFlow::SubframeBuilderDevice::BuildAndSendFrame(FairMQParts &in
   // subframe meta information as payload
   SubframeMetadata md;
   // md.startTime = (hbh->orbit / mOrbitsPerTimeframe) * mDuration;
-  md.startTime = hbh->orbit * mDuration;
+  md.startTime = static_cast<uint64_t>(hbh->orbit) * static_cast<uint64_t>(mOrbitDuration);
   md.duration = mDuration;
-  LOG(INFO) << "Start time for subframe " << timeframeIdFromTimestamp(md.startTime, mDuration) << " " << md.startTime<< "\n";
+  LOG(INFO) << "Start time for subframe (" << hbh->orbit << ", "
+                                           << mDuration
+            << ") " << timeframeIdFromTimestamp(md.startTime, mDuration) << " " << md.startTime<< "\n";
 
   // send an empty subframe (no detector payload), only the data header
   // and the subframe meta data are added to the sub timeframe

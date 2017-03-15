@@ -102,7 +102,7 @@ inline void FLPSender::sendFrontData()
   uint16_t currentTimeframeId = AliceO2::DataFlow::timeframeIdFromTimestamp(sfm->startTime, sfm->duration);
   if (mLastTimeframeId != -1) {
     if (currentTimeframeId == mLastTimeframeId) {
-      LOG(ERROR) << "sended same consecutive timeframe ids\n";
+      LOG(ERROR) << "Sent same consecutive timeframe ids\n";
     }
   }
   mLastTimeframeId = currentTimeframeId;

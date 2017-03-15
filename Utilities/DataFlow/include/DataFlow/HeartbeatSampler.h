@@ -49,7 +49,7 @@ protected:
 
 private:
   /// publishing period (configurable)
-  uint32_t mPeriod = 89100;
+  uint32_t mPeriod = 1000000000;
   /// name of the (configurable)
   std::string mOutputChannelName = "output";
   /// number of elapsed periods

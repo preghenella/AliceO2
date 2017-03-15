@@ -84,8 +84,9 @@ protected:
 
 private:
   unsigned mFrameNumber = 0;
-  uint32_t mDuration = DefaultDuration;
-  uint32_t mOrbitsPerTimeframe = 256;
+  constexpr static uint32_t mOrbitsPerTimeframe = 1;
+  constexpr static uint32_t mOrbitDuration = 1000000000;
+  constexpr static uint32_t mDuration = mOrbitsPerTimeframe * mOrbitDuration;
   std::string mInputChannelName = "";
   std::string mOutputChannelName = "";
   bool mIsSelfTriggered = false;

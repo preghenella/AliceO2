@@ -23,8 +23,9 @@ struct SubframeMetadata
 // so we can get a unique id by dividing by the timeframe period and masking 
 // the lower 16 bits. Overlaps will only happen every ~ 22 minutes.
 constexpr uint16_t
-timeframeIdFromTimestamp(uint64_t timestamp, uint64_t duration) {
-  return (timestamp / duration) & 0xffff;
+timeframeIdFromTimestamp(uint64_t timestamp, uint64_t timeFrameDuration) {
+  assert(timeFrameDuration);
+  return (timestamp / timeFrameDuration) & 0xffff;
 }
 
 // A Mockup class to describe some TPC-like payload
