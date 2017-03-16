@@ -8,7 +8,7 @@
 #include <functional>
 
 #include "DataFlow/SubframeBuilderDevice.h"
-#include "DataFlow/SubframeMetadata.h"
+#include "Headers/SubframeMetadata.h"
 #include "Headers/HeartbeatFrame.h"
 #include "Headers/DataHeader.h"
 #include "FairMQProgOptions.h"

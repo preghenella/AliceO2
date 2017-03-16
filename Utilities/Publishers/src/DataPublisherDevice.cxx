@@ -6,7 +6,7 @@
 #include "Publishers/DataPublisherDevice.h"
 #include "Headers/DataHeader.h"
 #include "Headers/HeartbeatFrame.h"
-#include "DataFlow/SubframeMetadata.h"
+#include "Headers/SubframeMetadata.h"
 #include "FairMQProgOptions.h"
 
 using HeartbeatHeader = AliceO2::Header::HeartbeatHeader;

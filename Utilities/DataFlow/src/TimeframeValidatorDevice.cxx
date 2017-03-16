@@ -7,7 +7,7 @@
 #include <chrono>
 
 #include "DataFlow/TimeframeValidatorDevice.h"
-#include "DataFlow/SubframeMetadata.h"
+#include "Headers/SubframeMetadata.h"
 #include "Headers/DataHeader.h"
 #include "FairMQProgOptions.h"
 

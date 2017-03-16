@@ -14,7 +14,7 @@
 
 #include "DataFlow/EPNReceiver.h"
 #include "Headers/DataHeader.h"
-#include "DataFlow/SubframeMetadata.h"
+#include "Headers/SubframeMetadata.h"
 
 using namespace std;
 using namespace std::chrono;

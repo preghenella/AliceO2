@@ -14,7 +14,7 @@
 #include "FairMQProgOptions.h"
 
 #include "Headers/DataHeader.h"
-#include "DataFlow/SubframeMetadata.h"
+#include "Headers/SubframeMetadata.h"
 #include "DataFlow/FLPSender.h"
 
 using namespace std;
