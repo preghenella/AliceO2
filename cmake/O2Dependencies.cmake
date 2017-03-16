@@ -164,7 +164,6 @@ o2_define_bucket(
     ${OPTIONAL_DDS_LIBRARIES}
     Base
     Headers
-    DataFlow
     FairTools
     FairMQ
     fairmq_logger
