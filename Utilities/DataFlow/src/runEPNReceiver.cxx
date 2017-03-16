@@ -6,7 +6,7 @@
  */
 
 #include "runFairMQDevice.h"
-#include "DataFlow/EPNReceiver.h"
+#include "DataFlow/EPNReceiverDevice.h"
 
 #include <string>
 

@@ -15,7 +15,7 @@
 
 #include "Headers/DataHeader.h"
 #include "Headers/SubframeMetadata.h"
-#include "DataFlow/FLPSender.h"
+#include "DataFlow/FLPSenderDevice.h"
 
 using namespace std;
 using namespace std::chrono;

@@ -2,11 +2,11 @@
  * runFLPSender.cxx
  *
  * @since 2013-01-21
- * @author D. Klein, A. Rybalchenko, M. Al-Turany, C. Kouzinopoulos
+ * @author D. Klein, A. Rybalchenko, M. Al-Turany, C. Kouzinopoulos, G. Eulisse, M. Richter, S. Wenzel
  */
 
 #include "runFairMQDevice.h"
-#include "DataFlow/FLPSender.h"
+#include "DataFlow/FLPSenderDevice.h"
 
 #include <string>
 

@@ -12,7 +12,7 @@
 #include "FairMQLogger.h"
 #include "FairMQProgOptions.h"
 
-#include "DataFlow/EPNReceiver.h"
+#include "DataFlow/EPNReceiverDevice.h"
 #include "Headers/DataHeader.h"
 #include "Headers/SubframeMetadata.h"
 
