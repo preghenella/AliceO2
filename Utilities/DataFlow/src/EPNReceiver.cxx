@@ -2,7 +2,7 @@
  * EPNReceiver.cxx
  *
  * @since 2013-01-09
- * @author D. Klein, A. Rybalchenko, M. Al-Turany, C. Kouzinopoulos
+ * @author D. Klein, A. Rybalchenko, M. Al-Turany, C. Kouzinopoulos, G. Eulisse, M. Richter, S. Wenzel
  */
 
 #include <cstddef> // size_t
