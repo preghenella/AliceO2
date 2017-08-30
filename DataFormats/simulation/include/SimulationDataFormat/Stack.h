@@ -180,6 +180,16 @@ class Stack : public FairGenericStack
       mStoreMothers = choice;
     }
 
+    void StorePrimaryDecayChain(Bool_t choice = kTRUE)
+    {
+      mStorePrimaryDecayChain = choice;
+    }
+    
+    void StorePrimaryPairProduction(Bool_t choice = kTRUE)
+    {
+      mStorePrimaryPairProduction = choice;
+    }
+
     /// Increment number of points for the current track in a given detector
     /// \param iDet  Detector unique identifier
 
@@ -202,6 +212,11 @@ class Stack : public FairGenericStack
     FairGenericStack *CloneStack() const override;
 
   private:
+
+    Bool_t IsPrimary(Int_t i);
+    Bool_t IsFromPrimaryDecayChain(Int_t i);
+    Bool_t IsFromPrimaryPairProduction(Int_t i);
+      
     FairLogger *mLogger;
 
     /// STL stack (FILO) used to handle the TParticles for tracking
@@ -234,6 +249,8 @@ class Stack : public FairGenericStack
 
     /// Variables defining the criteria for output selection
     Bool_t mStoreMothers;
+    Bool_t mStorePrimaryDecayChain;
+    Bool_t mStorePrimaryPairProduction;
     Bool_t mStoreSecondaries;
     Int_t mMinPoints;
     Double32_t mEnergyCut;

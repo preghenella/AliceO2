@@ -49,6 +49,8 @@ Stack::Stack(Int_t size)
     mNumberOfEntriesInTracks(0),
     mIndex(0),
     mStoreMothers(kTRUE),
+    mStorePrimaryDecayChain(kTRUE),
+    mStorePrimaryPairProduction(kTRUE),
     mStoreSecondaries(kTRUE),
     mMinPoints(1),
     mEnergyCut(0.),
@@ -73,6 +75,8 @@ Stack::Stack(const Stack &rhs)
     mNumberOfEntriesInTracks(0),
     mIndex(0),
     mStoreMothers(rhs.mStoreMothers),
+    mStorePrimaryDecayChain(rhs.mStorePrimaryDecayChain),
+    mStorePrimaryPairProduction(rhs.mStorePrimaryPairProduction),
     mStoreSecondaries(rhs.mStoreSecondaries),
     mMinPoints(rhs.mMinPoints),
     mEnergyCut(rhs.mEnergyCut),
@@ -113,6 +117,8 @@ Stack &Stack::operator=(const Stack &rhs)
   mNumberOfEntriesInTracks = 0;
   mIndex = 0;
   mStoreMothers = rhs.mStoreMothers;
+  mStorePrimaryDecayChain = rhs.mStorePrimaryDecayChain;
+  mStorePrimaryPairProduction = rhs.mStorePrimaryPairProduction;
   mStoreSecondaries = rhs.mStoreSecondaries;
   mMinPoints = rhs.mMinPoints;
   mEnergyCut = rhs.mEnergyCut;
@@ -435,6 +441,56 @@ TParticle *Stack::GetParticle(Int_t trackID) const
   return (TParticle *) mParticles->At(trackID);
 }
 
+Bool_t Stack::IsPrimary(Int_t i)
+{
+  /** check if the particle is
+      a primary particle **/
+  
+  /** get particle **/
+  TParticle *particle = GetParticle(i);
+  Int_t process = particle->GetUniqueID();
+  Int_t motherL = particle->GetMother(0);
+  /** check if primary **/
+  if (process == TMCProcess::kPPrimary || motherL < 0) return kTRUE;
+  /** not primary **/
+  return kFALSE;
+}
+
+Bool_t Stack::IsFromPrimaryDecayChain(Int_t i)
+{
+  /** check if the particle is from the 
+      decay chain of a primary particle **/
+
+  /** get particle **/
+  TParticle *particle = GetParticle(i);
+  Int_t process = particle->GetUniqueID();
+  Int_t motherL = particle->GetMother(0);
+  /** check if from decay **/
+  if (process != kPDecay) return kFALSE;
+  /** check if mother is primary **/
+  if (IsPrimary(motherL)) return kTRUE;
+  /** else check if mother is from primary decay **/
+  return IsFromPrimaryDecayChain(motherL);
+}
+
+Bool_t Stack::IsFromPrimaryPairProduction(Int_t i)
+{
+  /** check if the particle is from 
+      pair production from a particle
+      belonging to the primary decay chain **/
+
+  /** get particle **/
+  TParticle *particle = GetParticle(i);
+  Int_t process = particle->GetUniqueID();
+  Int_t motherL = particle->GetMother(0);
+  /** check if from pair production **/
+  if (process != kPPair) return kFALSE;
+  /** check if mother is primary **/
+  if (IsPrimary(motherL)) return kTRUE;
+  /** else check if mother is from primary decay **/
+  return IsFromPrimaryDecayChain(motherL);
+}
+
 void Stack::SelectTracks()
 {
 
@@ -446,19 +502,44 @@ void Stack::SelectTracks()
   // Check particles in the fParticle array
   for (Int_t i = 0; i < mNumberOfEntriesInParticles; i++) {
 
-    TParticle *thisPart = GetParticle(i);
-    Bool_t store = kTRUE;
+    /** always store primary particles **/
+    if (IsPrimary(i) || IsFromPrimaryDecayChain(i) || IsFromPrimaryPairProduction(i)) {
+      mStoreMap[i] = kTRUE;
+      continue;
+    }
 
-    // Get track parameters
-    Int_t iMother = thisPart->GetMother(0);
+    /** store primary decay chain **/
+    if (mStorePrimaryDecayChain && IsFromPrimaryDecayChain(i)) {
+      mStoreMap[i] = kTRUE;
+      continue;
+    }
+
+    /** store primary pair production **/
+    if (mStorePrimaryPairProduction && IsFromPrimaryPairProduction(i)) {
+      mStoreMap[i] = kTRUE;
+      continue;      
+    }
+    
+    /** check store secondaries **/
+    if (!mStoreSecondaries) {
+      mStoreMap[i] = kFALSE;
+      continue;
+    }
+      
+    /** check particle energy **/
+    TParticle *thisPart = GetParticle(i);
     TLorentzVector p;
     thisPart->Momentum(p);
     Double_t energy = p.E();
     Double_t mass = p.M();
     //    Double_t mass   = thisPart->GetMass();
     Double_t eKin = energy - mass;
+    if (eKin < mEnergyCut) {
+      mStoreMap[i] = kFALSE;
+      continue;
+    }
 
-    // Calculate number of points
+    /** check number of points **/
     Int_t nPoints = 0;
     for (Int_t iDet = kAliIts; iDet < kSTOPHERE; iDet++) {
       pair<Int_t, Int_t> a(i, iDet);
@@ -466,24 +547,13 @@ void Stack::SelectTracks()
         nPoints += mPointsMap[a];
       }
     }
-
-    // Check for cuts (store primaries in any case)
-    if (iMother < 0) {
-      store = kTRUE;
-    } else {
-      if (!mStoreSecondaries) {
-        store = kFALSE;
-      }
-      if (nPoints < mMinPoints) {
-        store = kFALSE;
-      }
-      if (eKin < mEnergyCut) {
-        store = kFALSE;
-      }
+    if (nPoints < mMinPoints) {
+      mStoreMap[i] = kFALSE;
+      continue;
     }
-
-    // Set storage flag
-    mStoreMap[i] = store;
+      
+    /** store track **/
+    mStoreMap[i] = kTRUE;
   }
 
   // If flag is set, flag recursively mothers of selected tracks
