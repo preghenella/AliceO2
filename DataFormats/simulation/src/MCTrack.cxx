@@ -66,6 +66,7 @@ MCTrack::MCTrack(TParticle *part)
     mStartVertexCoordinatesT(part->T() * 1e09),
     mNumberOfPoints(0)
 {
+  SetUniqueID(part->GetUniqueID());
 }
 
 MCTrack::~MCTrack()
