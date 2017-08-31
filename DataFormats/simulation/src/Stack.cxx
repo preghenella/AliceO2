@@ -148,6 +148,18 @@ void Stack::PushTrack(Int_t toBeDone, Int_t parentId, Int_t pdgCode, Double_t px
   Int_t nPoints = 0;
   Int_t daughter1Id = -1;
   Int_t daughter2Id = -1;
+
+  /** recover true parent id for primary particles **/
+  if (secondparentID != -1) parentId = secondparentID; /** === NOTE ===
+							   FairPrimaryGenerator::AddTrack function passes
+							   a dummy 'parentId' = -1, whereas the true
+							   parent id is passed via 'secondparentID'.
+							   This differs from the VMC behaviour, where 
+							   the true parent id is passed via 'parentId'.
+							   In this case, a dummy 'secondparentID' = -1 
+							   is set by Stack::PushTrack.
+						      **/
+ 
   auto *particle = new(partArray[mNumberOfEntriesInParticles++])
     TParticle(pdgCode, trackId, parentId, nPoints, daughter1Id, daughter2Id, px, py, pz, e, vx, vy, vz, time);
   particle->SetPolarisation(polx, poly, polz);
@@ -155,7 +167,7 @@ void Stack::PushTrack(Int_t toBeDone, Int_t parentId, Int_t pdgCode, Double_t px
   particle->SetUniqueID(proc);
 
   // Increment counter
-  if (parentId < 0) {
+  if (parentId < 0 || proc == kPPrimary) {
     mNumberOfPrimaryParticles++;
   }
 
