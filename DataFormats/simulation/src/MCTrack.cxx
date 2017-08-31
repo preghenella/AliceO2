@@ -18,6 +18,7 @@
 #include "TDatabasePDG.h"
 #include "TParticle.h"
 #include "TParticlePDG.h"
+#include "TClonesArray.h"
 
 MCTrack::MCTrack()
   : TObject(),
@@ -142,6 +143,59 @@ void MCTrack::setNumberOfPoints(Int_t iDet, Int_t nPoints)
 
   // else { LOG(ERROR) << "Unknown detector ID " << iDet << FairLogger::endl; }
   //
+}
+
+Bool_t MCTrack::BuildParticles(const TClonesArray *tracks, std::vector<TParticle *> &particles)
+{
+  /** Build array of TParticles from MCTrack array
+      setting mother-daughter relations 
+      for forward-backward navigation **/
+
+  /** check tracks **/
+  if (!tracks) return kFALSE;
+  /** clear output array **/
+  particles.clear();
+
+  /** loop over tracks **/
+  auto nTracks = tracks->GetEntries();
+  for (Int_t trackId = 0; trackId < nTracks; trackId++) {
+    
+    /** get track **/
+    MCTrack *track = (MCTrack *)tracks->At(trackId);
+    if (!track) return kFALSE; // null track, error
+    
+    /** get track info **/
+    auto pdg = track->GetPdgCode();
+    auto motherId = track->getMotherTrackId();
+    auto px = track->GetStartVertexMomentumX();
+    auto py = track->GetStartVertexMomentumY();
+    auto pz = track->GetStartVertexMomentumZ();
+    auto etot = track->GetEnergy();
+    auto vx = track->GetStartVertexCoordinatesX();
+    auto vy = track->GetStartVertexCoordinatesY();
+    auto vz = track->GetStartVertexCoordinatesZ();
+    auto time = track->GetStartVertexCoordinatesT();
+    auto proc = track->GetUniqueID();
+    
+    /** create and add particle to output array **/
+    auto particle = new TParticle(pdg, 0, motherId, 0, -1, -1, px, py, pz, etot, vx, vy, vz, time);
+    particle->SetUniqueID(proc);
+    particles.push_back(particle);
+    
+    /** update daughters in parent particle **/
+    if (motherId < 0) continue; // no mother, continue
+    if (motherId >= particles.size()) return kFALSE; // out-of-range mother, error
+    auto mother = particles.at(motherId);
+    if (!mother) return kFALSE; // null mother, error
+    Int_t daugh1 = mother->GetDaughter(0);
+    Int_t daugh2 = mother->GetDaughter(1);
+    if (daugh1 < 0 || trackId < daugh1) mother->SetDaughter(0, trackId);
+    if (daugh2 < 0 || trackId > daugh2) mother->SetDaughter(1, trackId);
+
+  } /** end of loop over tracks **/
+
+  /** success **/
+  return kTRUE;
 }
 
 ClassImp(MCTrack)

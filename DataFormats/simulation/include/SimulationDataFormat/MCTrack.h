@@ -24,6 +24,7 @@
 #include "SimulationDataFormat/DetectorList.h"
 
 class TParticle;
+class TClonesArray;
 
 /// Data class for storing Monte Carlo tracks processed by the Stack.
 /// An MCTrack can be a primary track put into the simulation or a
@@ -133,6 +134,11 @@ class MCTrack : public TObject
 
     void setNumberOfPoints(Int_t iDet, Int_t np);
 
+    /// Build array of TParticles from MCTrack array setting mother-daughter relations
+    /// \param tracks    input MCTrack array
+    /// \param particle  output TParticle array
+    static Bool_t BuildParticles(const TClonesArray *tracks, std::vector<TParticle *> &particles);
+    
   private:
     ///  PDG particle code
     Int_t mPdgCode;
