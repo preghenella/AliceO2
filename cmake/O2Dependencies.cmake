@@ -422,6 +422,7 @@ o2_define_bucket(
     EG
     Tree
     Geom
+    Physics
 
     INCLUDE_DIRECTORIES
 )

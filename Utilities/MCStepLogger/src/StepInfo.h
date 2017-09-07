@@ -81,6 +81,7 @@ struct StepInfo {
   float step = 0.;
   float maxstep = 0.;
   int nsecondaries = 0;
+  int* secondaryid = nullptr; //[nsecondaries]
   int* secondaryprocesses = nullptr; //[nsecondaries]
   int nprocessesactive = 0;          // number of active processes
   bool stopped = false;              //
@@ -96,7 +97,7 @@ struct StepInfo {
   static std::map<std::string, std::string>* volnametomodulemap;
   static std::vector<std::string*> volidtomodulevector;
 
-  ClassDefNV(StepInfo, 2);
+  ClassDefNV(StepInfo, 3);
 };
 
 struct MagCallInfo {

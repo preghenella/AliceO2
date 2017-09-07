@@ -29,6 +29,7 @@
 #include <StepInfo.h>
 #include <TArrayI.h>
 #include <TParticle.h>
+#include <TLorentzVector.h>
 #include <TVirtualMC.h>
 #include <chrono>
 
@@ -112,9 +113,14 @@ StepInfo::StepInfo(TVirtualMC* mc)
 
   if (nsecondaries > 0) {
     secondaryprocesses = new int[nsecondaries];
+    secondaryid = new int[nsecondaries];
     // for the processes
+    int secid;
+    TLorentzVector secpos, secmom;
     for (int i = 0; i < nsecondaries; ++i) {
       secondaryprocesses[i] = mc->ProdProcess(i);
+      mc->GetSecondary(i, secid, secpos, secmom);
+      secondaryid[i] = secid;
     }
   }
 
