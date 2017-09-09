@@ -62,6 +62,7 @@ StepInfo::StepInfo(TVirtualMC* mc)
   auto stack = mc->GetStack();
 
   trackID = stack->GetCurrentTrackNumber();
+  parentID = stack->GetCurrentParentTrackNumber();
   pdg = mc->TrackPid();
   auto particle = TDatabasePDG::Instance()->GetParticle(pdg);
   pname = particle ? particle->GetName() : "NULL";
@@ -114,13 +115,14 @@ StepInfo::StepInfo(TVirtualMC* mc)
   if (nsecondaries > 0) {
     secondaryprocesses = new int[nsecondaries];
     secondaryid = new int[nsecondaries];
+    secondarymomentum = new TLorentzVector[nsecondaries];
+    secondaryposition = new TLorentzVector[nsecondaries];
     // for the processes
     int secid;
     TLorentzVector secpos, secmom;
     for (int i = 0; i < nsecondaries; ++i) {
       secondaryprocesses[i] = mc->ProdProcess(i);
-      mc->GetSecondary(i, secid, secpos, secmom);
-      secondaryid[i] = secid;
+      mc->GetSecondary(i, secondaryid[i], secondaryposition[i], secondarymomentum[i]);
     }
   }
 

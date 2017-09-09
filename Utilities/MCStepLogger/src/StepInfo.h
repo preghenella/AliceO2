@@ -30,6 +30,7 @@
 class TVirtualMC;
 class TGeoVolume;
 class TGeoMedium;
+class TLorentzVector;
 
 namespace o2
 {
@@ -71,6 +72,7 @@ struct StepInfo {
   int volId = -1; // keep another branch somewhere mapping this to name, medium, etc.
   int copyNo = -1;
   int trackID = -1;
+  int parentID = -1;
   int pdg = 0;
   std::string pname; // particle name
   std::string modulename;
@@ -82,6 +84,8 @@ struct StepInfo {
   float maxstep = 0.;
   int nsecondaries = 0;
   int* secondaryid = nullptr; //[nsecondaries]
+  TLorentzVector *secondarymomentum = nullptr; //[nsecondaries]
+  TLorentzVector *secondaryposition = nullptr; //[nsecondaries]
   int* secondaryprocesses = nullptr; //[nsecondaries]
   int nprocessesactive = 0;          // number of active processes
   bool stopped = false;              //
