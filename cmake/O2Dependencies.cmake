@@ -796,11 +796,14 @@ o2_define_bucket(
     DEPENDENCIES
     itsmft_base_bucket
     ITSMFTBase
+    DetectorsBase
     Graf
     Gpad
     XMLIO
 
     INCLUDE_DIRECTORIES
+    ${CMAKE_SOURCE_DIR}/Detectors/Base/include
+    ${CMAKE_SOURCE_DIR}/Detectors/ITSMFT/common/base/include
 
 )
 
@@ -834,6 +837,7 @@ o2_define_bucket(
     ITSMFTReconstruction
     MFTBase
     MFTSimulation
+    DetectorsBase
     O2Device_bucket
     Tree
     Net
