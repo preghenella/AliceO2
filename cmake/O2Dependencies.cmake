@@ -18,7 +18,7 @@ else (ALICEO2_MODULAR_BUILD)
   find_package(CLHEP)
 endif (ALICEO2_MODULAR_BUILD)
 find_package(CERNLIB)
-find_package(HEPMC)
+find_package(HepMC3)
 find_package(IWYU)
 find_package(DDS)
 
@@ -744,29 +744,35 @@ o2_define_bucket(
 )
 
 # base bucket for generators not needing any external stuff
-o2_define_bucket(
-    NAME
-    generators_base_bucket
 
-    DEPENDENCIES
-    Base SimulationDataFormat MathCore RIO Tree
-    fairroot_base_bucket
-
-    INCLUDE_DIRECTORIES
-    ${ROOT_INCLUDE_DIR}
-    ${FAIRROOT_INCLUDE_DIR}
-)
+set(GENERATORS_BUCKET_DEPENDENCIES
+	Base SimulationDataFormat MathCore RIO Tree
+	fairroot_base_bucket
+	)
+set(GENERATORS_BUCKET_INCLUDE_DIRECTORIES
+	${ROOT_INCLUDE_DIR}
+    	${FAIRROOT_INCLUDE_DIR}
+    	${CMAKE_SOURCE_DIR}/Generators/include
+    	${CMAKE_SOURCE_DIR}/DataFormats/simulation/include
+	)
+if(PYTHIA8_FOUND)
+   list(APPEND GENERATORS_BUCKET_DEPENDENCIES pythia8)
+   list(APPEND GENERATORS_BUCKET_INCLUDE_DIRECTORIES ${PYTHIA8_INCLUDE_DIR})
+endif()
+if(HepMC3_FOUND)
+   list(APPEND GENERATORS_BUCKET_DEPENDENCIES ${HEPMC_LIBRARIES})
+   list(APPEND GENERATORS_BUCKET_INCLUDE_DIRECTORIES ${HEPMC_INCLUDE_DIR})
+endif()
 
 o2_define_bucket(
     NAME
     generators_bucket
 
     DEPENDENCIES
-    generators_base_bucket
-    pythia8
+    ${GENERATORS_BUCKET_DEPENDENCIES}
 
     INCLUDE_DIRECTORIES
-    ${PYTHIA8_INCLUDE_DIR}
+    ${GENERATORS_BUCKET_INCLUDE_DIRECTORIES}
 )
 
 o2_define_bucket(
