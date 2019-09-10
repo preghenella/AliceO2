@@ -122,10 +122,13 @@ void GeneratorFactory::setPrimaryGenerator(o2::conf::SimConfig const& conf, Fair
     primGen->AddGenerator(extGen);
     LOG(INFO) << "using external kinematics";
 #ifdef GENERATORS_WITH_HEPMC3
-  } else if (genconfig.compare("hepmc") == 0) {
+  } else if (genconfig.compare(0, 5, "hepmc") == 0) {
     // external HepMC file
+    if (genconfig[5] != ':' || genconfig.substr(6).empty())
+      LOG(FATAL) << "Syntax error. HepMC usage: \'-g hepmc:<filename>\'";
+    auto hepmc_filename = genconfig.substr(6);
     auto hepmcGen = new o2::eventgen::GeneratorHepMC();
-    hepmcGen->setFileName(conf.getHepMCFileName());
+    hepmcGen->setFileName(hepmc_filename);
     hepmcGen->setVersion(2);
     primGen->AddGenerator(hepmcGen);
 #endif
