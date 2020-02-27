@@ -12,7 +12,7 @@
 #include "FairLogger.h"
 #include "FairPrimaryGenerator.h"
 #include "TGenerator.h"
-#include "TClonesArray.h"
+#include "TParticle.h"
 
 namespace o2
 {
@@ -26,6 +26,9 @@ GeneratorTGenerator::GeneratorTGenerator() : Generator("ALICEo2", "ALICEo2 TGene
                                              mTGenerator(nullptr)
 {
   /** default constructor **/
+
+  mInterface = reinterpret_cast<void*>(mTGenerator);
+  mInterfaceName = "tgenerator";
 }
 
 /*****************************************************************/
@@ -34,6 +37,9 @@ GeneratorTGenerator::GeneratorTGenerator(const Char_t* name, const Char_t* title
                                                                                     mTGenerator(nullptr)
 {
   /** constructor **/
+
+  mInterface = reinterpret_cast<void*>(mTGenerator);
+  mInterfaceName = "tgenerator";
 }
 
 /*****************************************************************/
@@ -56,7 +62,10 @@ Bool_t
 {
   /** import particles **/
 
-  mTGenerator->ImportParticles(mParticles, "All");
+  mParticles.clear();
+  auto nparticles = mTGenerator->GetNumberOfParticles();
+  for (Int_t iparticle = 0; iparticle < nparticles; iparticle++)
+    mParticles.push_back(*mTGenerator->GetParticle(iparticle));
 
   /** success **/
   return kTRUE;

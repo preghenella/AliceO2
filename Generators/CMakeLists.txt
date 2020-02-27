@@ -57,6 +57,7 @@ set(headers
     include/Generators/PrimaryGenerator.h
     include/Generators/InteractionDiamondParam.h
     include/Generators/TriggerParticleParam.h
+    include/Generators/ConfigurationMacroHelper.h
     include/Generators/BoxGunParam.h
     include/Generators/QEDGenParam.h)
 
@@ -93,17 +94,27 @@ o2_add_test_root_macro(share/external/tgenerator.C
                        PUBLIC_LINK_LIBRARIES O2::Generators
                        LABELS generators)
 
-o2_add_test_root_macro(share/external/multiphi_trigger.C
+o2_add_test_root_macro(share/external/trigger_multiplicity.C
+                       PUBLIC_LINK_LIBRARIES O2::Generators
+                       LABELS generators)
+
+o2_add_test_root_macro(share/external/trigger_mpi.C
+                       PUBLIC_LINK_LIBRARIES O2::Generators
+                       LABELS generators)
+
+o2_add_test_root_macro(share/egconfig/pythia8_userhooks_charm.C
                        PUBLIC_LINK_LIBRARIES O2::Generators
                        LABELS generators)
 
 		     
 install(FILES share/external/extgen.C share/external/pythia6.C
               share/external/tgenerator.C share/external/QEDLoader.C share/external/QEDepem.C
-	      share/external/multiphi_trigger.C
+	      share/external/trigger_multiplicity.C
+	      share/external/trigger_mpi.C
         DESTINATION share/Generators/external/)
 
 install(FILES share/egconfig/pythia8_inel.cfg
               share/egconfig/pythia8_hf.cfg
 	      share/egconfig/pythia8_hi.cfg
+	      share/egconfig/pythia8_userhooks_charm.C
         DESTINATION share/Generators/egconfig/)

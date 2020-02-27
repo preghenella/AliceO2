@@ -12,8 +12,8 @@
 
 #include "Generators/GeneratorPythia8.h"
 #include <Generators/GeneratorPythia8Param.h>
+#include "Generators/ConfigurationMacroHelper.h"
 #include "FairLogger.h"
-#include "TClonesArray.h"
 #include "TParticle.h"
 
 namespace o2
@@ -27,6 +27,9 @@ namespace eventgen
 GeneratorPythia8::GeneratorPythia8() : Generator("ALICEo2", "ALICEo2 Pythia8 Generator")
 {
   /** default constructor **/
+
+  mInterface = reinterpret_cast<void*>(&mPythia);
+  mInterfaceName = "pythia8";
 }
 
 /*****************************************************************/
@@ -58,6 +61,14 @@ Bool_t GeneratorPythia8::Init()
     }
   }
 
+  /** user hooks via configuration macro **/
+  if (!param.hooksFileName.empty()) {
+    auto hooks = GetFromMacro<Pythia8::UserHooks*>(param.hooksFileName, param.hooksFuncName, "Pythia8::UserHooks*", "pythia8_user_hooks");
+    if (!hooks)
+      LOG(FATAL) << "Failed to init \'Pythia8\': problem with user hooks configuration ";
+    mPythia.setUserHooksPtr(hooks);
+  }
+
   /** initialise **/
   if (!mPythia.init()) {
     LOG(FATAL) << "Failed to init \'Pythia8\': init returned with error";
@@ -85,8 +96,7 @@ Bool_t
 {
   /** import particles **/
 
-  TClonesArray& clonesParticles = *mParticles;
-  clonesParticles.Clear();
+  mParticles.clear();
 
   /* loop over particles */
   //  auto weight = mPythia.info.weight(); // TBD: use weights
@@ -107,7 +117,7 @@ Bool_t
     auto m2 = particle.mother2();
     auto d1 = particle.daughter1();
     auto d2 = particle.daughter2();
-    new (clonesParticles[iparticle]) TParticle(pdg, st, m1, m2, d1, d2, px, py, pz, et, vx, vy, vz, vt);
+    mParticles.push_back(TParticle(pdg, st, m1, m2, d1, d2, px, py, pz, et, vx, vy, vz, vt));
   }
 
   /** success **/
