@@ -37,11 +37,6 @@ if(DEFINED BUILD_SIMULATION AND BUILD_SIMULATION)
 endif()
 
 # MC specific packages
-find_package(pythia MODULE)
-set_package_properties(pythia
-                       PROPERTIES
-                       TYPE ${mcPackageRequirement} DESCRIPTION
-                            "the Pythia8 generator")
 find_package(pythia6 MODULE)
 set_package_properties(pythia6
                        PROPERTIES
@@ -61,20 +56,13 @@ find_package(Geant4VMC MODULE)
 set_package_properties(Geant4VMC PROPERTIES TYPE ${mcPackageRequirement})
 find_package(VGM CONFIG)
 set_package_properties(VGM PROPERTIES TYPE ${mcPackageRequirement})
-find_package(HepMC MODULE)
-set_package_properties(HepMC
-		       PROPERTIES
-		       TYPE ${mcPackageRequirement} DESCRIPTION
-		       	    "the HepMC3 event record package")
 set(doBuildSimulation OFF)
 
-if(pythia_FOUND
-   AND pythia6_FOUND
+if(pythia6_FOUND
    AND Geant3_FOUND
    AND Geant4_FOUND
    AND Geant4VMC_FOUND
-   AND VGM_FOUND
-   AND HepMC_FOUND)
+   AND VGM_FOUND)
   set(doBuildSimulation ON)
 endif()
 

@@ -40,8 +40,6 @@ list(APPEND O2_ROOT_MACRO_EXCLUSION_LIST
             GPU/TPCFastTransformation/alirootMacro/moveTPCFastTransform.C # Relies on initTPCcalibration.C
             GPU/GPUTracking/TRDTracking/macros/run_trd_tracker.C # Not yet ready
 	    Detectors/TOF/prototyping/ConvertRun2CalibrationToO2.C
-            Generators/share/external/hijing.C
-	    Generators/share/external/QEDepem.C
             macro/SetIncludePath.C
             macro/loadExtDepLib.C
             macro/load_all_libs.C
@@ -56,13 +54,6 @@ if(NOT BUILD_SIMULATION)
   list(APPEND O2_ROOT_MACRO_EXCLUSION_LIST ${macros})
   o2_get_list_of_macros(${CMAKE_SOURCE_DIR}/Detectors/gconfig macros)
   list(APPEND O2_ROOT_MACRO_EXCLUSION_LIST ${macros})
-  list(APPEND O2_ROOT_MACRO_EXCLUSION_LIST Generators/share/external/QEDLoader.C)
-  list(APPEND O2_ROOT_MACRO_EXCLUSION_LIST Generators/share/egconfig/pythia8_userhooks_charm.C)
-  list(APPEND O2_ROOT_MACRO_EXCLUSION_LIST Generators/share/external/trigger_mpi.C)
-endif()
-
-if(NOT pythia6_FOUND)
-  list(APPEND O2_ROOT_MACRO_EXCLUSION_LIST Generators/share/external/pythia6.C)
 endif()
 
 list(REMOVE_DUPLICATES O2_ROOT_MACRO_EXCLUSION_LIST)

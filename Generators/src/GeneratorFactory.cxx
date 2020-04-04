@@ -17,6 +17,7 @@
 #include <FairLogger.h>
 #include <SimConfig/SimConfig.h>
 #include <Generators/GeneratorFromFile.h>
+#include <Generators/Generator.h>
 #ifdef GENERATORS_WITH_PYTHIA6
 #include <Generators/GeneratorPythia6.h>
 #include <Generators/GeneratorPythia6Param.h>
@@ -25,7 +26,6 @@
 #include <Generators/GeneratorPythia8.h>
 #include <Generators/GeneratorPythia8Param.h>
 #endif
-#include <Generators/GeneratorTGenerator.h>
 #ifdef GENERATORS_WITH_HEPMC3
 #include <Generators/GeneratorHepMC.h>
 #endif
@@ -156,6 +156,15 @@ void GeneratorFactory::setPrimaryGenerator(o2::conf::SimConfig const& conf, Fair
     py6Gen->setWin(param.win);
     primGen->AddGenerator(py6Gen);
 #endif
+    /***** THIS IS A TEST *****/
+  } else if (genconfig.compare("pythia8") == 0) {
+    gSystem->Load("libO2GeneratorsExtra");
+    auto theClass = gROOT->GetClass("o2::eventgen::GeneratorPythia8");
+    if (!theClass)
+      LOG(FATAL) << "Failed to retrieve 'o2::eventgen::GeneratorPythia8' class";
+    auto gen = reinterpret_cast<o2::eventgen::Generator*>(theClass->New());
+    primGen->AddGenerator(gen);
+    /***** END OF THE TEST *****/
 #ifdef GENERATORS_WITH_PYTHIA8
   } else if (genconfig.compare("alldets") == 0) {
     // a simple generator for test purposes - making sure to generate hits
