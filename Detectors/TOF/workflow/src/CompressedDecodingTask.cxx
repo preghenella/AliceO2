@@ -109,30 +109,34 @@ void CompressedDecodingTask::run(ProcessingContext& pc)
   }
 }
 
-void CompressedDecodingTask::rdhHandler(const o2::header::RAWDataHeader* rdh)
+void CompressedDecodingTask::handlerHBFHeader()
 {
 
-  // rdh close
-  if (rdh->stop && rdh->heartbeatOrbit == o2::raw::HBFUtils::Instance().getNOrbitsPerTF() - 1 + mInitOrbit) {
-    mNCrateCloseTF++;
-    printf("New TF close RDH %d\n", int(rdh->feeId));
-    return;
-  }
-
   // rdh open
-  if ((rdh->pageCnt == 0) && (rdh->triggerType & o2::trigger::TF)) {
+  if (mHBFTrigger->triggerType & o2::trigger::TF) {
     mNCrateOpenTF++;
-    mInitOrbit = rdh->heartbeatOrbit;
-    printf("New TF open RDH %d\n", int(rdh->feeId));
+    mInitOrbit = mHBFOrbit->orbitID;
+    printf("New TF open RDH %d\n", int(mHBFHeader->drmID));
   }
 };
 
-void CompressedDecodingTask::frameHandler(const CrateHeader_t* crateHeader, const CrateOrbit_t* crateOrbit,
-                                          const FrameHeader_t* frameHeader, const PackedHit_t* packedHits)
+void CompressedDecodingTask::handlerHBFTrailer()
 {
-  for (int i = 0; i < frameHeader->numberOfHits; ++i) {
-    auto packedHit = packedHits + i;
-    mDecoder.InsertDigit(crateHeader->drmID, frameHeader->trmID, packedHit->tdcID, packedHit->chain, packedHit->channel, crateOrbit->orbitID, crateHeader->bunchID, frameHeader->frameID << 13, packedHit->time, packedHit->tot);
+
+  // rdh close
+  if (mHBFOrbit->orbitID == o2::raw::HBFUtils::Instance().getNOrbitsPerTF() - 1 + mInitOrbit) {
+    mNCrateCloseTF++;
+    printf("New TF close RDH %d\n", int(mHBFHeader->drmID));
+    return;
+  }
+
+};
+
+void CompressedDecodingTask::handlerFrameHeader()
+{
+  for (int i = 0; i < mFrameHeader->numberOfHits; ++i) {
+    auto packedHit = mPackedHits + i;
+    mDecoder.InsertDigit(mHBFHeader->drmID, mFrameHeader->trmID, packedHit->tdcID, packedHit->chain, packedHit->channel, mHBFOrbit->orbitID, mCrateHeader->bunchID, mFrameHeader->frameID << 13, packedHit->time, packedHit->tot);
   }
 };
 

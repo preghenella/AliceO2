@@ -21,7 +21,7 @@
 #include <iostream>
 
 //#define DECODER_PARANOID
-//#define DECODER_VERBOSE
+#define DECODER_VERBOSE
 
 #ifdef DECODER_PARANOID
 #warning "Building code with DecoderParanoid option. This may limit the speed."
@@ -43,79 +43,167 @@ namespace tof
 namespace compressed
 {
 
-template <typename RAWDataHeader>
-bool DecoderBaseT<RAWDataHeader>::processHBF()
+bool DecoderBase::processHBF()
 {
 
+  mDecoderVerbose = true;
+  
 #ifdef DECODER_VERBOSE
   if (mDecoderVerbose) {
-    std::cout << colorBlue
-              << "--- PROCESS HBF"
+    std::cout << colorBlue << "--- PROCESS HBF"
               << colorReset
               << std::endl;
   }
 #endif
 
-  mDecoderRDH = reinterpret_cast<const RAWDataHeader*>(mDecoderPointer);
-  auto rdh = mDecoderRDH;
-
-  /** loop until RDH close **/
-  while (!rdh->stop) {
-
+  /** check HBF Header signature **/
+  if ((*mDecoderPointer & 0x80000000) != 0x80000000) {
 #ifdef DECODER_VERBOSE
     if (mDecoderVerbose) {
-      std::cout << colorBlue
-                << "--- RDH open/continue detected"
-                << colorReset
-                << std::endl;
-      o2::raw::RDHUtils::printRDH(*rdh);
+      printf(" %08x [ERROR] \n", *mDecoderPointer);
     }
 #endif
-
-    /** rdh handler **/
-    rdhHandler(rdh);
-
-    auto headerSize = rdh->headerSize;
-    auto memorySize = rdh->memorySize;
-    auto offsetToNext = rdh->offsetToNext;
-    auto drmPayload = memorySize - headerSize;
-
-    /** copy DRM payload to save buffer **/
-    std::memcpy(mDecoderSaveBuffer + mDecoderSaveBufferDataSize, reinterpret_cast<const char*>(rdh) + headerSize, drmPayload);
-    mDecoderSaveBufferDataSize += drmPayload;
-
-    /** move to next RDH **/
-    rdh = reinterpret_cast<const RAWDataHeader*>(reinterpret_cast<const char*>(rdh) + offsetToNext);
-
-    /** check next RDH is within buffer **/
-    if (reinterpret_cast<const char*>(rdh) < mDecoderBuffer + mDecoderBufferSize)
-      continue;
-
-    /** otherwise return **/
     return true;
   }
 
+  /** HBF Header detected **/
+  mHBFHeader = reinterpret_cast<const HBFHeader_t*>(mDecoderPointer);
 #ifdef DECODER_VERBOSE
   if (mDecoderVerbose) {
-    std::cout << colorBlue
-              << "--- RDH close detected"
-              << colorReset
-              << std::endl;
-    o2::raw::RDHUtils::printRDH(*rdh);
+    mHBFHeader->print();
   }
 #endif
-
-  /** process DRM data **/
-  mDecoderPointer = reinterpret_cast<const uint32_t*>(mDecoderSaveBuffer);
-  mDecoderPointerMax = reinterpret_cast<const uint32_t*>(mDecoderSaveBuffer + mDecoderSaveBufferDataSize);
-  while (mDecoderPointer < mDecoderPointerMax) {
-    if (processDRM())
-      break;
+  mDecoderPointer++;
+  
+  /** HBF Orbit expected **/
+  mHBFOrbit = reinterpret_cast<const HBFOrbit_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+  if (mDecoderVerbose) {
+    mHBFOrbit->print();
   }
-  mDecoderSaveBufferDataSize = 0;
+#endif
+  mDecoderPointer++;
 
-  /** rdh handler **/
-  rdhHandler(rdh);
+  /** HBF Trigger expected **/
+  mHBFTrigger = reinterpret_cast<const HBFTrigger_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+  if (mDecoderVerbose) {
+    mHBFTrigger->print();
+  }
+#endif
+  mDecoderPointer++;
+
+  /** HBF Payload expected **/
+  mHBFPayload = reinterpret_cast<const HBFPayload_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+  if (mDecoderVerbose) {
+    mHBFPayload->print();
+  }
+#endif
+  mDecoderPointer++;
+
+  /** HBF Header handler **/
+  handlerHBFHeader();
+
+  
+  /** loop over HBF data **/
+  while (true) {
+    
+    /** Crate Header detected **/
+    if (*mDecoderPointer & 0x80000000) {
+      mCrateHeader = reinterpret_cast<const CrateHeader_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+      if (mDecoderVerbose) {
+	mCrateHeader->print();
+      }
+#endif
+      mDecoderPointer++;
+
+      /** Header Crate handler **/
+      handlerCrateHeader();
+      
+      /** loop over Crate data **/
+      while (true) {
+	
+	/** Crate Trailer detected **/
+	if (*mDecoderPointer & 0x80000000) {
+	  mCrateTrailer = reinterpret_cast<const CrateTrailer_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+	  if (mDecoderVerbose) {
+	    mCrateTrailer->print();
+	  }
+#endif
+	  mDecoderPointer++;
+	  mDiagnostics = reinterpret_cast<const Diagnostic_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+	  if (mDecoderVerbose) {
+	    for (int i = 0; i < mCrateTrailer->numberOfDiagnostics; ++i) {
+	      auto diagnostic = reinterpret_cast<const Diagnostic_t*>(mDiagnostics + i);
+	      diagnostic->print();
+	    }
+	  }
+#endif
+	  mDecoderPointer += mCrateTrailer->numberOfDiagnostics;
+	  mErrors = reinterpret_cast<const Error_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+	  if (mDecoderVerbose) {
+	    for (int i = 0; i < mCrateTrailer->numberOfErrors; ++i) {
+	      auto error = reinterpret_cast<const Error_t*>(mErrors + i);
+	      error->print();
+	    }
+	  }
+#endif
+	  mDecoderPointer += mCrateTrailer->numberOfErrors;
+
+	  /** Crate Trailer Handler **/
+	  handlerCrateTrailer();
+	  
+	  break;
+	}
+
+	/** frame header detected **/
+	mFrameHeader = reinterpret_cast<const FrameHeader_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+	if (mDecoderVerbose) {
+	  mFrameHeader->print();
+	}
+#endif
+	mDecoderPointer++;
+	mPackedHits = reinterpret_cast<const PackedHit_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+	if (mDecoderVerbose) {
+	  for (int i = 0; i < mFrameHeader->numberOfHits; ++i) {
+	    auto packedHit = reinterpret_cast<const PackedHit_t*>(mPackedHits + i);
+	    packedHit->print();
+	  }
+	}
+#endif
+	mDecoderPointer += mFrameHeader->numberOfHits;
+
+	/** Frame Header handler **/
+	handlerFrameHeader();
+
+	
+      } /** end of loop over Crate data **/
+      
+      continue;
+    }
+
+    /** HBF Trailer detected **/
+    auto hbfTrailer = reinterpret_cast<const HBFTrailer_t*>(mDecoderPointer);
+#ifdef DECODER_VERBOSE
+    if (mDecoderVerbose) {
+      hbfTrailer->print();
+    }
+#endif
+    mDecoderPointer++;
+
+    /** HBF Trailer handler **/
+    handlerHBFTrailer();
+    
+    break;
+    
+  } /** end of loop over HBF data **/
 
 #ifdef DECODER_VERBOSE
   if (mDecoderVerbose) {
@@ -126,127 +214,14 @@ bool DecoderBaseT<RAWDataHeader>::processHBF()
   }
 #endif
 
-  /** move to next RDH **/
-  mDecoderPointer = reinterpret_cast<const uint32_t*>(reinterpret_cast<const char*>(rdh) + rdh->offsetToNext);
-
-  /** check next RDH is within buffer **/
+  /** check next HBF is within buffer **/
   if (reinterpret_cast<const char*>(mDecoderPointer) < mDecoderBuffer + mDecoderBufferSize)
     return false;
 
   /** otherwise return **/
   return true;
+
 }
-
-template <typename RAWDataHeader>
-bool DecoderBaseT<RAWDataHeader>::processDRM()
-{
-
-#ifdef DECODER_VERBOSE
-  if (mDecoderVerbose) {
-    std::cout << colorBlue << "--- PROCESS DRM"
-              << colorReset
-              << std::endl;
-  }
-#endif
-
-  if ((*mDecoderPointer & 0x80000000) != 0x80000000) {
-#ifdef DECODER_VERBOSE
-    if (mDecoderVerbose) {
-      printf(" %08x [ERROR] \n ", *mDecoderPointer);
-    }
-#endif
-    return true;
-  }
-
-  /** crate header detected **/
-  auto crateHeader = reinterpret_cast<const CrateHeader_t*>(mDecoderPointer);
-#ifdef DECODER_VERBOSE
-  if (mDecoderVerbose) {
-    printf(" %08x CrateHeader          (drmID=%d) \n ", *mDecoderPointer, crateHeader->drmID);
-  }
-#endif
-  mDecoderPointer++;
-
-  /** crate orbit expected **/
-  auto crateOrbit = reinterpret_cast<const CrateOrbit_t*>(mDecoderPointer);
-#ifdef DECODER_VERBOSE
-  if (mDecoderVerbose) {
-    printf(" %08x CrateOrbit           (orbit=0x%08x) \n ", *mDecoderPointer, crateOrbit->orbitID);
-  }
-#endif
-  mDecoderPointer++;
-
-  /** header handler **/
-  headerHandler(crateHeader, crateOrbit);
-
-  while (true) {
-
-    /** crate trailer detected **/
-    if (*mDecoderPointer & 0x80000000) {
-      auto crateTrailer = reinterpret_cast<const CrateTrailer_t*>(mDecoderPointer);
-#ifdef DECODER_VERBOSE
-      if (mDecoderVerbose) {
-        printf(" %08x CrateTrailer         (numberOfDiagnostics=%d, numberOfErrors=%d) \n ", *mDecoderPointer, crateTrailer->numberOfDiagnostics, numberOfErrors);
-      }
-#endif
-      mDecoderPointer++;
-      auto diagnostics = reinterpret_cast<const Diagnostic_t*>(mDecoderPointer);
-#ifdef DECODER_VERBOSE
-      if (mDecoderVerbose) {
-        for (int i = 0; i < crateTrailer->numberOfDiagnostics; ++i) {
-          auto diagnostic = reinterpret_cast<const Diagnostic_t*>(mDecoderPointer + i);
-          printf(" %08x Diagnostic           (slotId=%d) \n ", *(mDecoderPointer + i), diagnostic->slotID);
-        }
-      }
-#endif
-      mDecoderPointer += crateTrailer->numberOfDiagnostics;
-      auto errors = reinterpret_cast<const Error_t*>(mDecoderPointer);
-#ifdef DECODER_VERBOSE
-      if (mDecoderVerbose) {
-        for (int i = 0; i < crateTrailer->numberOfErrors; ++i) {
-          auto error = reinterpret_cast<const Error_t*>(mDecoderPointer + i);
-          printf(" %08x Error                (slotId=%d) \n ", *(mDecoderPointer + i), error->slotID);
-        }
-      }
-#endif
-      mDecoderPointer += crateTrailer->numberOfErrors;
-
-      /** trailer handler **/
-      trailerHandler(crateHeader, crateOrbit, crateTrailer, diagnostics, errors);
-
-      return false;
-    }
-
-    /** frame header detected **/
-    auto frameHeader = reinterpret_cast<const FrameHeader_t*>(mDecoderPointer);
-#ifdef DECODER_VERBOSE
-    if (mDecoderVerbose) {
-      printf(" %08x FrameHeader          (numberOfHits=%d) \n ", *mDecoderPointer, frameHeader->numberOfHits);
-    }
-#endif
-    mDecoderPointer++;
-    auto packedHits = reinterpret_cast<const PackedHit_t*>(mDecoderPointer);
-#ifdef DECODER_VERBOSE
-    if (mDecoderVerbose) {
-      for (int i = 0; i < frameHeader->numberOfHits; ++i) {
-        auto packedHit = reinterpret_cast<const PackedHit_t*>(mDecoderPointer + 1);
-        printf(" %08x PackedHit            (tdcID=%d) \n ", *(mDecoderPointer + 1), packedHit->tdcID);
-        packedHits++;
-      }
-    }
-#endif
-    mDecoderPointer += frameHeader->numberOfHits;
-
-    /** frame handler **/
-    frameHandler(crateHeader, crateOrbit, frameHeader, packedHits);
-  }
-
-  /** should never reach here **/
-  return false;
-}
-
-template class DecoderBaseT<o2::header::RAWDataHeaderV4>;
-template class DecoderBaseT<o2::header::RAWDataHeaderV6>;
 
 } // namespace compressed
 } // namespace tof

@@ -116,7 +116,9 @@ class Compressor
   char mDecoderSaveBuffer[1048576];
   uint32_t mDecoderSaveBufferDataSize = 0;
   uint32_t mDecoderSaveBufferDataLeft = 0;
-
+  uint32_t mNumberOfPackets = 0;
+  uint8_t mLocalPacketCounter = 0;
+  
   /** encoder private functions and data members **/
 
   void encoderSpider(int itrm);

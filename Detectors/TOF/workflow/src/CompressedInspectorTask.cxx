@@ -31,8 +31,7 @@ namespace o2
 namespace tof
 {
 
-template <typename RAWDataHeader>
-void CompressedInspectorTask<RAWDataHeader>::init(InitContext& ic)
+void CompressedInspectorTask::init(InitContext& ic)
 {
   LOG(INFO) << "CompressedInspector init";
   auto filename = ic.options().get<std::string>("tof-compressed-inspector-filename");
@@ -74,8 +73,7 @@ void CompressedInspectorTask<RAWDataHeader>::init(InitContext& ic)
   ic.services().get<CallbackService>().set(CallbackService::Id::Stop, finishFunction);
 }
 
-template <typename RAWDataHeader>
-void CompressedInspectorTask<RAWDataHeader>::run(ProcessingContext& pc)
+void CompressedInspectorTask::run(ProcessingContext& pc)
 {
   LOG(DEBUG) << "CompressedInspector run";
 
@@ -97,57 +95,51 @@ void CompressedInspectorTask<RAWDataHeader>::run(ProcessingContext& pc)
       auto payloadIn = ref.payload;
       auto payloadInSize = headerIn->payloadSize;
 
-      DecoderBaseT<RAWDataHeader>::setDecoderBuffer(payloadIn);
-      DecoderBaseT<RAWDataHeader>::setDecoderBufferSize(payloadInSize);
-      DecoderBaseT<RAWDataHeader>::run();
+      DecoderBase::setDecoderBuffer(payloadIn);
+      DecoderBase::setDecoderBufferSize(payloadInSize);
+      DecoderBase::run();
     }
   }
 }
 
-template <typename RAWDataHeader>
-void CompressedInspectorTask<RAWDataHeader>::headerHandler(const CrateHeader_t* crateHeader, const CrateOrbit_t* crateOrbit)
+void CompressedInspectorTask::handlerCrateHeader()
 {
   for (int ibit = 0; ibit < 11; ++ibit)
-    if (crateHeader->slotPartMask & (1 << ibit))
-      mHistos2D["slotPartMask"]->Fill(crateHeader->drmID, ibit + 2);
+    if (mCrateHeader->slotPartMask & (1 << ibit))
+      mHistos2D["slotPartMask"]->Fill(mHBFHeader->drmID, ibit + 2);
 };
 
-template <typename RAWDataHeader>
-void CompressedInspectorTask<RAWDataHeader>::frameHandler(const CrateHeader_t* crateHeader, const CrateOrbit_t* crateOrbit,
-                                                          const FrameHeader_t* frameHeader, const PackedHit_t* packedHits)
+void CompressedInspectorTask::handlerFrameHeader()
 {
-  mHistos1D["hHisto"]->Fill(frameHeader->numberOfHits);
-  for (int i = 0; i < frameHeader->numberOfHits; ++i) {
-    auto packedHit = packedHits + i;
+  mHistos1D["hHisto"]->Fill(mFrameHeader->numberOfHits);
+  for (int i = 0; i < mFrameHeader->numberOfHits; ++i) {
+    auto packedHit = mPackedHits + i;
     auto indexE = packedHit->channel +
-                  8 * packedHit->tdcID +
-                  120 * packedHit->chain +
-                  240 * (frameHeader->trmID - 3) +
-                  2400 * crateHeader->drmID;
+      8 * packedHit->tdcID +
+      120 * packedHit->chain +
+      240 * (mFrameHeader->trmID - 3) +
+      2400 * mHBFHeader->drmID;
     int time = packedHit->time;
     int timebc = time % 1024;
-    time += (frameHeader->frameID << 13);
-
+    time += (mFrameHeader->frameID << 13);
+    
     mHistos1D["indexE"]->Fill(indexE);
     mHistos1D["time"]->Fill(time);
     mHistos1D["timebc"]->Fill(timebc);
     mHistos1D["tot"]->Fill(packedHit->tot);
   }
 };
-
-template <typename RAWDataHeader>
-void CompressedInspectorTask<RAWDataHeader>::trailerHandler(const CrateHeader_t* crateHeader, const CrateOrbit_t* crateOrbit,
-                                                            const CrateTrailer_t* crateTrailer, const Diagnostic_t* diagnostics,
-                                                            const Error_t* errors)
+  
+void CompressedInspectorTask::handlerCrateTrailer()
 {
-  mHistos2D["diagnostic"]->Fill(crateHeader->drmID, 0);
-  for (int i = 0; i < crateTrailer->numberOfDiagnostics; ++i) {
-    auto diagnostic = diagnostics + i;
-    mHistos2D["diagnostic"]->Fill(crateHeader->drmID, diagnostic->slotID);
+  mHistos2D["diagnostic"]->Fill(mHBFHeader->drmID, 0);
+  for (int i = 0; i < mCrateTrailer->numberOfDiagnostics; ++i) {
+    auto diagnostic = mDiagnostics + i;
+    mHistos2D["diagnostic"]->Fill(mHBFHeader->drmID, diagnostic->slotID);
   }
   int nError = 0, nTest = 0;
-  for (int i = 0; i < crateTrailer->numberOfErrors; ++i) {
-    auto error = errors + i;
+  for (int i = 0; i < mCrateTrailer->numberOfErrors; ++i) {
+    auto error = mErrors + i;
     if (error->undefined) {
       nTest++;
       mHistos2D["test"]->Fill(error->slotID + 0.5 * error->chain, error->tdcID);
@@ -163,9 +155,6 @@ void CompressedInspectorTask<RAWDataHeader>::trailerHandler(const CrateHeader_t*
   mHistos1D["Nerror"]->Fill(nError);
   mHistos1D["Ntest"]->Fill(nTest);
 };
-
-template class CompressedInspectorTask<o2::header::RAWDataHeaderV4>;
-template class CompressedInspectorTask<o2::header::RAWDataHeaderV6>;
 
 } // namespace tof
 } // namespace o2

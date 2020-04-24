@@ -108,12 +108,12 @@ bool Compressor<RAWDataHeader, verbose>::processHBF()
   }
 
   mDecoderRDH = reinterpret_cast<const RAWDataHeader*>(mDecoderPointer);
-  mEncoderRDH = reinterpret_cast<RAWDataHeader*>(mEncoderPointer);
   auto rdh = mDecoderRDH;
 
   /** loop until RDH close **/
   while (!rdh->stop) {
 
+    mNumberOfPackets++;
     if (verbose && mDecoderVerbose) {
       std::cout << colorBlue
                 << "--- RDH open/continue detected"
@@ -121,7 +121,7 @@ bool Compressor<RAWDataHeader, verbose>::processHBF()
                 << std::endl;
       o2::raw::RDHUtils::printRDH(*rdh);
     }
-
+    
     auto headerSize = rdh->headerSize;
     auto memorySize = rdh->memorySize;
     auto offsetToNext = rdh->offsetToNext;
@@ -142,6 +142,7 @@ bool Compressor<RAWDataHeader, verbose>::processHBF()
     return true;
   }
 
+  mNumberOfPackets++;
   if (verbose && mDecoderVerbose) {
     std::cout << colorBlue
               << "--- RDH close detected"
@@ -150,10 +151,52 @@ bool Compressor<RAWDataHeader, verbose>::processHBF()
     o2::raw::RDHUtils::printRDH(*rdh);
   }
 
-  /** copy RDH open to encoder buffer **/
-  std::memcpy(mEncoderPointer, mDecoderRDH, mDecoderRDH->headerSize);
-  mEncoderPointer = reinterpret_cast<uint32_t*>(reinterpret_cast<char*>(mEncoderPointer) + rdh->headerSize);
+  /** encode HBF Header **/
+  *mEncoderPointer = 0x80000000;
+  *mEncoderPointer |= mLocalPacketCounter;
+  *mEncoderPointer |= (mDecoderRDH->packetCounter << 8);
+  *mEncoderPointer |= (0xA << 20); // temporary version ID
+  *mEncoderPointer |= ((mDecoderRDH->feeId & 0xFF) << 24);
+  if (verbose && mEncoderVerbose) {
+    auto hbfHeader = reinterpret_cast<compressed::HBFHeader_t*>(mEncoderPointer);
+    printf("%s", colorGreen);
+    hbfHeader->print();
+    printf("%s", colorReset);
+  }
+  auto hbfHeaderPointer = mEncoderPointer;
+  encoderNext();
 
+  /** encode HBF Orbit **/
+  *mEncoderPointer = o2::raw::RDHUtils::getHeartBeatOrbit(mDecoderRDH);
+  if (verbose && mEncoderVerbose) {
+    auto hbfOrbit = reinterpret_cast<compressed::HBFOrbit_t*>(mEncoderPointer);
+    printf("%s", colorGreen);
+    hbfOrbit->print();
+    printf("%s", colorReset);
+  }
+  encoderNext();
+    
+  /** encode HBF Trigger **/
+  *mEncoderPointer = mDecoderRDH->triggerType;
+  if (verbose && mEncoderVerbose) {
+    auto hbfTrigger = reinterpret_cast<compressed::HBFTrigger_t*>(mEncoderPointer);
+    printf("%s", colorGreen);
+    hbfTrigger->print();
+    printf("%s", colorReset);
+  }
+  encoderNext();
+    
+  /** encode HBF Payload **/
+  *mEncoderPointer = 0x00000000;
+  if (verbose && mEncoderVerbose) {
+    auto hbfPayload = reinterpret_cast<compressed::HBFPayload_t*>(mEncoderPointer);
+    printf("%s", colorGreen);
+    hbfPayload->print();
+    printf("%s", colorReset);
+  }
+  auto hbfPayloadPointer = mEncoderPointer;
+  encoderNext();
+    
   /** process DRM data **/
   mDecoderPointer = reinterpret_cast<const uint32_t*>(mDecoderSaveBuffer);
   mDecoderPointerMax = reinterpret_cast<const uint32_t*>(mDecoderSaveBuffer + mDecoderSaveBufferDataSize);
@@ -165,7 +208,7 @@ bool Compressor<RAWDataHeader, verbose>::processHBF()
     }
   }
   mDecoderSaveBufferDataSize = 0;
-
+  
   /** bring encoder pointer back if fatal error **/
   if (mDecoderFatal) {
     mFatalCounter++;
@@ -175,18 +218,22 @@ bool Compressor<RAWDataHeader, verbose>::processHBF()
   if (mDecoderError)
     mErrorCounter++;
 
-  /** updated encoder RDH open **/
-  mEncoderRDH->memorySize = reinterpret_cast<char*>(mEncoderPointer) - reinterpret_cast<char*>(mEncoderRDH);
-  mEncoderRDH->offsetToNext = mEncoderRDH->memorySize;
+  /** encode HBF Trailer **/
+  *mEncoderPointer = 0x00000000;
+  *mEncoderPointer |= TOF_DETFIELD_RECVTRIGGER(rdh->detectorField);
+  *mEncoderPointer |= (TOF_DETFIELD_SERVTRIGGER(rdh->detectorField) << 4);  
+  *mEncoderPointer |= (mNumberOfPackets << 16);
+  if (verbose && mEncoderVerbose) {
+    auto hbfTrailer = reinterpret_cast<compressed::HBFTrailer_t*>(mEncoderPointer);
+    printf("%s", colorGreen);
+    hbfTrailer->print();
+    printf("%s", colorReset);
+  }
+  encoderNext();
 
-  /** copy RDH close to encoder buffer **/
-  /** CAREFUL WITH THE PAGE COUNTER **/
-  mEncoderRDH = reinterpret_cast<RAWDataHeader*>(mEncoderPointer);
-  std::memcpy(mEncoderRDH, rdh, rdh->headerSize);
-  mEncoderRDH->memorySize = rdh->headerSize;
-  mEncoderRDH->offsetToNext = mEncoderRDH->memorySize;
-  mEncoderPointer = reinterpret_cast<uint32_t*>(reinterpret_cast<char*>(mEncoderPointer) + rdh->headerSize);
-
+  /** update HBF payload **/
+  *hbfPayloadPointer = reinterpret_cast<char*>(mEncoderPointer) - reinterpret_cast<char*>(hbfHeaderPointer);
+  
   if (verbose && mDecoderVerbose) {
     std::cout << colorBlue
               << "--- END PROCESS HBF"
@@ -194,6 +241,12 @@ bool Compressor<RAWDataHeader, verbose>::processHBF()
               << std::endl;
   }
 
+  /** increment local packet counter **/
+  mLocalPacketCounter++;
+  
+  /** reset packet counter **/
+  mNumberOfPackets = 0;
+  
   /** move to next RDH **/
   mDecoderPointer = reinterpret_cast<const uint32_t*>(reinterpret_cast<const char*>(rdh) + rdh->offsetToNext);
 
@@ -343,24 +396,14 @@ bool Compressor<RAWDataHeader, verbose>::processDRM()
 
   /** encode Crate Header **/
   *mEncoderPointer = 0x80000000;
-  *mEncoderPointer |= GET_DRMHEADW1_PARTSLOTMASK(*mDecoderSummary.drmHeadW1) << 12;
-  *mEncoderPointer |= GET_DRMDATAHEADER_DRMID(*mDecoderSummary.drmDataHeader) << 24;
   *mEncoderPointer |= GET_DRMHEADW3_GBTBUNCHCNT(*mDecoderSummary.drmHeadW3);
+  *mEncoderPointer |= (GET_DRMHEADW1_PARTSLOTMASK(*mDecoderSummary.drmHeadW1) << 12);
+  *mEncoderPointer |= (0x100 << 28); // delta orbit should be computed properly
   if (verbose && mEncoderVerbose) {
     auto crateHeader = reinterpret_cast<compressed::CrateHeader_t*>(mEncoderPointer);
-    auto bunchID = crateHeader->bunchID;
-    auto drmID = crateHeader->drmID;
-    auto slotPartMask = crateHeader->slotPartMask;
-    printf("%s %08x Crate header          (drmID=%d, bunchID=%d, slotPartMask=0x%x) %s \n", colorGreen, *mEncoderPointer, drmID, bunchID, slotPartMask, colorReset);
-  }
-  encoderNext();
-
-  /** encode Crate Orbit **/
-  *mEncoderPointer = *mDecoderSummary.tofOrbit;
-  if (verbose && mEncoderVerbose) {
-    auto crateOrbit = reinterpret_cast<compressed::CrateOrbit_t*>(mEncoderPointer);
-    auto orbitID = crateOrbit->orbitID;
-    printf("%s %08x Crate orbit           (orbitID=%u) %s \n", colorGreen, *mEncoderPointer, orbitID, colorReset);
+    printf("%s", colorGreen);
+    crateHeader->print();
+    printf("%s", colorReset);
   }
   encoderNext();
 
@@ -416,11 +459,10 @@ bool Compressor<RAWDataHeader, verbose>::processDRM()
       *mEncoderPointer |= (mCheckerSummary.nTDCErrors << 16);
 
       if (verbose && mEncoderVerbose) {
-        auto CrateTrailer = reinterpret_cast<compressed::CrateTrailer_t*>(mEncoderPointer);
-        auto EventCounter = CrateTrailer->eventCounter;
-        auto NumberOfDiagnostics = CrateTrailer->numberOfDiagnostics;
-        auto NumberOfErrors = CrateTrailer->numberOfErrors;
-        printf("%s %08x Crate trailer         (EventCounter=%d, NumberOfDiagnostics=%d, NumberOfErrors=%d) %s \n", colorGreen, *mEncoderPointer, EventCounter, NumberOfDiagnostics, NumberOfErrors, colorReset);
+        auto crateTrailer = reinterpret_cast<compressed::CrateTrailer_t*>(mEncoderPointer);
+	printf("%s", colorGreen);
+	crateTrailer->print();
+	printf("%s", colorReset);
       }
       encoderNext();
 
@@ -429,10 +471,10 @@ bool Compressor<RAWDataHeader, verbose>::processDRM()
         auto itrm = (mCheckerSummary.DiagnosticWord[iword] & 0xF) - 3;
         *mEncoderPointer = mCheckerSummary.DiagnosticWord[iword];
         if (verbose && mEncoderVerbose) {
-          auto Diagnostic = reinterpret_cast<compressed::Diagnostic_t*>(mEncoderPointer);
-          auto slotId = Diagnostic->slotID;
-          auto faultBits = Diagnostic->faultBits;
-          printf("%s %08x Diagnostic            (slotId=%d, faultBits=0x%x) %s \n", colorGreen, *mEncoderPointer, slotId, faultBits, colorReset);
+          auto diagnostic = reinterpret_cast<compressed::Diagnostic_t*>(mEncoderPointer);
+	  printf("%s", colorGreen);
+	  diagnostic->print();
+	  printf("%s", colorReset);
         }
         encoderNext();
       }
@@ -446,12 +488,10 @@ bool Compressor<RAWDataHeader, verbose>::processDRM()
             *mEncoderPointer |= ((itrm + 3) << 19);
             *mEncoderPointer |= (ichain << 23);
             if (verbose && mEncoderVerbose) {
-              auto Error = reinterpret_cast<compressed::Error_t*>(mEncoderPointer);
-              auto errorFlags = Error->errorFlags;
-              auto slotID = Error->slotID;
-              auto chain = Error->chain;
-              auto tdcID = Error->tdcID;
-              printf("%s %08x Error                 (slotId=%d, chain=%d, tdcId=%d, errorFlags=0x%x) %s \n", colorGreen, *mEncoderPointer, slotID, chain, tdcID, errorFlags, colorReset);
+              auto error = reinterpret_cast<compressed::Error_t*>(mEncoderPointer);
+	      printf("%s", colorGreen);
+	      error->print();
+	      printf("%s", colorReset);
             }
             encoderNext();
           }
@@ -819,15 +859,15 @@ void Compressor<RAWDataHeader, verbose>::encoderSpider(int itrm)
 
     // encode Frame Header
     *mEncoderPointer = 0x00000000;
-    *mEncoderPointer |= slotId << 24;
-    *mEncoderPointer |= iframe << 16;
     *mEncoderPointer |= mSpiderSummary.nFramePackedHits[iframe];
+    *mEncoderPointer |= (iframe << 16);
+    *mEncoderPointer |= (slotId << 24);
+    *mEncoderPointer |= (0x100 << 28); // delta BC should be computed properly
     if (verbose && mEncoderVerbose) {
-      auto FrameHeader = reinterpret_cast<const compressed::FrameHeader_t*>(mEncoderPointer);
-      auto NumberOfHits = FrameHeader->numberOfHits;
-      auto FrameID = FrameHeader->frameID;
-      auto TRMID = FrameHeader->trmID;
-      printf("%s %08x Frame header          (TRMID=%d, FrameID=%d, NumberOfHits=%d) %s \n", colorGreen, *mEncoderPointer, TRMID, FrameID, NumberOfHits, colorReset);
+      auto frameHeader = reinterpret_cast<const compressed::FrameHeader_t*>(mEncoderPointer);
+      printf("%s", colorGreen);
+      frameHeader->print();
+      printf("%s", colorReset);
     }
     encoderNext();
 
@@ -835,13 +875,10 @@ void Compressor<RAWDataHeader, verbose>::encoderSpider(int itrm)
     for (int ihit = 0; ihit < mSpiderSummary.nFramePackedHits[iframe]; ++ihit) {
       *mEncoderPointer = mSpiderSummary.FramePackedHit[iframe][ihit];
       if (verbose && mEncoderVerbose) {
-        auto PackedHit = reinterpret_cast<const compressed::PackedHit_t*>(mEncoderPointer);
-        auto Chain = PackedHit->chain;
-        auto TDCID = PackedHit->tdcID;
-        auto Channel = PackedHit->channel;
-        auto Time = PackedHit->time;
-        auto TOT = PackedHit->tot;
-        printf("%s %08x Packed hit            (Chain=%d, TDCID=%d, Channel=%d, Time=%d, TOT=%d) %s \n", colorGreen, *mEncoderPointer, Chain, TDCID, Channel, Time, TOT, colorReset);
+        auto packedHit = reinterpret_cast<const compressed::PackedHit_t*>(mEncoderPointer);
+	printf("%s", colorGreen);
+	packedHit->print();
+	printf("%s", colorReset);
       }
       encoderNext();
     }
