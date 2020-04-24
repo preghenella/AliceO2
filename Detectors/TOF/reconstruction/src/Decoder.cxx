@@ -135,7 +135,7 @@ void Decoder::InsertDigit(int icrate, int itrm, int itdc, int ichain, int channe
 
 void Decoder::readTRM(int icru, int icrate, int orbit, int bunchid)
 {
-
+#if 0
   if (orbit < mFirstOrbit || (orbit == mFirstOrbit && bunchid < mFirstBunch)) {
     mFirstOrbit = orbit;
     mFirstBunch = bunchid;
@@ -189,6 +189,7 @@ void Decoder::readTRM(int icru, int icrate, int orbit, int bunchid)
     mUnion[icru]++;
     mIntegratedBytes[icru] += 4;
   }
+#endif
 }
 
 void Decoder::fromRawHit2Digit(int icrate, int itrm, int itdc, int ichain, int channel, int orbit, int bunchid, int tdc, int tot, std::array<int, 6>& digitInfo)
@@ -218,6 +219,7 @@ char* Decoder::nextPage(void* current, int shift)
 
 bool Decoder::decode() // return a vector of digits in a TOF readout window
 {
+#if 0
   mReadoutWindowCurrent = 0;
   mFirstOrbit = 0;
   mFirstBunch = 0;
@@ -304,6 +306,7 @@ bool Decoder::decode() // return a vector of digits in a TOF readout window
   // flushOutputContainer does the job
   FillWindows();
 
+#endif
   return false;
 }
 
@@ -316,25 +319,30 @@ void Decoder::FillWindows()
 
 void Decoder::printCrateInfo(int icru) const
 {
+#if 0
   printf("___CRATE HEADER____\n");
   printf("DRM ID           = %d\n", mUnion[icru]->crateHeader.drmID);
   printf("Bunch ID         = %d\n", mUnion[icru]->crateHeader.bunchID);
   printf("Slot part. mask  = %d\n", mUnion[icru]->crateHeader.slotPartMask);
   printf("Must be ONE      = %d\n", mUnion[icru]->crateHeader.mustBeOne);
   printf("___________________\n");
+#endif
 }
 
 void Decoder::printCrateTrailerInfo(int icru) const
 {
+#if 0
   printf("___CRATE TRAILER___\n");
   printf("Event counter         = %d\n", mUnion[icru]->crateTrailer.eventCounter);
   printf("Number of diagnostics = %d\n", mUnion[icru]->crateTrailer.numberOfDiagnostics);
   printf("Must be ONE           = %d\n", mUnion[icru]->crateTrailer.mustBeOne);
   printf("___________________\n");
+#endif
 }
 
 void Decoder::printTRMInfo(int icru) const
 {
+#if 0
   printf("______TRM_INFO_____\n");
   printf("TRM ID        = %d\n", mUnion[icru]->frameHeader.trmID);
   printf("Frame ID      = %d\n", mUnion[icru]->frameHeader.frameID);
@@ -342,10 +350,12 @@ void Decoder::printTRMInfo(int icru) const
   printf("DeltaBC       = %d\n", mUnion[icru]->frameHeader.deltaBC);
   printf("Must be Zero  = %d\n", mUnion[icru]->frameHeader.mustBeZero);
   printf("___________________\n");
+#endif
 }
 
 void Decoder::printHitInfo(int icru) const
 {
+#if 0
   printf("______HIT_INFO_____\n");
   printf("TDC ID        = %d\n", mUnion[icru]->packedHit.tdcID);
   printf("CHAIN ID      = %d\n", mUnion[icru]->packedHit.chain);
@@ -353,10 +363,12 @@ void Decoder::printHitInfo(int icru) const
   printf("TIME          = %d\n", mUnion[icru]->packedHit.time);
   printf("TOT           = %d\n", mUnion[icru]->packedHit.tot);
   printf("___________________\n");
+#endif
 }
 
 void Decoder::printRDH() const
 {
+#if 0
   printf("______RDH_INFO_____\n");
   printf("VERSION       = %d\n", int(mRDH->version));
   printf("BLOCK LENGTH  = %d\n", int(mRDH->blockLength));
@@ -366,6 +378,7 @@ void Decoder::printRDH() const
   printf("CRU ID        = %d\n", mRDH->cruID);
   printf("LINK ID       = %d\n", mRDH->linkID);
   printf("___________________\n");
+#endif
 }
 } // namespace compressed
 } // namespace tof

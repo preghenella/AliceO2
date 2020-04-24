@@ -55,8 +55,16 @@ class DecoderBaseT
   void setDecoderBuffer(const char* val) { mDecoderBuffer = val; };
   void setDecoderBufferSize(long val) { mDecoderBufferSize = val; };
 
- private:
+ protected:
   /** handlers **/
+
+  virtual void handlerHBFHeader() {};
+  virtual void handlerCrateHeader() {};
+  virtual void handlerFrameHeader() {};  
+  virtual void handlerCrateTrailer() {};
+  virtual void handlerHBFTrailer() {};
+  
+  /** old API, deprecated **/
 
   virtual void rdhHandler(const RAWDataHeader* rdh){};
   virtual void headerHandler(const CrateHeader_t* crateHeader, const CrateOrbit_t* crateOrbit){};
@@ -68,13 +76,12 @@ class DecoderBaseT
                               const CrateTrailer_t* crateTrailer, const Diagnostic_t* diagnostics,
                               const Error_t* errors){};
 
-  /** old API, deprecated **/
-
   virtual void trailerHandler(const CrateHeader_t* crateHeader, const CrateOrbit_t* crateOrbit,
                               const CrateTrailer_t* crateTrailer, const Diagnostic_t* diagnostics){};
 
+  /** end of old API **/
+  
   bool processHBF();
-  bool processDRM();
 
   /** decoder private functions and data members **/
   inline void decoderRewind() { mDecoderPointer = reinterpret_cast<const uint32_t*>(mDecoderBuffer); };
@@ -84,13 +91,26 @@ class DecoderBaseT
   const uint32_t* mDecoderPointer = nullptr;
   const uint32_t* mDecoderPointerMax = nullptr;
   const uint32_t* mDecoderPointerNext = nullptr;
-  const RAWDataHeader* mDecoderRDH;
   bool mDecoderVerbose = false;
   bool mDecoderError = false;
   bool mDecoderFatal = false;
   char mDecoderSaveBuffer[1048576];
   uint32_t mDecoderSaveBufferDataSize = 0;
   uint32_t mDecoderSaveBufferDataLeft = 0;
+
+  /** local pointers **/
+  const HBFHeader_t *mHBFHeader = nullptr;
+  const HBFOrbit_t *mHBFOrbit = nullptr;
+  const HBFTrigger_t *mHBFTrigger = nullptr;
+  const HBFPayload_t *mHBFPayload = nullptr;
+  const CrateHeader_t *mCrateHeader = nullptr;
+  const FrameHeader_t *mFrameHeader = nullptr;
+  const PackedHit_t *mPackedHits = nullptr;
+  const CrateTrailer_t *mCrateTrailer = nullptr;
+  const Diagnostic_t *mDiagnostics = nullptr;
+  const Error_t *mErrors = nullptr;
+  const HBFHeader_t *mHBFTrailer = nullptr;
+  
 };
 
 typedef DecoderBaseT<o2::header::RAWDataHeaderV4> DecoderBaseV4;

@@ -46,15 +46,12 @@ class CompressedInspectorTask : public DecoderBaseT<RAWDataHeader>, public Task
 
  private:
   /** decoding handlers **/
-  void headerHandler(const CrateHeader_t* crateHeader, const CrateOrbit_t* crateOrbit) override;
-
-  void frameHandler(const CrateHeader_t* crateHeader, const CrateOrbit_t* crateOrbit,
-                    const FrameHeader_t* frameHeader, const PackedHit_t* packedHits) override;
-
-  void trailerHandler(const CrateHeader_t* crateHeader, const CrateOrbit_t* crateOrbit,
-                      const CrateTrailer_t* crateTrailer, const Diagnostic_t* diagnostics,
-                      const Error_t* errors) override;
-
+  //  void handlerHBFHeader() override;
+  void handlerCrateHeader() override;
+  void handlerFrameHeader() override;  
+  void handlerCrateTrailer() override;
+  //  void handlerHBFTrailer() override;
+  
   bool mStatus = false;
   TFile* mFile = nullptr;
   std::map<std::string, TH1*> mHistos1D;
